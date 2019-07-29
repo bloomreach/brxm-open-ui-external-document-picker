@@ -203,10 +203,11 @@
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 8742380e-8e21-439a-ac17-b35799d40c28
           hippo:availability: []
+          hippostd:holder: admin
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
-          hippostdpubwf:lastModificationDate: 2019-07-29T16:19:56.232+02:00
+          hippostdpubwf:lastModificationDate: 2019-07-29T21:07:33.822+02:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: c2d0ab21-eb16-4997-8e04-d89661b7f133
           hippotranslation:locale: en

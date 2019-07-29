@@ -40,4 +40,9 @@ public class ContentDocument extends BaseDocument {
     public Calendar getPublicationDate() {
         return getSingleProperty("myproject:publicationdate");
     }
+
+    @HippoEssentialsGenerated(internalName = "myproject:externaldockerpicker")
+    public String getExternaldockerpicker() {
+        return getSingleProperty("myproject:externaldockerpicker");
+    }
 }

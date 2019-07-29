@@ -42,4 +42,14 @@ public class Banner extends BaseDocument {
     public HippoBean getLink() {
         return getLinkedBean("myproject:link", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "myproject:extdocpicker")
+    public String getExtdocpicker() {
+        return getSingleProperty("myproject:extdocpicker");
+    }
+
+    @HippoEssentialsGenerated(internalName = "myproject:md")
+    public String getMd() {
+        return getSingleProperty("myproject:md");
+    }
 }

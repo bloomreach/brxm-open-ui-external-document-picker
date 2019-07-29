@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    unsplashedpicker:
+      uri: http://extdockpicker.bloomreach.com/unsplashedpicker/1.0
+      cnd: unsplashedpicker.cnd

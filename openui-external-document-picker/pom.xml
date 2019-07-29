@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.onehippo.cms7</groupId>
+    <artifactId>hippo-cms7-project</artifactId>
+    <version>30.3.0</version>
+  </parent>
+
+  <groupId>com.bloomreach.openui</groupId>
+  <artifactId>external-document-picker-parent</artifactId>
+  <name>OpenUI External Document Picker Parent</name>
+  <description>OpenUI External Document Picker Parent</description>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+
+    <hippo.version>13.3.0</hippo.version>
+
+  </properties>
+
+
+
+  <modules>
+    <module>api</module>
+    <module>unsplashed-cms</module>
+    <module>unsplashed-site</module>
+
+  </modules>
+
+</project>

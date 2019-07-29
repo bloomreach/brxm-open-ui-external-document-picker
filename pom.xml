@@ -184,8 +184,9 @@
         </property>
       </activation>
       <modules>
-        <module>openui-external-document-picker-api</module>
-        <module>openui-external-document-picker-unsplashed</module>
+        <!--<module>openui-external-document-picker</module>-->
+        <!--<module>openui-external-document-picker-api</module>-->
+        <!--<module>openui-external-document-picker-unsplashed</module>-->
         <module>cms-dependencies</module>
         <module>repository-data</module>
         <module>cms</module>

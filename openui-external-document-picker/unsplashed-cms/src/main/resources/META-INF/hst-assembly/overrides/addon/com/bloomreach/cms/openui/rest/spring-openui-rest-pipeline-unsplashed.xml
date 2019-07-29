@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <import resource="classpath:/org/hippoecm/hst/site/optional/jaxrs/SpringComponentManager-rest-jackson.xml"/>
+
+  <bean id="customRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+        <bean class="org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider">
+          <constructor-arg>
+            <bean class="com.bloomreach.cms.openui.rest.unsplashed.UnsplashedExternalDocumentPickerResource"/>
+          </constructor-arg>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <!--
+    JAXB CONTEXT MAPPINGS
+  -->
+  <bean id="jaxrsOpenUiCustomContextProvider" class="org.onehippo.cms7.essentials.components.rest.JaxbContextProvider">
+    <property name="beansPackage" value="org.example.beans"/>
+    <!--
+      you can add extra classes if needed as followed:
+    -->
+    <!--
+      <property name="classes">
+        <list>
+          <value type="java.lang.Class">org.example.beans.MyBean</value>
+        </list>
+      </property>
+    -->
+  </bean>
+
+  <bean id="jaxrsRestOpenUiExceptionMapper" class="org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper">
+    <property name="printStackTrace" value="false"/>
+  </bean>
+
+  <bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+        <ref bean="jaxrsOpenUiCustomContextProvider"/>
+        <ref bean="jaxrsRestOpenUiExceptionMapper"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="openUiRestAllEntityProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">
+    <constructor-arg value="java.util.List"/>
+    <property name="targetClass" value="org.apache.commons.collections.ListUtils"/>
+    <property name="targetMethod" value="union"/>
+    <property name="arguments">
+      <list>
+        <ref bean="jaxrsRestDefaultEntityProviders"/>
+        <ref bean="openUiRestEntityProviders"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="jaxrsRestOpenUiServiceValve" class="org.hippoecm.hst.core.container.JaxrsRestServiceValve"
+        init-method="initialize" destroy-method="destroy">
+    <constructor-arg>
+      <bean class="org.hippoecm.hst.jaxrs.cxf.CXFJaxrsService">
+        <constructor-arg value="jaxrsOpenUiService"/>
+        <property name="servletPath" value=""/>
+        <property name="jaxrsServerFactoryBean">
+          <bean class="org.apache.cxf.jaxrs.JAXRSServerFactoryBean">
+            <property name="address" value="/"/>
+            <property name="providers" ref="openUiRestAllEntityProviders"/>
+            <property name="resourceProviders" ref="jaxrsRestOpenUiResourceProviders"/>
+            <property name="invoker" ref="jaxrsRestOpenUiServiceInvoker"/>
+          </bean>
+        </property>
+        <property name="inInterceptors">
+          <list>
+            <ref bean="jaxrsRestOpenUiServiceQueryStringReplacingInterceptor"/>
+          </list>
+        </property>
+      </bean>
+    </constructor-arg>
+    <property name="valveName" value="jaxrsRestOpenUiServiceValve"/>
+  </bean>
+
+</beans>

@@ -1,0 +1,12 @@
+definitions:
+  config:
+    /hst:platform/hst:hosts/dev-localhost/localhost/hst:root/edp:
+      jcr:primaryType: hst:mount
+      hst:alias: edp
+      hst:ismapped: false
+      hst:namedpipeline: JaxrsRestOpenUiPipeline
+      hst:types: [rest]
+      hst:responseheaders: ['Access-Control-Allow-Origin: http://localhost:3002',
+        'Access-Control-Allow-Credentials: true']
+      hst:subjectbasedsession: false
+      hst:authenticated: false

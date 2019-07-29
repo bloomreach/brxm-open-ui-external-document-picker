@@ -12,14 +12,24 @@
   <name>My Project CMS</name>
   <description>My Project CMS</description>
   <dependencies>
+    <!--<dependency>-->
+      <!--<groupId>org.example</groupId>-->
+      <!--<artifactId>openui-external-document-picker-api</artifactId>-->
+      <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.example</groupId>-->
+      <!--<artifactId>openui-external-document-picker-unsplashed</artifactId>-->
+      <!--<version>0.1.0-SNAPSHOT</version>-->
+    <!--</dependency>-->
     <dependency>
-      <groupId>org.example</groupId>
+      <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-api</artifactId>
-      <version>${project.version}</version>
+      <version>0.1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.example</groupId>
-      <artifactId>openui-external-document-picker-unsplashed</artifactId>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-unsplashed-cms</artifactId>
       <version>0.1.0-SNAPSHOT</version>
     </dependency>
     <dependency>

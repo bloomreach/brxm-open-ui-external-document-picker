@@ -14,6 +14,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.onehippo.cms7.essentials.components.rest.adapters.HippoHtmlAdapter;
 import org.onehippo.cms7.essentials.components.rest.adapters.HippoGalleryImageAdapter;
 
+/** 
+ * TODO: Beanwriter: Failed to create getter for node type: unsplashedpicker:unsplashed
+ */
 @XmlRootElement(name = "newsdocument")
 @XmlAccessorType(XmlAccessType.NONE)
 @HippoEssentialsGenerated(internalName = "myproject:newsdocument")
