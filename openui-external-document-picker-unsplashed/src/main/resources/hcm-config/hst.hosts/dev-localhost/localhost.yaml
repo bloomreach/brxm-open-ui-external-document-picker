@@ -1,12 +1,5 @@
 definitions:
   config:
-    /hst:platform/hst:hosts/dev-localhost/localhost/hst:root/api:
-      jcr:primaryType: hst:mount
-      hst:alias: api
-      hst:ismapped: false
-      hst:namedpipeline: RestApiPipeline
-      hst:types: [rest]
-      hst:mountpoint: /hst:myproject/hst:sites/myproject
     /hst:platform/hst:hosts/dev-localhost/localhost/hst:root/edp:
       jcr:primaryType: hst:mount
       hst:alias: edp
@@ -15,3 +8,5 @@ definitions:
       hst:types: [rest]
       hst:responseheaders: ['Access-Control-Allow-Origin: http://localhost:3002',
         'Access-Control-Allow-Credentials: true']
+      hst:subjectbasedsession: false
+      hst:authenticated: false
