@@ -7,10 +7,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import GridListTile from "@material-ui/core/GridListTile/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
 import GridList from "@material-ui/core/GridList/GridList";
-import IconButton from "@material-ui/core/IconButton/IconButton";
 import Fade from "@material-ui/core/Fade/Fade";
 import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
-import SvgIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";
 import DialogContent from "@material-ui/core/DialogContent/DialogContent";
@@ -20,20 +18,6 @@ import Button from "@material-ui/core/Button/Button";
 import Typography from "@material-ui/core/Typography/Typography";
 import Chip from "@material-ui/core/Chip/Chip";
 import Avatar from "@material-ui/core/Avatar/Avatar";
-
-class ExtPickerDialog extends React.Component {
-
-  constructor (props) {
-    super(props)
-
-    this.ui = props.ui;
-  }
-
-  render () {
-    return <ExtDocPickerLayout ui={this.ui}/>;
-  }
-
-}
 
 const dataMode = {
   SINGLE: 'single',
@@ -45,16 +29,16 @@ const galleryType = {
   LIST: 'List'
 }
 
-class ExtDocPickerLayout extends React.Component {
+class ExtPickerDialog extends React.Component {
 
   constructor (props) {
-    super(props);
+    super(props)
+
+    this.ui = props.ui;
 
     this.onScroll = this.onScroll.bind(this);
     this.onOk = this.onOk.bind(this);
-    // this.deleteItem = this.deleteItem.bind(this);
 
-    this.ui = props.ui;
     this.extensionConfig = JSON.parse(this.ui.extension.config);
     this.application = this.extensionConfig.application;
     if (this.extensionConfig.dataMode === dataMode.SINGLE) {
@@ -65,9 +49,9 @@ class ExtDocPickerLayout extends React.Component {
     this.urlEndpoint = this.ui.baseUrl + 'edp/' + this.application;
     this.state = {
       items: [],
-      query: 'hippo',
+      query: this.extensionConfig.query,
       page: 1,
-      pageSize: 10,
+      pageSize: this.extensionConfig.pageSize,
       isLoading: false,
       hasMore: true,
       selectedItems: [],
@@ -174,14 +158,14 @@ class ExtDocPickerLayout extends React.Component {
             onChange={event => this.changeQuery(event.target.value)}
           />
           {/*<IconButton disabled={true}>*/}
-            {/*<SvgIcon>*/}
-              {/*<path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>*/}
-            {/*</SvgIcon>*/}
+          {/*<SvgIcon>*/}
+          {/*<path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>*/}
+          {/*</SvgIcon>*/}
           {/*</IconButton>*/}
           {/*<IconButton disabled={true}>*/}
-            {/*<SvgIcon>*/}
-              {/*<path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>*/}
-            {/*</SvgIcon>*/}
+          {/*<SvgIcon>*/}
+          {/*<path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>*/}
+          {/*</SvgIcon>*/}
           {/*</IconButton>*/}
         </Toolbar>
       </AppBar>
@@ -224,7 +208,7 @@ class ExtDocPickerLayout extends React.Component {
                   size={'small'}
                   avatar={<Avatar src={p.image ? p.image : 'default'}></Avatar>}
                   label={p.title}
-                  // onDelete={this.deleteItem(p)}
+              // onDelete={this.deleteItem(p)}
             />
           )}
         </div>

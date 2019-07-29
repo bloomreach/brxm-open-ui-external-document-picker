@@ -19,7 +19,7 @@ definitions:
     /hippo:configuration/hippo:frontend/cms/ui-extensions/externaldocumentpicker:
       jcr:primaryType: frontend:uiExtension
       frontend:config: '{"dataMode":"multiple","title":"Unsplashed Image Picker","size":"large",
-        "application": "unsplashed"}'
+        "application": "unsplashed", "query": "hippo", "pageSize" :"16"}'
       frontend:displayName: External Document Picker
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
