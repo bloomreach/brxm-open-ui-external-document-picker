@@ -1,20 +1,25 @@
 package org.example.beans;
 
 import java.util.Calendar;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
+import com.bloomreach.site.openui.rest.unsplashed.beans.Unsplashed;
+
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.onehippo.cms7.essentials.components.rest.adapters.HippoHtmlAdapter;
 import org.onehippo.cms7.essentials.components.rest.adapters.HippoGalleryImageAdapter;
+import org.onehippo.cms7.essentials.components.rest.adapters.HippoHtmlAdapter;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
-/** 
+/**
  * TODO: Beanwriter: Failed to create getter for node type: unsplashedpicker:unsplashed
  */
 @XmlRootElement(name = "newsdocument")
@@ -22,7 +27,7 @@ import org.onehippo.cms7.essentials.components.rest.adapters.HippoGalleryImageAd
 @HippoEssentialsGenerated(internalName = "myproject:newsdocument")
 @Node(jcrType = "myproject:newsdocument")
 public class NewsDocument extends HippoDocument {
-    /** 
+    /**
      * The document type of the news document.
      */
     public static final String DOCUMENT_TYPE = "myproject:newsdocument";
@@ -35,8 +40,9 @@ public class NewsDocument extends HippoDocument {
     private static final String AUTHOR = "myproject:author";
     private static final String SOURCE = "myproject:source";
 
-    /** 
+    /**
      * Get the title of the document.
+     *
      * @return the title
      */
     @XmlElement
@@ -45,8 +51,9 @@ public class NewsDocument extends HippoDocument {
         return getSingleProperty(TITLE);
     }
 
-    /** 
+    /**
      * Get the date of the document.
+     *
      * @return the date
      */
     @XmlElement
@@ -55,8 +62,9 @@ public class NewsDocument extends HippoDocument {
         return getSingleProperty(DATE);
     }
 
-    /** 
+    /**
      * Get the introduction of the document.
+     *
      * @return the introduction
      */
     @XmlElement
@@ -65,8 +73,9 @@ public class NewsDocument extends HippoDocument {
         return getSingleProperty(INTRODUCTION);
     }
 
-    /** 
+    /**
      * Get the image of the document.
+     *
      * @return the image
      */
     @XmlJavaTypeAdapter(HippoGalleryImageAdapter.class)
@@ -76,8 +85,9 @@ public class NewsDocument extends HippoDocument {
         return getLinkedBean(IMAGE, HippoGalleryImageSet.class);
     }
 
-    /** 
+    /**
      * Get the main content of the document.
+     *
      * @return the content
      */
     @XmlJavaTypeAdapter(HippoHtmlAdapter.class)
@@ -87,8 +97,9 @@ public class NewsDocument extends HippoDocument {
         return getHippoHtml(CONTENT);
     }
 
-    /** 
+    /**
      * Get the location of the document.
+     *
      * @return the location
      */
     @XmlElement
@@ -97,8 +108,9 @@ public class NewsDocument extends HippoDocument {
         return getSingleProperty(LOCATION);
     }
 
-    /** 
+    /**
      * Get the author of the document.
+     *
      * @return the author
      */
     @XmlElement
@@ -107,13 +119,18 @@ public class NewsDocument extends HippoDocument {
         return getSingleProperty(AUTHOR);
     }
 
-    /** 
+    /**
      * Get the source of the document.
+     *
      * @return the source
      */
     @XmlElement
     @HippoEssentialsGenerated(internalName = "myproject:source")
     public String getSource() {
         return getSingleProperty(SOURCE);
+    }
+
+    public String[] getImages() {
+        return getBean("myproject:unsplashed", Unsplashed.class).getImages();
     }
 }

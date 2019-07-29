@@ -60,6 +60,7 @@ class App extends React.Component {
   handleDelete = itemToDelete => () => {
     const items = this.state.items.filter(value => value.id !== itemToDelete.id);
     this.setState({items: items});
+    this.ui.document.field.setValue(JSON.stringify(items));
   };
 
   async openDialog () {
@@ -77,7 +78,6 @@ class App extends React.Component {
         const items = [];
         await this.ui.document.field.setValue(JSON.stringify(items));
       }else{
-
         this.setState({items: response});
         const items = JSON.stringify(response);
         await this.ui.document.field.setValue(items);

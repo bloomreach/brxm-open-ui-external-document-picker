@@ -1,4 +1,4 @@
-package com.bloomreach.cms.openui.rest.unsplashed.beans;
+package com.bloomreach.site.openui.rest.unsplashed.beans;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoCompound;

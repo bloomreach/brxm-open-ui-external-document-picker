@@ -50,6 +50,7 @@
     <param-value>classpath*:org/example/**/*.class
       ,classpath*:org/onehippo/**/*.class
       ,classpath*:com/onehippo/**/*.class
+      ,classpath*:com/bloomreach/site/openui/**/*.class
       ,classpath*:org/onehippo/forge/**/*.class
     </param-value>
   </context-param>

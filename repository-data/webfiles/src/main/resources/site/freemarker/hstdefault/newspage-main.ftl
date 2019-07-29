@@ -33,6 +33,13 @@
       </#if>
     </figure>
   </#if>
+  <div>
+    <ul>
+      <#list document.images as img>
+          <img width="300" src="${img}" />
+      </#list>
+    </ul>
+  </div>
   <@hst.html hippohtml=document.content/>
 </article>
 </#if>
