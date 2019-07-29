@@ -24,3 +24,5 @@ definitions:
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
       frontend:url: http://localhost:3002
+#    /hippo:configuration/hippo:frontend/cms/ui-extensions/unsplashedpicker:
+#      frontend:url: http://brxm-extdoc-pickerv0.1.s3-website-eu-west-1.amazonaws.com/
