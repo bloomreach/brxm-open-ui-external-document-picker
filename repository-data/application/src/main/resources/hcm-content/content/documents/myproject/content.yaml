@@ -1,0 +1,214 @@
+/content/documents/myproject/content:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: eb7dae0c-e5bb-4755-a131-4df6e7e9bf61
+  hippostd:foldertype: [new-content-document, new-content-folder]
+  hippotranslation:id: fabfccd5-da76-461c-ba00-14dd90f9db38
+  hippotranslation:locale: en
+  /sample-document:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 64ab4648-0c20-40d2-9f18-d7a394f0334b
+    hippo:name: Sample document
+    hippo:versionHistory: f13c77b9-67a1-49eb-bc9a-2f2b9535e2b4
+    /sample-document[1]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: b8a08191-a49e-453f-8d2a-10439a9178a2
+      hippo:availability: [live]
+      hippostd:holder: admin
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-07-26T09:44:40.708+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2019-07-26T09:44:48.234+02:00
+      hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
+      hippotranslation:locale: en
+      myproject:externaldockerpicker: '[{"id":"KMn4VEeEPR8","description":null,"title":"seashore
+        during golden hour","data":{"id":"KMn4VEeEPR8","created_at":"2017-10-09T01:04:47-04:00","updated_at":"2019-07-21T01:04:40-04:00","width":4621,"height":3072,"color":"#4D4837","description":"The
+        last night of a two week stay on the North Shore of Oahu, Hawaii.","alt_description":"seashore
+        during golden hour","urls":{"raw":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/KMn4VEeEPR8","html":"https://unsplash.com/photos/KMn4VEeEPR8","download":"https://unsplash.com/photos/KMn4VEeEPR8/download","download_location":"https://api.unsplash.com/photos/KMn4VEeEPR8/download"},"tags":[{"title":"beach"},{"title":"sea"},{"title":"ocean"},{"title":"nature"},{"title":"water"},{"title":"travel"},{"title":"coast"},{"title":"outdoors"},{"title":"waialua"},{"title":"north
+        shore"},{"title":"united states"},{"title":"background"},{"title":"hawaii"},{"title":"landscape"},{"title":"wallpaper"},{"title":"website"},{"title":"shoreline"},{"title":"yellow"},{"title":"waves"},{"title":"foam"}]},"image":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},{"id":"BpYYsloFzTY","description":null,"title":null,"data":{"id":"BpYYsloFzTY","created_at":"2019-07-05T11:02:55-04:00","updated_at":"2019-07-06T15:05:42-04:00","width":4000,"height":6000,"color":"#E1DAD0","description":null,"alt_description":"gray
+        turtle near pond surrounded with grasses","urls":{"raw":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/BpYYsloFzTY","html":"https://unsplash.com/photos/BpYYsloFzTY","download":"https://unsplash.com/photos/BpYYsloFzTY/download","download_location":"https://api.unsplash.com/photos/BpYYsloFzTY/download"},"tags":[{"title":"outdoors"},{"title":"turtle"},{"title":"sea
+        life"},{"title":"reptile"},{"title":"animal"},{"title":"water"},{"title":"nature"},{"title":"land"},{"title":"waterfowl"},{"title":"bird"},{"title":"pond"},{"title":"marsh"},{"title":"bog"},{"title":"swamp"},{"title":"teal"},{"title":"stork"},{"title":"crocodile"},{"title":"alligator"},{"title":"mallard"},{"title":"duck"}]},"image":"https://images.unsplash.com/photo-1562338962-03e01ece6908?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},{"id":"d0qt3L9LBvc","description":null,"title":null,"data":{"id":"d0qt3L9LBvc","created_at":"2019-07-14T19:53:43-04:00","updated_at":"2019-07-17T15:05:35-04:00","width":6000,"height":4000,"color":"#9AE3ED","description":null,"alt_description":"close-up
+        photography of body of water","urls":{"raw":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/d0qt3L9LBvc","html":"https://unsplash.com/photos/d0qt3L9LBvc","download":"https://unsplash.com/photos/d0qt3L9LBvc/download","download_location":"https://api.unsplash.com/photos/d0qt3L9LBvc/download"},"tags":[{"title":"water"},{"title":"outdoors"},{"title":"nature"},{"title":"ripple"},{"title":"rock"},{"title":"sea"},{"title":"ocean"},{"title":"aquatic"},{"title":"animal"},{"title":"mammal"},{"title":"stones"},{"title":"flow"},{"title":"land"},{"title":"river"},{"title":"sand"},{"title":"sea
+        life"},{"title":"shoreline"},{"title":"beach"},{"title":"coast"},{"title":"mountain"}]},"image":"https://images.unsplash.com/photo-1563148336-bc0c3296dc87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},{"id":"XEURsvdKXtE","description":null,"title":"silhouette
+        of person under cloudy sky during daytim","data":{"id":"XEURsvdKXtE","created_at":"2019-07-07T11:56:46-04:00","updated_at":"2019-07-13T15:02:17-04:00","width":5184,"height":3456,"color":"#FDFCFC","description":"Seaside
+        Moonscape","alt_description":"silhouette of person under cloudy sky during
+        daytim","urls":{"raw":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/XEURsvdKXtE","html":"https://unsplash.com/photos/XEURsvdKXtE","download":"https://unsplash.com/photos/XEURsvdKXtE/download","download_location":"https://api.unsplash.com/photos/XEURsvdKXtE/download"},"tags":[{"title":"human"},{"title":"person"},{"title":"nature"},{"title":"outdoors"},{"title":"animal"},{"title":"mammal"},{"title":"plant"},{"title":"herd"},{"title":"ground"},{"title":"water"},{"title":"river"},{"title":"sky"},{"title":"flare"},{"title":"light"},{"title":"mud"},{"title":"sea"},{"title":"ocean"},{"title":"wildlife"},{"title":"soil"},{"title":"landscape"}]},"image":"https://images.unsplash.com/photo-1562514958-8e9fdb384c72?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},{"id":"ViNS4X3sBoU","description":null,"title":"hippopotamus
+        mascot riding red car toy beside the street","data":{"id":"ViNS4X3sBoU","created_at":"2017-10-25T13:10:15-04:00","updated_at":"2019-06-14T01:11:47-04:00","width":4896,"height":3264,"color":"#F4F5F5","description":"Hyppo
+        Car","alt_description":"hippopotamus mascot riding red car toy beside the
+        street","urls":{"raw":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/ViNS4X3sBoU","html":"https://unsplash.com/photos/ViNS4X3sBoU","download":"https://unsplash.com/photos/ViNS4X3sBoU/download","download_location":"https://api.unsplash.com/photos/ViNS4X3sBoU/download"},"tags":[{"title":"car"},{"title":"automobile"},{"title":"vehicle"},{"title":"transportation"},{"title":"netherlands"},{"title":"tilburg"},{"title":"street"},{"title":"building"},{"title":"scale"},{"title":"pedestrian"},{"title":"human"},{"title":"person"},{"title":"toy"},{"title":"old"},{"title":"path"},{"title":"pavement"},{"title":"urban"},{"title":"city"},{"title":"town"},{"title":"road"}]},"image":"https://images.unsplash.com/photo-1508951381092-7b753dc71d95?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"}]'
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+    /sample-document[2]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 3839a720-b324-4997-8171-ebc0f86c4a33
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-07-29T08:58:33.512+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
+      hippotranslation:locale: en
+      myproject:externaldockerpicker: '[{"id":"1O1hLL-v7Hc","title":"gray hipopotamos","image":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"1O1hLL-v7Hc","created_at":"2017-07-12T02:53:16-04:00","updated_at":"2019-07-28T01:25:53-04:00","width":7952,"height":5304,"color":"#34261A","description":"Yawning
+        hippo","alt_description":"gray hipopotamos","urls":{"raw":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/1O1hLL-v7Hc","html":"https://unsplash.com/photos/1O1hLL-v7Hc","download":"https://unsplash.com/photos/1O1hLL-v7Hc/download","download_location":"https://api.unsplash.com/photos/1O1hLL-v7Hc/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"hippopotamus"},{"title":"yawn"},{"title":"teeth"},{"title":"face"},{"title":"wild"},{"title":"africa"},{"title":"african"},{"title":"herbivorous"},{"title":"safari"},{"title":"zoo"},{"title":"dangerous"},{"title":"head"},{"title":"attack"},{"title":"wild
+        animal"},{"title":"open mouth"}]}},{"id":"Li1aC1AJ7Ak","title":"hippopotamus
+        swimming","image":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"Li1aC1AJ7Ak","created_at":"2018-09-07T09:49:11-04:00","updated_at":"2019-07-21T01:32:35-04:00","width":5052,"height":3065,"color":"#DAD6DB","description":"HYPPOS","alt_description":"hippopotamus
+        swimming","urls":{"raw":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/Li1aC1AJ7Ak","html":"https://unsplash.com/photos/Li1aC1AJ7Ak","download":"https://unsplash.com/photos/Li1aC1AJ7Ak/download","download_location":"https://api.unsplash.com/photos/Li1aC1AJ7Ak/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"murchison
+        falls uganda"},{"title":"uganda"},{"title":"hippopotamus"},{"title":"swimming"},{"title":"swim"},{"title":"outdoor"},{"title":"sunlight"},{"title":"closeup"},{"title":"baby"},{"title":"family"},{"title":"water"},{"title":"safari"},{"title":"hyppo"}]}},{"id":"JWlY4Z4_mCI","title":"macro
+        shot of black animal","image":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"JWlY4Z4_mCI","created_at":"2017-08-08T01:32:49-04:00","updated_at":"2019-07-28T01:06:02-04:00","width":3411,"height":2443,"color":"#B4CAEE","description":"My
+        business and job are based on adventure travel. I lead adventure holidays
+        (mostly walking, hiking and cultural experiences) which puts me in many places
+        around the world to take fantastic images. The challenge is that I am usually
+        working, so taking pictures, though it is my passion, is mostly an afterthought.
+        I take them when I can and have little time to set up a shot, think through
+        a proper setting, or even letting a scene fully develop before I start pointing
+        and shooting. So I take advantage whenever and wherever I can. Hope you find
+        one to like!","alt_description":"macro shot of black animal","urls":{"raw":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/JWlY4Z4_mCI","html":"https://unsplash.com/photos/JWlY4Z4_mCI","download":"https://unsplash.com/photos/JWlY4Z4_mCI/download","download_location":"https://api.unsplash.com/photos/JWlY4Z4_mCI/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"tanzania"},{"title":"serengeti
+        national park"},{"title":"hippopotamus"},{"title":"safari photography"},{"title":"african
+        wildlife"},{"title":"big 5"},{"title":"africa big five"},{"title":"south africa"},{"title":"massai
+        mara"},{"title":"serengeti"},{"title":"kenya"},{"title":"africa"},{"title":"safari"},{"title":"hippopatamus"}]}}]'
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+    /sample-document[3]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 378fa84b-3abc-47e9-b779-37655d0e3b7d
+      hippo:availability: []
+      hippostd:holder: admin
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-07-29T08:58:37.045+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
+      hippotranslation:locale: en
+      myproject:externaldockerpicker: '[{"id":"1O1hLL-v7Hc","title":"gray hipopotamos","image":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"1O1hLL-v7Hc","created_at":"2017-07-12T02:53:16-04:00","updated_at":"2019-07-28T01:25:53-04:00","width":7952,"height":5304,"color":"#34261A","description":"Yawning
+        hippo","alt_description":"gray hipopotamos","urls":{"raw":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/1O1hLL-v7Hc","html":"https://unsplash.com/photos/1O1hLL-v7Hc","download":"https://unsplash.com/photos/1O1hLL-v7Hc/download","download_location":"https://api.unsplash.com/photos/1O1hLL-v7Hc/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"hippopotamus"},{"title":"yawn"},{"title":"teeth"},{"title":"face"},{"title":"wild"},{"title":"africa"},{"title":"african"},{"title":"herbivorous"},{"title":"safari"},{"title":"zoo"},{"title":"dangerous"},{"title":"head"},{"title":"attack"},{"title":"wild
+        animal"},{"title":"open mouth"}]}},{"id":"Li1aC1AJ7Ak","title":"hippopotamus
+        swimming","image":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"Li1aC1AJ7Ak","created_at":"2018-09-07T09:49:11-04:00","updated_at":"2019-07-21T01:32:35-04:00","width":5052,"height":3065,"color":"#DAD6DB","description":"HYPPOS","alt_description":"hippopotamus
+        swimming","urls":{"raw":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1536328105599-b20961f76903?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/Li1aC1AJ7Ak","html":"https://unsplash.com/photos/Li1aC1AJ7Ak","download":"https://unsplash.com/photos/Li1aC1AJ7Ak/download","download_location":"https://api.unsplash.com/photos/Li1aC1AJ7Ak/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"murchison
+        falls uganda"},{"title":"uganda"},{"title":"hippopotamus"},{"title":"swimming"},{"title":"swim"},{"title":"outdoor"},{"title":"sunlight"},{"title":"closeup"},{"title":"baby"},{"title":"family"},{"title":"water"},{"title":"safari"},{"title":"hyppo"}]}},{"id":"JWlY4Z4_mCI","title":"macro
+        shot of black animal","image":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"JWlY4Z4_mCI","created_at":"2017-08-08T01:32:49-04:00","updated_at":"2019-07-28T01:06:02-04:00","width":3411,"height":2443,"color":"#B4CAEE","description":"My
+        business and job are based on adventure travel. I lead adventure holidays
+        (mostly walking, hiking and cultural experiences) which puts me in many places
+        around the world to take fantastic images. The challenge is that I am usually
+        working, so taking pictures, though it is my passion, is mostly an afterthought.
+        I take them when I can and have little time to set up a shot, think through
+        a proper setting, or even letting a scene fully develop before I start pointing
+        and shooting. So I take advantage whenever and wherever I can. Hope you find
+        one to like!","alt_description":"macro shot of black animal","urls":{"raw":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1502170154101-c38e5d49997b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/JWlY4Z4_mCI","html":"https://unsplash.com/photos/JWlY4Z4_mCI","download":"https://unsplash.com/photos/JWlY4Z4_mCI/download","download_location":"https://api.unsplash.com/photos/JWlY4Z4_mCI/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"wildlife"},{"title":"tanzania"},{"title":"serengeti
+        national park"},{"title":"hippopotamus"},{"title":"safari photography"},{"title":"african
+        wildlife"},{"title":"big 5"},{"title":"africa big five"},{"title":"south africa"},{"title":"massai
+        mara"},{"title":"serengeti"},{"title":"kenya"},{"title":"africa"},{"title":"safari"},{"title":"hippopatamus"}]}}]'
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+  /another-sample-document:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 9caea793-42b1-4f3e-a8e5-d58f810ce2ef
+    hippo:name: Another sample document
+    /another-sample-document:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2ea8c13b-9e73-4462-a7f2-984b38a4a2f8
+      hippo:availability: [live, preview]
+      hippostd:holder: admin
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2014-03-25T16:57:00+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2014-03-25T16:57:00+01:00
+      hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
+      hippotranslation:locale: en
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Another Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
