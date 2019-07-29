@@ -19,6 +19,8 @@ class App extends React.Component {
     this.openDialog = this.openDialog.bind(this);
 
     this.ui = props.ui;
+
+    console.log(this.ui);
     this.state = {items: []};
 
     this.extensionConfig = JSON.parse(this.ui.extension.config);
@@ -39,6 +41,7 @@ class App extends React.Component {
       const brDocument = await ui.document.get();
       this.mode = brDocument.mode;
       this.setState({mode: this.mode});
+      console.log(brDocument);
 
       const value = await ui.document.field.getValue();
       let items = JSON.parse(value);

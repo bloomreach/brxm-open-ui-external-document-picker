@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: b93580c4-81ca-4553-a424-586d27e2deba
+          jcr:uuid: 809c407b-d75e-470f-85b2-289bb9aa9de5
           hipposysedit:node: true
           hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
@@ -80,12 +80,20 @@ definitions:
             hipposysedit:path: myproject:location
             hipposysedit:primary: false
             hipposysedit:type: String
+          /unsplashed:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: myproject:unsplashed
+            hipposysedit:primary: false
+            hipposysedit:type: unsplashedpicker:unsplashed
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: myproject:newsdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 3b103d35-436e-4dd8-9944-5bd90bf9cd1f
+          jcr:uuid: 9743b31c-869e-4844-bc92-f37135c204f6
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft
@@ -99,15 +107,22 @@ definitions:
           myproject:documenttype: news
           myproject:introduction: ''
           myproject:title: ''
+          myproject:author: ''
+          myproject:location: ''
+          myproject:source: ''
           /myproject:content:
             jcr:primaryType: hippostd:html
-            hippostd:content: <html><body></body></html>
+            hippostd:content: ''
           /myproject:image:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /myproject:unsplashed:
+            jcr:primaryType: unsplashedpicker:unsplashed
+            unsplashedpicker:images: []
+            unsplashedpicker:unsplashedimgs: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -186,5 +201,14 @@ definitions:
             field: image
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /unsplashed:
+            jcr:primaryType: frontend:plugin
+            caption: unsplashed
+            field: unsplashed
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

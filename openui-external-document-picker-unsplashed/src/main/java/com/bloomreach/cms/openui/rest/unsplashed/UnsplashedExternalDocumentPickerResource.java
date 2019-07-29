@@ -42,15 +42,14 @@ public class UnsplashedExternalDocumentPickerResource extends BaseRestResource i
         pathVars.put("page", page);
 
         ResourceServiceBroker broker = CrispHstServices.getDefaultResourceServiceBroker(HstServices.getComponentManager());
-        Resource content = broker.resolve("unsplashed", "?query={query}&per_page={per_page}&page={page}&client_id=56203cf6dbc6c347a71b1614c517ee922a662aea9672d267e5380d32221aa755", pathVars);
+        Resource content = broker.resolve("unsplashed", "&query={query}&per_page={per_page}&page={page}", pathVars);
         Resource results = (Resource)content.getValue("results");
 
         ResourceCollection children = results.getChildren();
-        ResourceBeanMapper unsplasehd = broker.getResourceBeanMapper("unsplashed");
+        ResourceBeanMapper unsplashed = broker.getResourceBeanMapper("unsplashed");
 
-        Collection<UnsplashedItem> items = unsplasehd.mapCollection(children, UnsplashedItem.class);
+        return unsplashed.mapCollection(children, UnsplashedItem.class).stream().map(unsplashedItem -> new UnsplashedPickerItemAdapter(unsplashedItem)).collect(Collectors.toList());
 
-        return items.stream().map(unsplashedItem -> new UnsplashedPickerItemAdapter(unsplashedItem)).collect(Collectors.toList());
     }
 
 

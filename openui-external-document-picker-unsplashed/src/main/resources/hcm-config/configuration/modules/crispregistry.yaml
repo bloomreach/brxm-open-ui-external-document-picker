@@ -7,10 +7,11 @@ definitions:
         \ xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd\"\
         >\r\n   <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
         \ class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
-        >\r\n      <property name=\"cacheEnabled\" value=\"true\" />\r\n      <property\
-        \ name=\"baseUri\" value=\"https://api.unsplash.com/search/photos\" />\r\n\
-        \      <property name=\"restTemplate\">\r\n         <bean class=\"org.springframework.web.client.RestTemplate\"\
-        >\r\n            <property name=\"requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
+        >\r\n      <property name=\"cacheEnabled\" value=\"${cache.enabled}\" />\r\
+        \n      <property name=\"baseUri\" value=\"https://api.unsplash.com/search/photos?client_id=${client.id}\"\
+        \ />\r\n      <property name=\"restTemplate\">\r\n         <bean class=\"\
+        org.springframework.web.client.RestTemplate\">\r\n            <property name=\"\
+        requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
         \ />\r\n         </bean>\r\n      </property>\r\n      <property name=\"resourceDataCache\"\
         >\r\n         <bean class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
         >\r\n            <constructor-arg>\r\n               <bean class=\"org.springframework.cache.ehcache.EhCacheCache\"\
@@ -24,3 +25,5 @@ definitions:
         5\" />\r\n                     </bean>\r\n                  </constructor-arg>\r\
         \n               </bean>\r\n            </constructor-arg>\r\n         </bean>\r\
         \n      </property>\r\n   </bean>\r\n</beans>"
+      crisp:propnames: [cache.enabled, client.id]
+      crisp:propvalues: ['true', 56203cf6dbc6c347a71b1614c517ee922a662aea9672d267e5380d32221aa755]

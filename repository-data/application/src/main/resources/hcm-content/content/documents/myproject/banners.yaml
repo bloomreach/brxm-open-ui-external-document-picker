@@ -105,16 +105,8 @@
       hippotranslation:id: 918edc40-ba1d-4a51-89da-dad6ff088283
       hippotranslation:locale: en
       myproject:extdocpicker: adem, hannah
-      myproject:md: |-
-        ***
-
-        ## Hello markdown editor
-
-        **Hello**
-
-        **BloomREach CMS**
-
-        ***
+      myproject:md: "***\r\n\r\n## Hello markdown editor\r\n\r\n**Hello**\r\n\r\n\
+        **BloomREach CMS**\r\n\r\n***"
       myproject:title: Sample banner
       /myproject:content:
         jcr:primaryType: hippostd:html

@@ -16,9 +16,9 @@ public class UnsplashedPickerItemAdapter implements PickerItem<UnsplashedItem> {
     public UnsplashedPickerItemAdapter(final UnsplashedItem unsplashedItem) {
         this.data = unsplashedItem;
         this.id = unsplashedItem.getID();
-        this.title = StringUtils.isEmpty(unsplashedItem.getDescription()) ? unsplashedItem.getDescription() : unsplashedItem.getAltDescription();
+        this.title = unsplashedItem.getAltDescription();
         this.image = unsplashedItem.getUrls().getRegular();
-        this.description = unsplashedItem.getAltDescription();
+        this.description = unsplashedItem.getDescription();
     }
 
     public UnsplashedPickerItemAdapter() {
