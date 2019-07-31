@@ -48,7 +48,9 @@ public class UnsplashedExternalDocumentPickerResource extends BaseRestResource i
         ResourceCollection children = results.getChildren();
         ResourceBeanMapper unsplashed = broker.getResourceBeanMapper("unsplashed");
 
-        return unsplashed.mapCollection(children, UnsplashedItem.class).stream().map(unsplashedItem -> new UnsplashedPickerItemAdapter(unsplashedItem)).collect(Collectors.toList());
+        return unsplashed.mapCollection(children, UnsplashedItem.class)
+                .stream().map(unsplashedItem -> new UnsplashedPickerItemAdapter(unsplashedItem))
+                .collect(Collectors.toList());
 
     }
 
