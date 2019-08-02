@@ -57,4 +57,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ui.extension: unsplashedpicker
+              ui.extension: unsplashed

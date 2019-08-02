@@ -18,6 +18,8 @@ import Button from "@material-ui/core/Button/Button";
 import Typography from "@material-ui/core/Typography/Typography";
 import Chip from "@material-ui/core/Chip/Chip";
 import Avatar from "@material-ui/core/Avatar/Avatar";
+import IconButton from "@material-ui/core/IconButton/IconButton";
+import SvgIcon from "@material-ui/core/SvgIcon/SvgIcon";
 
 const dataMode = {
   SINGLE: 'single',
@@ -58,6 +60,8 @@ class ExtPickerDialog extends React.Component {
       open: false,
       galleryType: galleryType.GALLERY
     };
+
+    this.clientId = this.extensionConfig.clientId;
 
     this.useStyles = makeStyles(theme => ({
       grow: {
@@ -121,7 +125,7 @@ class ExtPickerDialog extends React.Component {
 
   async fetchItems (query, page, pageSize) {
     this.setState({isLoading: true});
-    const fetched = await fetch(this.urlEndpoint + '/search?query=' + query + '&page=' + page + '&pageSize=' + pageSize)
+    const fetched = await fetch(this.urlEndpoint + '/search?query=' + query + '&page=' + page + '&pageSize=' + pageSize + "&clientId=" + this.clientId)
       .then(response => response.json());
     this.setState({isLoading: false});
     return fetched;
@@ -157,16 +161,16 @@ class ExtPickerDialog extends React.Component {
             fullWidth
             onChange={event => this.changeQuery(event.target.value)}
           />
-          {/*<IconButton disabled={true}>*/}
-          {/*<SvgIcon>*/}
-          {/*<path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>*/}
-          {/*</SvgIcon>*/}
-          {/*</IconButton>*/}
-          {/*<IconButton disabled={true}>*/}
-          {/*<SvgIcon>*/}
-          {/*<path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>*/}
-          {/*</SvgIcon>*/}
-          {/*</IconButton>*/}
+          <IconButton disabled={true}>
+            <SvgIcon>
+              <path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
+            </SvgIcon>
+          </IconButton>
+          <IconButton disabled={true}>
+            <SvgIcon>
+              <path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>
+            </SvgIcon>
+          </IconButton>
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>

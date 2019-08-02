@@ -77,11 +77,14 @@
 
   <bean id="jaxrsRestOpenUiResourceProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">
     <constructor-arg value="java.util.List"/>
-    <property name="targetClass" value="org.apache.commons.collections.ListUtils"/>
-    <property name="targetMethod" value="union"/>
+    <property name="targetClass" value="com.bloomreach.cms.openui.util.ListUtils"/>
+    <property name="targetMethod" value="joinLists"/>
     <property name="arguments">
       <list>
         <ref bean="customRestOpenUiResourceProviders"/>
+        <ref bean="customRestOpenUiResourceProviders2"/>
+        <ref bean="customRestOpenUiResourceProviders3"/>
+        <ref bean="customRestOpenUiResourceProviders4"/>
         <ref bean="defaultRestOpenUiResourceProviders"/>
       </list>
     </property>
@@ -105,9 +108,33 @@
   <bean id="customRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
-
       </list>
     </property>
+  </bean>
+
+  <bean id="customRestOpenUiResourceProviders2" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="customRestOpenUiResourceProviders3" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="customRestOpenUiResourceProviders4" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="simpleOpenUiSecurityValve" parent="abstractValve" class="com.bloomreach.cms.openui.security.valve.SimpleOpenUiSecurityValve">
+    <property name="valveName" value="simpleOpenUiSecurityValve"/>
   </bean>
 
   <!-- Pipelining -->
@@ -128,6 +155,7 @@
           <property name="initializationValves">
             <list>
               <ref bean="initializationValve"/>
+              <ref bean="simpleOpenUiSecurityValve"/>
               <ref bean="cmsSecurityValve"/>
             </list>
           </property>
