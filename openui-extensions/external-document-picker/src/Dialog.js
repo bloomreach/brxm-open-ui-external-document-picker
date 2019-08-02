@@ -145,7 +145,6 @@ class ExtPickerDialog extends React.Component {
     const {items} = this.state || [];
     const {selectedItems} = this.state || [];
     const classes = this.useStyles;
-    const isSingleMode = this.dataMode === dataMode.SINGLE;
     const isMultiMode = this.dataMode === dataMode.MULTIPLE;
 
     return <Dialog fullScreen open={true}>
@@ -212,7 +211,6 @@ class ExtPickerDialog extends React.Component {
                   size={'small'}
                   avatar={<Avatar src={p.image ? p.image : 'default'}></Avatar>}
                   label={p.title}
-              // onDelete={this.deleteItem(p)}
             />
           )}
         </div>
@@ -221,39 +219,6 @@ class ExtPickerDialog extends React.Component {
       }
     </Dialog>
   }
-}
-
-{/*<List>*/
-}
-{/*{users.map((p, id) =>*/
-}
-{/*<ListItem alignItems="flex-start" key={id}>
-            <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src={p.image ? p.image : 'default'}/>
-            </ListItemAvatar>
-            <ListItemText
-               primary={p.title ? p.title : ''}
-               secondary={
-                 <React.Fragment>
-                   <Typography
-                     component="span"
-                     variant="body2"
-                     color="textPrimary">
-                     {p.description ? p.description : ''}
-                   </Typography>
-                 </React.Fragment>
-               }
-             />
-             {this.containsObject(p, this.state.selectedUsers) ?
-               <Fab color="secondary" aria-label="Delete">
-                 <DeleteIcon onClick={event => this.deleteItem(p)}/>
-               </Fab> :
-               <Fab color="primary" aria-label="Add">
-                 <AddIcon onClick={event => this.addItem(p)}/>
-               </Fab>}
-           </ListItem>
-           }
-         </List>*/
 }
 
 export default ExtPickerDialog;
