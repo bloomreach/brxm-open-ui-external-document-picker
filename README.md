@@ -1,3 +1,9 @@
+Build External Document Picker Dependencies
+===============
+
+    cd openui-external-document-picker
+    mvn clean install
+
 Running Locally
 ===============
 
