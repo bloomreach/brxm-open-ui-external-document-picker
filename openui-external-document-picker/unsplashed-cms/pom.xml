@@ -17,6 +17,7 @@
       <groupId>org.example</groupId>
       <artifactId>openui-external-document-picker-api</artifactId>
       <version>${project.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
