@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: d6056971-0379-4574-9660-a4c233a33815
+          jcr:uuid: df6ff8a7-1d38-4318-8640-9a97fa198283
           hipposysedit:node: true
           hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
@@ -47,20 +47,20 @@ definitions:
             hipposysedit:path: myproject:publicationdate
             hipposysedit:primary: false
             hipposysedit:type: Date
-          /externaldockerpicker:
+          /giphyimagepicker:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: myproject:externaldockerpicker
+            hipposysedit:path: myproject:giphyimagepicker
             hipposysedit:primary: false
-            hipposysedit:type: OpenUiString
+            hipposysedit:type: giphy:giphyimagepicker
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: myproject:contentdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 2074cff5-067c-4199-b961-abbd0f18a4bc
+          jcr:uuid: 2d655c66-3acf-452c-8f45-5d45a8b1994c
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft
@@ -73,10 +73,13 @@ definitions:
           myproject:introduction: ''
           myproject:publicationdate: 0001-01-01T13:00:00+01:00
           myproject:title: ''
-          myproject:externaldockerpicker: ''
           /myproject:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /myproject:giphyimagepicker:
+            jcr:primaryType: giphy:giphyimagepicker
+            giphy:gifs: ''
+            giphy:images: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -129,13 +132,12 @@ definitions:
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /externaldockerpicker:
+          /giphyimagepicker:
             jcr:primaryType: frontend:plugin
-            caption: External Document Picker
-            field: externaldockerpicker
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: giphyimagepicker
+            field: giphyimagepicker
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ui.extension: externaldocumentpicker

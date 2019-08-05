@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:derivatives/giphy:
+      jcr:primaryType: hipposys:deriveddefinition
+      hipposys:classname: com.bloomreach.cms.openui.rest.giphy.derived.GiphyImageFunction
+      hipposys:nodetype: giphy:giphyimagepicker
+      hipposys:serialver: 1
+      /hipposys:accessed:
+        jcr:primaryType: hipposys:propertyreferences
+        /openuid:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: giphy:gifs
+      /hipposys:derived:
+        jcr:primaryType: hipposys:propertyreferences
+        /images:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: giphy:images

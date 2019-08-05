@@ -17,18 +17,16 @@
   <packaging>pom</packaging>
 
   <properties>
-
     <hippo.version>13.3.0</hippo.version>
-
   </properties>
-
 
 
   <modules>
     <module>api</module>
     <module>unsplashed-cms</module>
     <module>unsplashed-site</module>
-
+    <module>giphy-cms</module>
+    <!--<module>giphy-site</module>-->
   </modules>
 
 </project>

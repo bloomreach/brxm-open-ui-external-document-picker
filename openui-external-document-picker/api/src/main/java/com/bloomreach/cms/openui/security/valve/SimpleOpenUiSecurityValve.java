@@ -16,9 +16,6 @@ public class SimpleOpenUiSecurityValve extends AbstractBaseOrderableValve {
 
     private static final String OPEN_UI_REGISTRY = "/hippo:configuration/hippo:frontend/cms/ui-extensions/";
 
-    private static final Pattern PATTERN = Pattern.compile("/edp/(.*?)/");
-//    private static final Pattern PATTERN = Pattern.compile("/edp/(.+?)/");
-
 
     private static void sendError(final HttpServletResponse servletResponse, final int errorCode) throws ContainerException {
         try {

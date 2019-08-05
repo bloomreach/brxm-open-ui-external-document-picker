@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hippo:namespaces/giphy:
+      jcr:primaryType: hipposysedit:namespace
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: db9f38cd-3974-4174-b104-d3b5af13b7c3

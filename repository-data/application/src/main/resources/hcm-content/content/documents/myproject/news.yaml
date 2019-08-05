@@ -193,7 +193,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
-          hippostdpubwf:lastModificationDate: 2019-08-02T13:00:39.548+02:00
+          hippostdpubwf:lastModificationDate: 2019-08-05T20:50:16.389+02:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: c2d0ab21-eb16-4997-8e04-d89661b7f133
           hippotranslation:locale: en
@@ -264,6 +264,10 @@
               a usability test","alt_description":"person holding pink sticky note","urls":{"raw":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/WC6MJ0kRzGw","html":"https://unsplash.com/photos/WC6MJ0kRzGw","download":"https://unsplash.com/photos/WC6MJ0kRzGw/download","download_location":"https://api.unsplash.com/photos/WC6MJ0kRzGw/download"},"tags":[{"title":"paper"},{"title":"pink"},{"title":"office"},{"title":"work"},{"title":"hand"},{"title":"note"},{"title":"holding"},{"title":"post
               it"},{"title":"design"},{"title":"wall"},{"title":"work space"},{"title":"website"},{"title":"word"},{"title":"business"},{"title":"business
               card"},{"title":"text"},{"title":"user research"},{"title":"user experience"},{"title":"ux"},{"title":"writing"}]}}]'
+          /myproject:giphyimagepicker:
+            jcr:primaryType: giphy:giphyimagepicker
+            giphy:gifs: ''
+            giphy:images: []
       /2013-harvest:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
