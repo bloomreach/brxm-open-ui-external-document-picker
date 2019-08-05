@@ -9,6 +9,10 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import com.bloomreach.site.openui.rest.giphy.beans.Giphy;
+import com.bloomreach.site.openui.rest.unsplashed.beans.Unsplashed;
+
 import org.onehippo.cms7.essentials.components.rest.adapters.HippoHtmlAdapter;
 
 @XmlRootElement(name = "contentdocument")
@@ -44,5 +48,9 @@ public class ContentDocument extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "myproject:externaldockerpicker")
     public String getExternaldockerpicker() {
         return getSingleProperty("myproject:externaldockerpicker");
+    }
+
+    public String[] getImages() {
+        return getBean("myproject:giphyimagepicker", Giphy.class).getImages();
     }
 }

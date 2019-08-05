@@ -14,7 +14,6 @@ public class GiphyItem {
     private String embedURL;
     private String username;
     private String source;
-//    private Rating rating;
     private String contentURL;
     private String sourceTLD;
     private String sourcePostURL;
@@ -23,7 +22,6 @@ public class GiphyItem {
     private String trendingDatetime;
     private Images images;
     private String title;
-    private Analytics analytics;
     private User user;
 
     @JsonProperty("type")
@@ -71,10 +69,6 @@ public class GiphyItem {
     @JsonProperty("source")
     public void setSource(String value) { this.source = value; }
 
-//    @JsonProperty("rating")
-//    public Rating getRating() { return rating; }
-//    @JsonProperty("rating")
-//    public void setRating(Rating value) { this.rating = value; }
 
     @JsonProperty("content_url")
     public String getContentURL() { return contentURL; }
@@ -115,11 +109,6 @@ public class GiphyItem {
     public String getTitle() { return title; }
     @JsonProperty("title")
     public void setTitle(String value) { this.title = value; }
-
-    @JsonProperty("analytics")
-    public Analytics getAnalytics() { return analytics; }
-    @JsonProperty("analytics")
-    public void setAnalytics(Analytics value) { this.analytics = value; }
 
     @JsonProperty("user")
     public User getUser() { return user; }

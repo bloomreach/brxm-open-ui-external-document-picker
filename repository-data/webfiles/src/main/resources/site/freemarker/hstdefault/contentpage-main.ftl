@@ -2,25 +2,32 @@
 
 <#-- @ftlvariable name="document" type="org.example.beans.ContentDocument" -->
 <#if document??>
-  <article class="has-edit-button">
+    <article class="has-edit-button">
     <@hst.manageContent hippobean=document />
     <h3>${document.title?html}</h3>
     <#if document.publicationDate??>
-      <p>
+        <p>
         <@fmt.formatDate value=document.publicationDate.time type="both" dateStyle="medium" timeStyle="short"/>
-      </p>
+        </p>
     </#if>
     <#if document.introduction??>
-      <p>
-      ${document.introduction?html}
-      </p>
+        <p>
+        ${document.introduction?html}
+        </p>
     </#if>
     <@hst.html hippohtml=document.content/>
-  </article>
+    <div>
+    <ul>
+    <#list document.images as img>
+        <img width="300" src="${img}" />
+    </#list>
+    </ul>
+    </div>
+    </article>
 <#-- @ftlvariable name="editMode" type="java.lang.Boolean"-->
 <#elseif editMode>
-  <div class="has-edit-button">
+    <div class="has-edit-button">
     <img src="<@hst.link path="/images/essentials/catalog-component-icons/simple-content.svg" />"> Click to edit Simple Content
     <@hst.manageContent documentTemplateQuery="new-content-document" parameterName="document" rootPath="content"/>
-  </div>
+    </div>
 </#if>

@@ -26,7 +26,7 @@
     <module>unsplashed-cms</module>
     <module>unsplashed-site</module>
     <module>giphy-cms</module>
-    <!--<module>giphy-site</module>-->
+    <module>giphy-site</module>
   </modules>
 
 </project>

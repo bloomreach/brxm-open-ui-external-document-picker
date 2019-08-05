@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: df6ff8a7-1d38-4318-8640-9a97fa198283
+          jcr:uuid: b5645341-bb51-499a-b25d-b8cb57c40618
           hipposysedit:node: true
           hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
@@ -60,7 +60,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: myproject:contentdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 2d655c66-3acf-452c-8f45-5d45a8b1994c
+          jcr:uuid: 28193a25-62c2-4cab-b9e6-5766044ece9b
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft
@@ -134,7 +134,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /giphyimagepicker:
             jcr:primaryType: frontend:plugin
-            caption: giphyimagepicker
+            caption: Giphy
             field: giphyimagepicker
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item

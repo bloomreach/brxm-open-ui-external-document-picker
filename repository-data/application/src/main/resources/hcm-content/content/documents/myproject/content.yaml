@@ -10,7 +10,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 64ab4648-0c20-40d2-9f18-d7a394f0334b
     hippo:name: Sample document
-    hippo:versionHistory: 1fa884b4-617d-4abc-af71-bd3c72794782
+    hippo:versionHistory: e9785094-ee1f-45c7-a839-454e4d8a7ae3
     /sample-document[1]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -20,9 +20,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-08-05T20:54:02.788+02:00
+      hippostdpubwf:lastModificationDate: 2019-08-05T21:48:29.399+02:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2019-08-05T20:54:05.105+02:00
+      hippostdpubwf:publicationDate: 2019-08-05T21:48:56.364+02:00
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
       myproject:externaldockerpicker: '[{"id":"1O1hLL-v7Hc","title":"gray hipopotamos","image":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"1O1hLL-v7Hc","created_at":"2017-07-12T02:53:16-04:00","updated_at":"2019-07-28T01:25:53-04:00","width":7952,"height":5304,"color":"#34261A","description":"Yawning
@@ -38,10 +38,7 @@
       /myproject:content:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <html>
-                      <body>
-
-                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                       roots in a piece of classical Latin literature from 45 BC, making it over 2000
                       years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
                       Virginia, looked up one of the more obscure Latin words, consectetur, from a
@@ -51,9 +48,6 @@
                       Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
                       ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
                       "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-                      </body>
-                      </html>
       /myproject:giphyimagepicker:
         jcr:primaryType: giphy:giphyimagepicker
         giphy:gifs: '[{"id":"devyAHhaiQlfa","title":"hungry hippo GIF","image":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif","description":"","data":{"type":"gif","id":"devyAHhaiQlfa","slug":"hungry-hippo-devyAHhaiQlfa","url":"https://giphy.com/gifs/hungry-hippo-devyAHhaiQlfa","bitly_gif_url":"https://gph.is/29kLKj7","bitly_url":"https://gph.is/29kLKj7","embed_url":"https://giphy.com/embed/devyAHhaiQlfa","username":"","source":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","is_sticker":0,"import_datetime":"2016-07-07
@@ -76,18 +70,14 @@
           hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SENT"}},"user":null}},{"id":"fWCRNZUrkxcD6","title":"hippo
           diarrhea GIF","image":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"fWCRNZUrkxcD6","slug":"hippo-diarrhea-fWCRNZUrkxcD6","url":"https://giphy.com/gifs/hippo-diarrhea-fWCRNZUrkxcD6","bitly_gif_url":"https://gph.is/GCx9My","bitly_url":"https://gph.is/GCx9My","embed_url":"https://giphy.com/embed/fWCRNZUrkxcD6","username":"","source":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","content_url":"","source_tld":"www.gifbay.com","source_post_url":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","is_sticker":0,"import_datetime":"2013-10-06
           09:26:36","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"320","height":"240","size":"1206907","mp4":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"1223693","webp":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"577662","frames":"30","hash":"e35d01e675a1ce242920dfe44137d8b9"}},"title":"hippo
-          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}},{"id":"121GkOAsG86yTm","title":"baby
-          hippo GIF","image":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"121GkOAsG86yTm","slug":"animal-adorable-121GkOAsG86yTm","url":"https://giphy.com/gifs/animal-adorable-121GkOAsG86yTm","bitly_gif_url":"https://gph.is/1sEK7li","bitly_url":"https://gph.is/1sEK7li","embed_url":"https://giphy.com/embed/121GkOAsG86yTm","username":"","source":"https://wifflegif.com","content_url":"","source_tld":"wifflegif.com","source_post_url":"https://wifflegif.com","is_sticker":0,"import_datetime":"2016-06-14
-          17:01:20","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"250","height":"188","size":"861511","mp4":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"481985","webp":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"840490","frames":"56","hash":null}},"title":"baby
-          hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SENT"}},"user":null}}]'
+          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}}]'
         giphy:images: ['https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/aqA9RAVGJ7SeI/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/26gs6RnXEtZEIVfkQ/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media0.giphy.com/media/fEZXym04F4fwk/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/bPUM6OKcLkYUM/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/DILNiqg1xoRwY/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
+          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
     /sample-document[2]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -96,7 +86,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-08-05T20:54:02.788+02:00
+      hippostdpubwf:lastModificationDate: 2019-08-05T21:48:29.399+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
@@ -113,10 +103,7 @@
       /myproject:content:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <html>
-                      <body>
-
-                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                       roots in a piece of classical Latin literature from 45 BC, making it over 2000
                       years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
                       Virginia, looked up one of the more obscure Latin words, consectetur, from a
@@ -126,9 +113,6 @@
                       Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
                       ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
                       "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-                      </body>
-                      </html>
       /myproject:giphyimagepicker:
         jcr:primaryType: giphy:giphyimagepicker
         giphy:gifs: '[{"id":"devyAHhaiQlfa","title":"hungry hippo GIF","image":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif","description":"","data":{"type":"gif","id":"devyAHhaiQlfa","slug":"hungry-hippo-devyAHhaiQlfa","url":"https://giphy.com/gifs/hungry-hippo-devyAHhaiQlfa","bitly_gif_url":"https://gph.is/29kLKj7","bitly_url":"https://gph.is/29kLKj7","embed_url":"https://giphy.com/embed/devyAHhaiQlfa","username":"","source":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","is_sticker":0,"import_datetime":"2016-07-07
@@ -151,18 +135,14 @@
           hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SENT"}},"user":null}},{"id":"fWCRNZUrkxcD6","title":"hippo
           diarrhea GIF","image":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"fWCRNZUrkxcD6","slug":"hippo-diarrhea-fWCRNZUrkxcD6","url":"https://giphy.com/gifs/hippo-diarrhea-fWCRNZUrkxcD6","bitly_gif_url":"https://gph.is/GCx9My","bitly_url":"https://gph.is/GCx9My","embed_url":"https://giphy.com/embed/fWCRNZUrkxcD6","username":"","source":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","content_url":"","source_tld":"www.gifbay.com","source_post_url":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","is_sticker":0,"import_datetime":"2013-10-06
           09:26:36","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"320","height":"240","size":"1206907","mp4":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"1223693","webp":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"577662","frames":"30","hash":"e35d01e675a1ce242920dfe44137d8b9"}},"title":"hippo
-          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}},{"id":"121GkOAsG86yTm","title":"baby
-          hippo GIF","image":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"121GkOAsG86yTm","slug":"animal-adorable-121GkOAsG86yTm","url":"https://giphy.com/gifs/animal-adorable-121GkOAsG86yTm","bitly_gif_url":"https://gph.is/1sEK7li","bitly_url":"https://gph.is/1sEK7li","embed_url":"https://giphy.com/embed/121GkOAsG86yTm","username":"","source":"https://wifflegif.com","content_url":"","source_tld":"wifflegif.com","source_post_url":"https://wifflegif.com","is_sticker":0,"import_datetime":"2016-06-14
-          17:01:20","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"250","height":"188","size":"861511","mp4":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"481985","webp":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"840490","frames":"56","hash":null}},"title":"baby
-          hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SENT"}},"user":null}}]'
+          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}}]'
         giphy:images: ['https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/aqA9RAVGJ7SeI/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/26gs6RnXEtZEIVfkQ/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media0.giphy.com/media/fEZXym04F4fwk/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/bPUM6OKcLkYUM/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/DILNiqg1xoRwY/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
+          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
     /sample-document[3]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -172,7 +152,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-08-05T20:56:47.645+02:00
+      hippostdpubwf:lastModificationDate: 2019-08-05T21:48:56.483+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
@@ -189,10 +169,7 @@
       /myproject:content:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <html>
-                      <body>
-
-                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                       roots in a piece of classical Latin literature from 45 BC, making it over 2000
                       years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
                       Virginia, looked up one of the more obscure Latin words, consectetur, from a
@@ -202,9 +179,6 @@
                       Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
                       ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
                       "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-                      </body>
-                      </html>
       /myproject:giphyimagepicker:
         jcr:primaryType: giphy:giphyimagepicker
         giphy:gifs: '[{"id":"devyAHhaiQlfa","title":"hungry hippo GIF","image":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif","description":"","data":{"type":"gif","id":"devyAHhaiQlfa","slug":"hungry-hippo-devyAHhaiQlfa","url":"https://giphy.com/gifs/hungry-hippo-devyAHhaiQlfa","bitly_gif_url":"https://gph.is/29kLKj7","bitly_url":"https://gph.is/29kLKj7","embed_url":"https://giphy.com/embed/devyAHhaiQlfa","username":"","source":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","is_sticker":0,"import_datetime":"2016-07-07
@@ -227,18 +201,14 @@
           hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=DILNiqg1xoRwY&action_type=SENT"}},"user":null}},{"id":"fWCRNZUrkxcD6","title":"hippo
           diarrhea GIF","image":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"fWCRNZUrkxcD6","slug":"hippo-diarrhea-fWCRNZUrkxcD6","url":"https://giphy.com/gifs/hippo-diarrhea-fWCRNZUrkxcD6","bitly_gif_url":"https://gph.is/GCx9My","bitly_url":"https://gph.is/GCx9My","embed_url":"https://giphy.com/embed/fWCRNZUrkxcD6","username":"","source":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","content_url":"","source_tld":"www.gifbay.com","source_post_url":"https://www.gifbay.com/gif/a_hippo_and_his_diarrhea-41819/","is_sticker":0,"import_datetime":"2013-10-06
           09:26:36","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"320","height":"240","size":"1206907","mp4":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"1223693","webp":"https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"577662","frames":"30","hash":"e35d01e675a1ce242920dfe44137d8b9"}},"title":"hippo
-          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}},{"id":"121GkOAsG86yTm","title":"baby
-          hippo GIF","image":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","description":"","data":{"type":"gif","id":"121GkOAsG86yTm","slug":"animal-adorable-121GkOAsG86yTm","url":"https://giphy.com/gifs/animal-adorable-121GkOAsG86yTm","bitly_gif_url":"https://gph.is/1sEK7li","bitly_url":"https://gph.is/1sEK7li","embed_url":"https://giphy.com/embed/121GkOAsG86yTm","username":"","source":"https://wifflegif.com","content_url":"","source_tld":"wifflegif.com","source_post_url":"https://wifflegif.com","is_sticker":0,"import_datetime":"2016-06-14
-          17:01:20","trending_datetime":"1970-01-01 00:00:00","images":{"original":{"url":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif","width":"250","height":"188","size":"861511","mp4":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.mp4?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.mp4","mp4_size":"481985","webp":"https://media3.giphy.com/media/121GkOAsG86yTm/giphy.webp?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.webp","webp_size":"840490","frames":"56","hash":null}},"title":"baby
-          hippo GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=121GkOAsG86yTm&action_type=SENT"}},"user":null}}]'
+          diarrhea GIF","analytics":{"onload":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SEEN"},"onclick":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=CLICK"},"onsent":{"url":"https://giphy-analytics.giphy.com/simple_analytics?response_id=5d487b0575492f5a2e5d8664&event_type=GIF_SEARCH&gif_id=fWCRNZUrkxcD6&action_type=SENT"}},"user":null}}]'
         giphy:images: ['https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/aqA9RAVGJ7SeI/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media1.giphy.com/media/26gs6RnXEtZEIVfkQ/giphy.gif?cid=042fc1565d487af942464530369f6bd9&rid=giphy.gif',
           'https://media0.giphy.com/media/fEZXym04F4fwk/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/bPUM6OKcLkYUM/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
           'https://media1.giphy.com/media/DILNiqg1xoRwY/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif',
-          'https://media3.giphy.com/media/121GkOAsG86yTm/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
+          'https://media0.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc1565d487b0575492f5a2e5d8664&rid=giphy.gif']
   /another-sample-document:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
