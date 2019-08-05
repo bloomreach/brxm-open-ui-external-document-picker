@@ -160,16 +160,16 @@ class ExtPickerDialog extends React.Component {
             fullWidth
             onChange={event => this.changeQuery(event.target.value)}
           />
-          <IconButton disabled={true}>
-            <SvgIcon>
-              <path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
-            </SvgIcon>
-          </IconButton>
-          <IconButton disabled={true}>
-            <SvgIcon>
-              <path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>
-            </SvgIcon>
-          </IconButton>
+          {/*todo<IconButton disabled={true}>*/}
+            {/*<SvgIcon>*/}
+              {/*<path fill="#000000" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>*/}
+            {/*</SvgIcon>*/}
+          {/*</IconButton>*/}
+          {/*<IconButton disabled={true}>*/}
+            {/*<SvgIcon>*/}
+              {/*<path fill="#000000" d="M3,4H21V8H3V4M3,10H21V14H3V10M3,16H21V20H3V16Z"/>*/}
+            {/*</SvgIcon>*/}
+          {/*</IconButton>*/}
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>

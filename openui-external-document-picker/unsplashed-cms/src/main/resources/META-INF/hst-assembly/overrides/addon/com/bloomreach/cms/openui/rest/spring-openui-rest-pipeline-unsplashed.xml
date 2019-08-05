@@ -6,7 +6,7 @@
 
   <import resource="classpath:/org/hippoecm/hst/site/optional/jaxrs/SpringComponentManager-rest-jackson.xml"/>
 
-  <bean id="customRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+  <bean id="unsplashedRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
         <bean class="org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider">

@@ -81,7 +81,10 @@
     <property name="targetMethod" value="joinLists"/>
     <property name="arguments">
       <list>
-        <ref bean="customRestOpenUiResourceProviders"/>
+        <ref bean="unsplashedRestOpenUiResourceProviders"/>
+        <ref bean="giphyRestOpenUiResourceProviders"/>
+        <ref bean="brSMRestOpenUiResourceProviders"/>
+        <ref bean="customRestOpenUiResourceProviders1"/>
         <ref bean="customRestOpenUiResourceProviders2"/>
         <ref bean="customRestOpenUiResourceProviders3"/>
         <ref bean="customRestOpenUiResourceProviders4"/>
@@ -104,8 +107,29 @@
     </property>
   </bean>
 
+  <bean id="unsplashedRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="brSMRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="giphyRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
   <!-- Default empty list of custom open ui resource providers to be overriden. -->
-  <bean id="customRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+  <bean id="customRestOpenUiResourceProviders1" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
       </list>

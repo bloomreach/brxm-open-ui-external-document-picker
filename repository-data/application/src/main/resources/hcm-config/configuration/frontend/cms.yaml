@@ -24,5 +24,3 @@ definitions:
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
       frontend:url: http://localhost:3002
-    /hippo:configuration/hippo:frontend/cms/ui-extensions/unsplashed:
-      frontend:url: http://localhost:3002
