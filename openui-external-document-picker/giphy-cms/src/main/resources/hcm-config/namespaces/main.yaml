@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    giphy:
+      uri: http://extdockpicker.bloomreach.com/giphy/1.0
+      cnd: giphy.cnd
