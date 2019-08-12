@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: 0b29325c-b963-4fd0-a081-d88122d1b716
+          jcr:uuid: 6bf882bb-1e04-47bc-ac5b-f5713ec9c9b8
           hipposysedit:node: true
           hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
@@ -47,28 +47,12 @@ definitions:
             hipposysedit:path: myproject:link
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /extdocpicker:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: myproject:extdocpicker
-            hipposysedit:primary: false
-            hipposysedit:type: OpenUiString
-          /md:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: myproject:md
-            hipposysedit:primary: false
-            hipposysedit:type: OpenUiString
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: myproject:bannerdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 09186b19-76c5-431a-8476-b84e99885579
+          jcr:uuid: 9203cc54-ade4-4571-bfe5-6c5d8172a5ed
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft
@@ -79,8 +63,6 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           myproject:title: ''
-          myproject:extdocpicker: ''
-          myproject:md: ''
           /myproject:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -145,23 +127,3 @@ definitions:
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /extdocpicker:
-            jcr:primaryType: frontend:plugin
-            caption: External Document Picker
-            field: extdocpicker
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              ui.extension: picker
-          /md:
-            jcr:primaryType: frontend:plugin
-            caption: Markdown Editor
-            field: md
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              ui.extension: md

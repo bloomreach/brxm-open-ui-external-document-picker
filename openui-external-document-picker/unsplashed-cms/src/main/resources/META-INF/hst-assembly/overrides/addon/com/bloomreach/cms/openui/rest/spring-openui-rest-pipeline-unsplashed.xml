@@ -18,23 +18,6 @@
     </property>
   </bean>
 
-  <!--&lt;!&ndash;-->
-    <!--JAXB CONTEXT MAPPINGS-->
-  <!--&ndash;&gt;-->
-  <!--<bean id="jaxrsOpenUiCustomContextProvider" class="org.onehippo.cms7.essentials.components.rest.JaxbContextProvider">-->
-    <!--<property name="beansPackage" value="org.example.beans"/>-->
-    <!--&lt;!&ndash;-->
-      <!--you can add extra classes if needed as followed:-->
-    <!--&ndash;&gt;-->
-    <!--&lt;!&ndash;-->
-      <!--<property name="classes">-->
-        <!--<list>-->
-          <!--<value type="java.lang.Class">org.example.beans.MyBean</value>-->
-        <!--</list>-->
-      <!--</property>-->
-    <!--&ndash;&gt;-->
-  <!--</bean>-->
-
   <bean id="jaxrsRestOpenUiExceptionMapper" class="org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper">
     <property name="printStackTrace" value="false"/>
   </bean>
@@ -42,7 +25,6 @@
   <bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
-        <!--<ref bean="jaxrsOpenUiCustomContextProvider"/>-->
         <ref bean="jaxrsRestOpenUiExceptionMapper"/>
       </list>
     </property>
