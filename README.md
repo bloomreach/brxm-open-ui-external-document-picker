@@ -127,26 +127,19 @@ The first thing that is required is to register the Open UI extension point in t
 
 2. Import the following snippet and replace all the parts with `<application>` with the name of the integration you wish to create:
 
-/hippo:configuration/hippo:frontend/cms/ui-extensions/< application >:  
+```yaml
+/hippo:configuration/hippo:frontend/cms/ui-extensions/<application>:  
   jcr:primaryType: frontend:uiExtension  
   jcr:mixinTypes: ['hippostd:relaxed']  
-  frontend:clientid: qwerty123  
-  frontend:config: '{"dataMode":"multiple","title":"Giphy Image Picker","size":"large",  
- "application": "giphy", "query": "hippo", "pageSize" :"16", "clientId": "qwerty123"}'  frontend:displayName: External Document Picker  
+  frontend:clientid: abc123  
+  frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
+                      "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`  
+  frontend:displayName: External Document Picker  
   frontend:extensionPoint: document.field  
   frontend:initialHeightInPixels: 200  
-  frontend:url: http://localhost:3002
+  frontend:url: http://<frontend-url>
 
-/< application >:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jcr:primaryType: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:uiExtension
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jcr:mixinTypes: ['hippostd:relaxed']
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:clientid: abc123
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:config: '{"dataMode":"multiple", "title":"< application > Image Picker","size":"large",
-   "application": "< application >", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:displayName: External Document Picker
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:extensionPoint: document.field
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:initialHeightInPixels: 200
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:url: http://< frontend-url >
+```
 
 In the above snippet we are registering an Open UI extension to be used in the CMS.
 
