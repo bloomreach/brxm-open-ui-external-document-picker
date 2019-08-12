@@ -42,6 +42,24 @@ In this project we have included 2 examples with 3rd party integrations: [Unspla
      
 ## Install to your project  
 
+In the root pom.xml
+
+```xml
+<repositories>
+ 
+  <!-- SNIP -->
+ 
+  <repository>
+    <id>hippo-maven2</id>
+    <name>Hippo Maven 2 Repository</name>
+    <url>https://maven.onehippo.com/maven2-forge//</url>
+  </repository>
+ 
+  <!-- SNIP -->
+ 
+</repositories>
+```
+
 In the cms pom.xml add the following dependencies
 
 API dependency (required):
