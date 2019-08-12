@@ -102,28 +102,77 @@ For Gipy is the same approach.
 
 The following section will go to how to create your own integration with a 3rd Party. Before we go into creating your own external document picker extension we will explain on how it works.
 
-### How it works
+### Resources
 
+before we start going into the details on how to create you own integration with the Open UI External Document Picker make sure to read through the official documentation:
+
+[https://documentation.bloomreach.com/library/concepts/open-ui/introduction.html](https://documentation.bloomreach.com/library/concepts/open-ui/introduction.html)
+
+
+
+### Register the Open UI Extension in the CMS
+
+The first thing that is required is to register the Open UI extension point in the CMS.
+
+1. Go to the console and navigate to:
+
+*/hippo:configuration/hippo:frontend/cms/ui-extensions*
+
+2. Import the following snippet and replace all the parts with `<application>` with the name of the integration you wish to create:
+
+`/<application>:`
+	  `jcr:primaryType: frontend:uiExtension`
+	  `jcr:mixinTypes: ['hippostd:relaxed']`
+	  `frontend:clientid: abc123`
+	  `frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
+   "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
+	 `frontend:displayName: External Document Picker`
+	 `frontend:extensionPoint: document.field`
+	 `frontend:initialHeightInPixels: 200`
+	 `frontend:url: http://<frontend-url>`
+
+In the above snippet we are registering an Open UI extension to be used in the CMS.
+
+in the **frontend:config** we are specifying the JSON string which the frontend application (external document picker frontend ui) is going to receive during initialisation of the UI. 
+
+| property | value | comment |
+|--|--|--|
+|dataMode  | single or multiple | Depending if you would like to select a single or multiple items in the external document picker. |
+|title | X Picker | The title of the dialog
+|size | small, medium or large| Size of the Dialog
+|application | foo | Name of the 3rd party connector developed. E.g. unsplash: {... ,application: unsplash}. This corresponds with the value of @Path annotation in the Rest Resource (see below)
+| query | hippo | Default query executed when dialog instantiated 
+| pageSize | 16 | Default limit  used for pagination in the infinite scroll feature
+|cliendId | foobar123 | the same value as the  `frontend:clientid: abc123` property. Used for (simple authentication purposes)
+
+The **frontend:url** is the property which is pointing towards the frontend application. If you are running the frontend application locally on http://localhost:3002 then the value should be `frontend:url: http://localhost:3002`. Check the release notes (below) which frontend application is already deployed and you can use the link directly e.g.: [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/)
+
+
+### How it works
 
 ```mermaid
 sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+CMS User ->> CMS UI: 
+CMS UI ->> Frontend: application: unsplash
+Note right of CMS UI: Open UI extension <br/> Embed as iframe.
+Frontend ->> CMS EDP Endpoint: retrieve results
+Note right of Frontend: /edp/<application>/search?..
+CMS EDP Endpoint ->> 3rd Party Integration: query
+3rd Party Integration -->> CMS EDP Endpoint: results 
+CMS EDP Endpoint -->> Frontend: results 
+Note right of Frontend: transformed results
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+
+
+
 ```
-
 
  
 ## Release Notes
 
-| CMS Version| External Document Picker Version| Release Notes
-|--|--|--|
-| 13.3.x | 0.1.0 | Initial Version: Included Unsplash.com + Giphy |
+| CMS Version| External Document Picker Version| Frontend URL | Release Notes
+|--|--|--|--|
+| 13.3.x | 0.1.0 | [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | Initial Version: Included Unsplash.com + Giphy |
 
 ## Feature Requests:
 
