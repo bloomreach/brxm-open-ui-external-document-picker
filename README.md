@@ -257,7 +257,9 @@ Note right of Frontend: transformed results
 ## Feature Requests:
 
 1. Re-ordering the selected items in the edit mode
-2. CKeditor Support
-3. Custom Dialog result view (i.e. video support)
+2. List and Data view in Dialog
+3. Improved ui in document field (now using chips)
+4. CKeditor Support
+5. Custom Dialog result view (i.e. video support)
 
 Let me know if you have more?
