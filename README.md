@@ -121,14 +121,22 @@ The first thing that is required is to register the Open UI extension point in t
 2. Import the following snippet and replace all the parts with `<application>` with the name of the integration you wish to create:
 
 `/<application>:`
+
 	  `jcr:primaryType: frontend:uiExtension`
+	  
 	  `jcr:mixinTypes: ['hippostd:relaxed']`
+	  
 	  `frontend:clientid: abc123`
+	  
 	  `frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
    "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
+	 
 	 `frontend:displayName: External Document Picker`
+	 
 	 `frontend:extensionPoint: document.field`
+	 
 	 `frontend:initialHeightInPixels: 200`
+	 
 	 `frontend:url: http://<frontend-url>`
 
 In the above snippet we are registering an Open UI extension to be used in the CMS.
