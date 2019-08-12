@@ -3,9 +3,16 @@
   
 Welcome to the documentation page of the External Document Picker (Re-created with Open UI)  
     
+The External Document Picker is a feature where you can select external resources and embed information from those external resources onto a document in BrXM. 
+
+Think about integrations with systems such as:  DAM (digital asset management) systems. Or PIM (Product Information Management) Systems. Where you have the website which is maintained in BrXM and you can select information from other systems to be included in the site with a link, url or id.
+    
 Previously we have had great success with our long lasting [External Document Picker Plugin (Original)](https://github.com/bloomreach-forge/external-document-picker)  
-  
+ 
 Now we feel there is a time for a new and refurbished UI to the features the external document picker offers us.  
+
+This External Document Picker plugin, such as the previous, is mainly targeted for back end (Java) developers  who do not want to write any frontend UI code and logic. The plugin offers a generic UI and allows the developer to **create connectors** to 3rd Party Solutions by implementing a very simple API. 
+Of course as a frontend developer you can take the source code of the picker, written in React using Material UI and tweak it to your own needs.
   
 **Short Demo:**  
   
@@ -104,7 +111,7 @@ The following section will go to how to create your own integration with a 3rd P
 
 ### Resources
 
-before we start going into the details on how to create you own integration with the Open UI External Document Picker make sure to read through the official documentation:
+Before we start going into the details on how to create you own integration with the Open UI External Document Picker make sure to read through the official documentation:
 
 [https://documentation.bloomreach.com/library/concepts/open-ui/introduction.html](https://documentation.bloomreach.com/library/concepts/open-ui/introduction.html)
 
@@ -121,22 +128,14 @@ The first thing that is required is to register the Open UI extension point in t
 2. Import the following snippet and replace all the parts with `<application>` with the name of the integration you wish to create:
 
 `/<application>:`
-
 	  `jcr:primaryType: frontend:uiExtension`
-	  
 	  `jcr:mixinTypes: ['hippostd:relaxed']`
-	  
 	  `frontend:clientid: abc123`
-	  
 	  `frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
    "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
-	 
 	 `frontend:displayName: External Document Picker`
-	 
 	 `frontend:extensionPoint: document.field`
-	 
 	 `frontend:initialHeightInPixels: 200`
-	 
 	 `frontend:url: http://<frontend-url>`
 
 In the above snippet we are registering an Open UI extension to be used in the CMS.
@@ -155,6 +154,33 @@ in the **frontend:config** we are specifying the JSON string which the frontend 
 
 The **frontend:url** is the property which is pointing towards the frontend application. If you are running the frontend application locally on http://localhost:3002 then the value should be `frontend:url: http://localhost:3002`. Check the release notes (below) which frontend application is already deployed and you can use the link directly e.g.: [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/)
 
+### API
+
+To use the Java API you will need to use the 2 interfaces from the api dependency:
+
+**com.bloomreach.cms.openui.rest.PickerItem**
+
+    public interface PickerItem<T> {  
+   
+        public String getId();  
+        public String getTitle();  
+        public String getImage();  
+        public String getDescription();  
+        public T getData();  
+    }
+
+**com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource**
+
+    public interface ExternalDocumentPickerResource<T extends PickerItem> {  
+      
+        @GET  
+        @Path("/search")  
+        @Produces({MediaType.APPLICATION_JSON})  
+        public List<T> search(@QueryParam("query") String query,  
+                @QueryParam("page") @DefaultValue("1") int page,  
+                @QueryParam("pageSize") @DefaultValue("16") int pageSize);  
+    }
+
 
 ### How it works
 
@@ -164,8 +190,9 @@ CMS User ->> CMS UI:
 CMS UI ->> Frontend: application: unsplash
 Note right of CMS UI: Open UI extension <br/> Embed as iframe.
 Frontend ->> CMS EDP Endpoint: retrieve results
-Note right of Frontend: /edp/<application>/search?..
+Note right of Frontend: /edp/<application><br/>/search?..
 CMS EDP Endpoint ->> 3rd Party Integration: query
+Note right of CMS EDP Endpoint: Using custom <br/> backend connector
 3rd Party Integration -->> CMS EDP Endpoint: results 
 CMS EDP Endpoint -->> Frontend: results 
 Note right of Frontend: transformed results
