@@ -154,7 +154,7 @@ in the **frontend:config** we are specifying the JSON string which the frontend 
 
 The **frontend:url** is the property which is pointing towards the frontend application. If you are running the frontend application locally on http://localhost:3002 then the value should be `frontend:url: http://localhost:3002`. Check the release notes (below) which frontend application is already deployed and you can use the link directly e.g.: [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/)
 
-### API
+### Connector API
 
 To use the Java API you will need to implement the 2 interfaces from the API dependency. The implementation will serve as a **connector**
 
