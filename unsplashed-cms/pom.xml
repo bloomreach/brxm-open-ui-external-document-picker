@@ -14,7 +14,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.example</groupId>
+      <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-api</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
