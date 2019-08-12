@@ -231,6 +231,9 @@ This REST resource will return results in a structured way for the (picker) fron
 
 ### How it works (Sequence):
 
+![Sequence Diagram](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/resources/sequence.png?raw=true)  
+ 
+
 ```mermaid
 sequenceDiagram
 
