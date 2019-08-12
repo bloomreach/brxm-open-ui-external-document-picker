@@ -127,16 +127,16 @@ The first thing that is required is to register the Open UI extension point in t
 
 2. Import the following snippet and replace all the parts with `<application>` with the name of the integration you wish to create:
 
-`/<application>:`
-	  `jcr:primaryType: frontend:uiExtension`
-	  `jcr:mixinTypes: ['hippostd:relaxed']`
-	  `frontend:clientid: abc123`
-	  `frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
-   "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
-	 `frontend:displayName: External Document Picker`
-	 `frontend:extensionPoint: document.field`
-	 `frontend:initialHeightInPixels: 200`
-	 `frontend:url: http://<frontend-url>`
+/< application >:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jcr:primaryType: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:uiExtension
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jcr:mixinTypes: ['hippostd:relaxed']
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:clientid: abc123
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:config: '{"dataMode":"multiple", "title":"< application > Image Picker","size":"large",
+   "application": "< application >", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:displayName: External Document Picker
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:extensionPoint: document.field
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:initialHeightInPixels: 200
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frontend:url: http://< frontend-url >
 
 In the above snippet we are registering an Open UI extension to be used in the CMS.
 
@@ -190,7 +190,7 @@ Example:
 	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java)
 	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java)
 
-####  Connectors
+####  Client Connector
 
 To create the client connectors we recommend you use CRISP as in above examples with unsplash and giphy. More about CRISP: [https://documentation.bloomreach.com/library/concepts/crisp-api/introduction.html](https://documentation.bloomreach.com/library/concepts/crisp-api/introduction.html)
 
@@ -222,12 +222,7 @@ Note right of CMS EDP Endpoint: using custom <br/> backend connector
 3rd Party Integration -->> CMS EDP Endpoint: results 
 CMS EDP Endpoint -->> Frontend: results 
 Note right of Frontend: transformed results
-
-
-
-
 ```
-
  
 ## Release Notes
 
