@@ -156,9 +156,9 @@ The **frontend:url** is the property which is pointing towards the frontend appl
 
 ### API
 
-To use the Java API you will need to use the 2 interfaces from the api dependency:
+To use the Java API you will need to implement the 2 interfaces from the API dependency. The implementation will serve as **connectors**
 
-**com.bloomreach.cms.openui.rest.PickerItem**
+**[com.bloomreach.cms.openui.rest.PickerItem](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/PickerItem.java)**
 
     public interface PickerItem<T> {  
    
@@ -169,7 +169,7 @@ To use the Java API you will need to use the 2 interfaces from the api dependenc
         public T getData();  
     }
 
-**com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource**
+**[com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/ExternalDocumentPickerResource.java)**
 
     public interface ExternalDocumentPickerResource<T extends PickerItem> {  
       
@@ -181,18 +181,44 @@ To use the Java API you will need to use the 2 interfaces from the api dependenc
                 @QueryParam("pageSize") @DefaultValue("16") int pageSize);  
     }
 
+Example:
 
-### How it works
+ - Unsplash
+	 - [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java)
+	 - [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java)
+- Giphy
+	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java)
+	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java)
+
+####  Connectors
+
+To create the client connectors we recommend you use CRISP as in above examples with unsplash and giphy. More about CRISP: [https://documentation.bloomreach.com/library/concepts/crisp-api/introduction.html](https://documentation.bloomreach.com/library/concepts/crisp-api/introduction.html)
+
+### EDP (Mount) Endpoint
+
+To register your custom connector you will need to register the implementation of ExternalDocumentPickerResource to the `JaxrsRestOpenUiPipeline`. You can do this by adding a XML snippet in your code
+
+Example of unsplash: [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml)
+
+When completed, rebuild and run. The endpoint should be available and retrieving results from the 3rd party service: 
+
+http://localhost:8080/edp/unsplash/search?query=hippo&clientId=abc123
+
+> Make sure the clientId property matches the same one as the frontend:clientid in ui-extension configuration in the console
+
+This REST resource will return results in a structured way for the (picker) frontend ui to consume. It will always need an id, title and image to render the view (description is optional). This means that in your connector you need to transform the 3rd party response to suit the PickerItem model. 
+
+### How it works (Sequence):
 
 ```mermaid
 sequenceDiagram
-CMS User ->> CMS UI: 
+
 CMS UI ->> Frontend: application: unsplash
 Note right of CMS UI: Open UI extension <br/> Embed as iframe.
 Frontend ->> CMS EDP Endpoint: retrieve results
 Note right of Frontend: /edp/<application><br/>/search?..
 CMS EDP Endpoint ->> 3rd Party Integration: query
-Note right of CMS EDP Endpoint: Using custom <br/> backend connector
+Note right of CMS EDP Endpoint: using custom <br/> backend connector
 3rd Party Integration -->> CMS EDP Endpoint: results 
 CMS EDP Endpoint -->> Frontend: results 
 Note right of Frontend: transformed results
