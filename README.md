@@ -1,4 +1,4 @@
-#### Note: please check if the UI extension is using the latest frontend url https://github.com/ksalic/brxm-open-ui-external-document-picker#release-notes
+`Note: please check if the UI extension is using the latest frontend url https://github.com/ksalic/brxm-open-ui-external-document-picker#release-notes`
 
 # Documentation BrXM External Document Picker (Open UI)  
   
