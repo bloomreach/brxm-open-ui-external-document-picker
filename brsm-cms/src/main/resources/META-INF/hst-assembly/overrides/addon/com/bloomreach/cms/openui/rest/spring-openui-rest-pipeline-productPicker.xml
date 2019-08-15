@@ -11,7 +11,7 @@
       <list>
         <bean class="org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider">
           <constructor-arg>
-            <bean class="com.hobbycraft.cms.openui.rest.productpicker.ProductPickerExternalDocumentPickerResource"/>
+            <bean class="com.bloomreach.cms.openui.rest.brsm.ProductPickerExternalDocumentPickerResource"/>
           </constructor-arg>
         </bean>
       </list>
