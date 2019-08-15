@@ -9,10 +9,7 @@ definitions:
         >\r\n \r\n  <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
         \r\n        class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
         >\r\n    <property name=\"cacheEnabled\" value=\"${cache.enabled}\" />\r\n\
-        \    <property name=\"queryUri\" value=\"request_type=search&search_type=keyword\"\
-        \ />\r\n    <property name=\"authUri\" value=\"&account_id=${account_id}&auth_key=${auth_key}\"\
-        \ />\r\n    <property name=\"queryUri\" value=\"${authUri}${queryUri}&domain_key=${domain_key}&request_id=${request_id}&url=${url}&ref_url=${ref_url}&facet.range=${facet.range}&fl=${fl}\"\
-        \ />\r\n    <property name=\"baseUri\" value=\"${commerce.api.base.uri}${queryUri}\"\
+        \    <property name=\"baseUri\" value=\"${commerce.api.base.uri}&amp;account_id=${account_id}&amp;auth_key=${auth_key}&amp;request_type=search&amp;search_type=keyword&amp;domain_key=${domain_key}&amp;request_id=${request_id}&amp;url=${url}&amp;ref_url=${ref_url}&amp;facet.range=${facet.range}&amp;fl=${fl}\"\
         \ />\r\n    <property name=\"restTemplate\">\r\n      <bean class=\"org.springframework.web.client.RestTemplate\"\
         >\r\n        <property name=\"requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
         \ />\r\n      </bean>\r\n    </property>\r\n    <property name=\"resourceLinkResolver\"\
