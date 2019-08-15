@@ -1,0 +1,13 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/ui-extensions/productPicker:
+      jcr:primaryType: frontend:uiExtension
+      jcr:mixinTypes: ['hippostd:relaxed']
+      frontend:clientid: qwerty123
+      frontend:config: '{"dataMode":"multiple","title":"Product Picker","size":"small",
+        "application": "productPicker", "query": "candy", "pageSize" :"16", "clientId":
+        "qwerty123"}'
+      frontend:displayName: External Document Picker
+      frontend:extensionPoint: document.field
+      frontend:initialHeightInPixels: 200
+      frontend:url: http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com
