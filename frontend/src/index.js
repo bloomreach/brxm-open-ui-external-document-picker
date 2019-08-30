@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import * as UiExtension from "@bloomreach/ui-extension";
 import ExtPickerDialog from "./Dialog";
+import Paper from "@material-ui/core/Paper/Paper";
+import Typography from "@material-ui/core/Typography/Typography";
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
@@ -26,6 +28,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(error);
     console.error('Failed to register extension:', error.message);
     console.error('- error code:', error.code);
+    const message = (
+      <Paper>
+        <Typography variant="h5" component="h3">
+          Error, need to load this application in the context on the CMS
+        </Typography>
+      </Paper>
+    );
+    ReactDOM.render(message, document.getElementById("root"));
   }
 });
 // If you want your app to work offline and load faster, you can change

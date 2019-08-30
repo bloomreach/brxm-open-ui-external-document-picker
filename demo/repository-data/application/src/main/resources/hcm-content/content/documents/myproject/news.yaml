@@ -113,7 +113,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
-          hippostdpubwf:lastModificationDate: 2019-08-08T18:54:04.025+02:00
+          hippostdpubwf:lastModificationDate: 2019-08-30T11:37:59.359+02:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: c2d0ab21-eb16-4997-8e04-d89661b7f133
           hippotranslation:locale: en
@@ -161,11 +161,16 @@
             hippo:values: []
           /myproject:unsplashed:
             jcr:primaryType: unsplashedpicker:unsplashed
-            unsplashedpicker:images: ['https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
+            unsplashedpicker:images: ['https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
+              'https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
               'https://images.unsplash.com/photo-1551357246-9e744e1144f7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
-              'https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
-              'https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ']
-            unsplashedpicker:unsplashedimgs: '[{"id":"3_gjh0OE1-c","title":"black
+              'https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ']
+            unsplashedpicker:unsplashedimgs: '[{"id":"WC6MJ0kRzGw","title":"person
+              holding pink sticky note","image":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"Run
+              a usability test","data":{"id":"WC6MJ0kRzGw","created_at":"2018-02-11T06:48:34-05:00","updated_at":"2019-07-28T01:09:46-04:00","width":2560,"height":1707,"color":"#47212B","description":"Run
+              a usability test","alt_description":"person holding pink sticky note","urls":{"raw":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/WC6MJ0kRzGw","html":"https://unsplash.com/photos/WC6MJ0kRzGw","download":"https://unsplash.com/photos/WC6MJ0kRzGw/download","download_location":"https://api.unsplash.com/photos/WC6MJ0kRzGw/download"},"tags":[{"title":"paper"},{"title":"pink"},{"title":"office"},{"title":"work"},{"title":"hand"},{"title":"note"},{"title":"holding"},{"title":"post
+              it"},{"title":"design"},{"title":"wall"},{"title":"work space"},{"title":"website"},{"title":"word"},{"title":"business"},{"title":"business
+              card"},{"title":"text"},{"title":"user research"},{"title":"user experience"},{"title":"ux"},{"title":"writing"}]}},{"id":"3_gjh0OE1-c","title":"black
               hippo hiding on water near grasses","image":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"3_gjh0OE1-c","created_at":"2019-01-31T09:10:42-05:00","updated_at":"2019-05-17T19:47:19-04:00","width":4874,"height":2742,"color":"#F1EEEC","description":null,"alt_description":"black
               hippo hiding on water near grasses","urls":{"raw":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/3_gjh0OE1-c","html":"https://unsplash.com/photos/3_gjh0OE1-c","download":"https://unsplash.com/photos/3_gjh0OE1-c/download","download_location":"https://api.unsplash.com/photos/3_gjh0OE1-c/download"},"tags":[{"title":"wildlife"},{"title":"animal"},{"title":"mammal"},{"title":"cow"},{"title":"cattle"},{"title":"pet"},{"title":"dog"},{"title":"canine"},{"title":"bear"},{"title":"jaguar"},{"title":"panther"},{"title":"leopard"},{"title":"hyena"},{"title":"lion"},{"title":"sleeping"},{"title":"asleep"},{"title":"rhino"},{"title":"cougar"},{"title":"ocelot"},{"title":"invertebrate"}]}},{"id":"sqf892xV-8w","title":"black
               hippopotamus on green grass field","image":"https://images.unsplash.com/photo-1551357246-9e744e1144f7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"A
@@ -178,12 +183,7 @@
               bath","alt_description":"hippopotamus in water","urls":{"raw":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/Q3r-NFhamlw","html":"https://unsplash.com/photos/Q3r-NFhamlw","download":"https://unsplash.com/photos/Q3r-NFhamlw/download","download_location":"https://api.unsplash.com/photos/Q3r-NFhamlw/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"elephant"},{"title":"wildlife"},{"title":"czech
               republic"},{"title":"zoo troja"},{"title":"prague"},{"title":"water"},{"title":"river
               horse"},{"title":"hippopotamus"},{"title":"pachyderm"},{"title":"pool"},{"title":"lip"},{"title":"mouth"},{"title":"aquatic"},{"title":"eating"},{"title":"food"},{"title":"hyena"},{"title":"sea
-              life"},{"title":"sea lion"}]}},{"id":"WC6MJ0kRzGw","title":"person holding
-              pink sticky note","image":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"Run
-              a usability test","data":{"id":"WC6MJ0kRzGw","created_at":"2018-02-11T06:48:34-05:00","updated_at":"2019-07-28T01:09:46-04:00","width":2560,"height":1707,"color":"#47212B","description":"Run
-              a usability test","alt_description":"person holding pink sticky note","urls":{"raw":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/WC6MJ0kRzGw","html":"https://unsplash.com/photos/WC6MJ0kRzGw","download":"https://unsplash.com/photos/WC6MJ0kRzGw/download","download_location":"https://api.unsplash.com/photos/WC6MJ0kRzGw/download"},"tags":[{"title":"paper"},{"title":"pink"},{"title":"office"},{"title":"work"},{"title":"hand"},{"title":"note"},{"title":"holding"},{"title":"post
-              it"},{"title":"design"},{"title":"wall"},{"title":"work space"},{"title":"website"},{"title":"word"},{"title":"business"},{"title":"business
-              card"},{"title":"text"},{"title":"user research"},{"title":"user experience"},{"title":"ux"},{"title":"writing"}]}}]'
+              life"},{"title":"sea lion"}]}}]'
           /myproject:giphyimagepicker:
             jcr:primaryType: giphy:giphyimagepicker
             giphy:gifs: ''
@@ -193,11 +193,10 @@
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 8742380e-8e21-439a-ac17-b35799d40c28
           hippo:availability: []
-          hippostd:holder: admin
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
-          hippostdpubwf:lastModificationDate: 2019-08-08T19:31:14.725+02:00
+          hippostdpubwf:lastModificationDate: 2019-08-30T11:38:02.791+02:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: c2d0ab21-eb16-4997-8e04-d89661b7f133
           hippotranslation:locale: en
@@ -245,11 +244,16 @@
             hippo:values: []
           /myproject:unsplashed:
             jcr:primaryType: unsplashedpicker:unsplashed
-            unsplashedpicker:images: ['https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
+            unsplashedpicker:images: ['https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
+              'https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
               'https://images.unsplash.com/photo-1551357246-9e744e1144f7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
-              'https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ',
-              'https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ']
-            unsplashedpicker:unsplashedimgs: '[{"id":"3_gjh0OE1-c","title":"black
+              'https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ']
+            unsplashedpicker:unsplashedimgs: '[{"id":"WC6MJ0kRzGw","title":"person
+              holding pink sticky note","image":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"Run
+              a usability test","data":{"id":"WC6MJ0kRzGw","created_at":"2018-02-11T06:48:34-05:00","updated_at":"2019-07-28T01:09:46-04:00","width":2560,"height":1707,"color":"#47212B","description":"Run
+              a usability test","alt_description":"person holding pink sticky note","urls":{"raw":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/WC6MJ0kRzGw","html":"https://unsplash.com/photos/WC6MJ0kRzGw","download":"https://unsplash.com/photos/WC6MJ0kRzGw/download","download_location":"https://api.unsplash.com/photos/WC6MJ0kRzGw/download"},"tags":[{"title":"paper"},{"title":"pink"},{"title":"office"},{"title":"work"},{"title":"hand"},{"title":"note"},{"title":"holding"},{"title":"post
+              it"},{"title":"design"},{"title":"wall"},{"title":"work space"},{"title":"website"},{"title":"word"},{"title":"business"},{"title":"business
+              card"},{"title":"text"},{"title":"user research"},{"title":"user experience"},{"title":"ux"},{"title":"writing"}]}},{"id":"3_gjh0OE1-c","title":"black
               hippo hiding on water near grasses","image":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"3_gjh0OE1-c","created_at":"2019-01-31T09:10:42-05:00","updated_at":"2019-05-17T19:47:19-04:00","width":4874,"height":2742,"color":"#F1EEEC","description":null,"alt_description":"black
               hippo hiding on water near grasses","urls":{"raw":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1548943155-224a45e29a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/3_gjh0OE1-c","html":"https://unsplash.com/photos/3_gjh0OE1-c","download":"https://unsplash.com/photos/3_gjh0OE1-c/download","download_location":"https://api.unsplash.com/photos/3_gjh0OE1-c/download"},"tags":[{"title":"wildlife"},{"title":"animal"},{"title":"mammal"},{"title":"cow"},{"title":"cattle"},{"title":"pet"},{"title":"dog"},{"title":"canine"},{"title":"bear"},{"title":"jaguar"},{"title":"panther"},{"title":"leopard"},{"title":"hyena"},{"title":"lion"},{"title":"sleeping"},{"title":"asleep"},{"title":"rhino"},{"title":"cougar"},{"title":"ocelot"},{"title":"invertebrate"}]}},{"id":"sqf892xV-8w","title":"black
               hippopotamus on green grass field","image":"https://images.unsplash.com/photo-1551357246-9e744e1144f7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"A
@@ -262,12 +266,7 @@
               bath","alt_description":"hippopotamus in water","urls":{"raw":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1562856928-b16c735cea87?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/Q3r-NFhamlw","html":"https://unsplash.com/photos/Q3r-NFhamlw","download":"https://unsplash.com/photos/Q3r-NFhamlw/download","download_location":"https://api.unsplash.com/photos/Q3r-NFhamlw/download"},"tags":[{"title":"animal"},{"title":"mammal"},{"title":"elephant"},{"title":"wildlife"},{"title":"czech
               republic"},{"title":"zoo troja"},{"title":"prague"},{"title":"water"},{"title":"river
               horse"},{"title":"hippopotamus"},{"title":"pachyderm"},{"title":"pool"},{"title":"lip"},{"title":"mouth"},{"title":"aquatic"},{"title":"eating"},{"title":"food"},{"title":"hyena"},{"title":"sea
-              life"},{"title":"sea lion"}]}},{"id":"WC6MJ0kRzGw","title":"person holding
-              pink sticky note","image":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":"Run
-              a usability test","data":{"id":"WC6MJ0kRzGw","created_at":"2018-02-11T06:48:34-05:00","updated_at":"2019-07-28T01:09:46-04:00","width":2560,"height":1707,"color":"#47212B","description":"Run
-              a usability test","alt_description":"person holding pink sticky note","urls":{"raw":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgwNjg5fQ","full":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgwNjg5fQ","regular":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","small":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","thumb":"https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ"},"links":{"self":"https://api.unsplash.com/photos/WC6MJ0kRzGw","html":"https://unsplash.com/photos/WC6MJ0kRzGw","download":"https://unsplash.com/photos/WC6MJ0kRzGw/download","download_location":"https://api.unsplash.com/photos/WC6MJ0kRzGw/download"},"tags":[{"title":"paper"},{"title":"pink"},{"title":"office"},{"title":"work"},{"title":"hand"},{"title":"note"},{"title":"holding"},{"title":"post
-              it"},{"title":"design"},{"title":"wall"},{"title":"work space"},{"title":"website"},{"title":"word"},{"title":"business"},{"title":"business
-              card"},{"title":"text"},{"title":"user research"},{"title":"user experience"},{"title":"ux"},{"title":"writing"}]}}]'
+              life"},{"title":"sea lion"}]}}]'
           /myproject:giphyimagepicker:
             jcr:primaryType: giphy:giphyimagepicker
             giphy:gifs: ''
@@ -341,14 +340,15 @@
             hippo:values: []
       /the-gastropoda-news:
         jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: aeda2bcd-b21d-4ead-a2e6-c64a2ca051c8
         hippo:name: The gastropoda news
-        /the-gastropoda-news:
+        hippo:versionHistory: 75b55d2c-fb2a-4b76-8c17-26c3ac783075
+        /the-gastropoda-news[1]:
           jcr:primaryType: myproject:newsdocument
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 0e7196cd-fc5b-494a-8c21-0d50ae8ce760
-          hippo:availability: [live, preview]
+          hippo:availability: [live]
           hippostd:holder: admin
           hippostd:state: published
           hippostdpubwf:createdBy: admin
@@ -356,6 +356,126 @@
           hippostdpubwf:lastModificationDate: 2013-11-12T12:52:00+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippostdpubwf:publicationDate: 2013-11-12T12:52:00+01:00
+          hippotranslation:id: 1d15024f-3035-43ca-aaf9-db5ccd2aa407
+          hippotranslation:locale: en
+          myproject:author: Alfred Anonymous
+          myproject:date: 2019-07-03T17:38:00+02:00
+          myproject:documenttype: news
+          myproject:introduction: Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          myproject:location: Liverpool
+          myproject:source: ''
+          myproject:title: The gastropoda news
+          /myproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        </body>
+                        </html>
+          /myproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 3c740fcf-8ec5-4f00-a713-ff96caa645c8
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /the-gastropoda-news[2]:
+          jcr:primaryType: myproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 24eb55da-cbd6-473f-a893-ee2d55834d05
+          hippo:availability: [preview]
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T12:50:00+01:00
+          hippostdpubwf:lastModificationDate: 2013-11-12T12:52:00+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 1d15024f-3035-43ca-aaf9-db5ccd2aa407
+          hippotranslation:locale: en
+          myproject:author: Alfred Anonymous
+          myproject:date: 2019-07-03T17:38:00+02:00
+          myproject:documenttype: news
+          myproject:introduction: Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          myproject:location: Liverpool
+          myproject:source: ''
+          myproject:title: The gastropoda news
+          /myproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        </body>
+                        </html>
+          /myproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 3c740fcf-8ec5-4f00-a713-ff96caa645c8
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /the-gastropoda-news[3]:
+          jcr:primaryType: myproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: c66b2854-834a-4d0d-a6aa-aa933e274b8d
+          hippo:availability: []
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T12:50:00+01:00
+          hippostdpubwf:lastModificationDate: 2019-08-30T12:08:19.802+02:00
+          hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 1d15024f-3035-43ca-aaf9-db5ccd2aa407
           hippotranslation:locale: en
           myproject:author: Alfred Anonymous

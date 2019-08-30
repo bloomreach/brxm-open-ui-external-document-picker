@@ -2,7 +2,9 @@ package com.bloomreach.cms.openui.rest.giphy;
 
 import com.bloomreach.cms.openui.rest.PickerItem;
 import com.bloomreach.cms.openui.rest.giphy.model.GiphyItem;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GiphyPickerItemAdapter implements PickerItem<GiphyItem> {
 
     private String id;

@@ -212,14 +212,15 @@
           'https://media2.giphy.com/media/JnCZxjhrb6D6g/giphy.gif?cid=042fc15671c36f710eab7a098035d2171dc16a53e1ddcda9&rid=giphy.gif']
   /another-sample-document:
     jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9caea793-42b1-4f3e-a8e5-d58f810ce2ef
     hippo:name: Another sample document
-    /another-sample-document:
+    hippo:versionHistory: f0ba00b2-329b-4b3e-a87a-77e85247ad3f
+    /another-sample-document[1]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 2ea8c13b-9e73-4462-a7f2-984b38a4a2f8
-      hippo:availability: [live, preview]
+      hippo:availability: [live]
       hippostd:holder: admin
       hippostd:state: published
       hippostdpubwf:createdBy: admin
@@ -252,3 +253,104 @@
 
                       </body>
                       </html>
+    /another-sample-document[2]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 0db6ec6a-edab-4af0-9d22-ab639252dbdf
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-08-30T14:32:37.569+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
+      hippotranslation:locale: en
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Another Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+      /myproject:giphyimagepicker:
+        jcr:primaryType: giphy:giphyimagepicker
+        giphy:gifs: '[{"id":"devyAHhaiQlfa","title":"hungry hippo GIF","image":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"","data":{"type":"gif","id":"devyAHhaiQlfa","slug":"hungry-hippo-devyAHhaiQlfa","url":"https://giphy.com/gifs/hungry-hippo-devyAHhaiQlfa","bitly_gif_url":"https://gph.is/29kLKj7","bitly_url":"https://gph.is/29kLKj7","embed_url":"https://giphy.com/embed/devyAHhaiQlfa","username":"","source":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","is_sticker":0,"import_datetime":"2016-07-07
+          19:08:46","trending_datetime":"2016-07-07 22:45:02","images":{"original":{"url":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"717","height":"404","size":"29872104","mp4":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"848084","webp":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"10394962","frames":"125","hash":null}},"title":"hungry
+          hippo GIF","user":null}},{"id":"26BGxEdqrtNVRNoC4","title":"leaving national
+          geographic GIF by Nat Geo Wild","image":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"natgeowild","data":{"type":"gif","id":"26BGxEdqrtNVRNoC4","slug":"natgeowild-nat-geo-wild-big-cat-week-26BGxEdqrtNVRNoC4","url":"https://giphy.com/gifs/natgeowild-nat-geo-wild-big-cat-week-26BGxEdqrtNVRNoC4","bitly_gif_url":"https://gph.is/2lEwhgD","bitly_url":"https://gph.is/2lEwhgD","embed_url":"https://giphy.com/embed/26BGxEdqrtNVRNoC4","username":"natgeowild","source":"https://channel.nationalgeographic.com/wild/big-cat-week/","content_url":"","source_tld":"channel.nationalgeographic.com","source_post_url":"https://channel.nationalgeographic.com/wild/big-cat-week/","is_sticker":0,"import_datetime":"2017-02-24
+          22:44:42","trending_datetime":"2017-03-09 09:45:01","images":{"original":{"url":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"480","height":"268","size":"3400515","mp4":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"1060413","webp":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"1529110","frames":"51","hash":"3d9f810c6ae39d3c80db870e8fb603a3"}},"title":"leaving
+          national geographic GIF by Nat Geo Wild","user":{"avatar_url":"https://media4.giphy.com/avatars/natgeowild/zBojD0lYteHi.jpg","banner_url":"https://media4.giphy.com/headers/natgeowild/UplNMTnbMAkp.jpg","banner_image":"https://media4.giphy.com/headers/natgeowild/UplNMTnbMAkp.jpg","profile_url":"https://giphy.com/natgeowild/","username":"natgeowild","display_name":"Nat
+          Geo Wild","is_verified":true}}},{"id":"2DRSlLXPBiKvC","title":"ballet dancing
+          GIF","image":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"","data":{"type":"gif","id":"2DRSlLXPBiKvC","slug":"2DRSlLXPBiKvC","url":"https://giphy.com/gifs/2DRSlLXPBiKvC","bitly_gif_url":"https://gph.is/25iHHaU","bitly_url":"https://gph.is/25iHHaU","embed_url":"https://giphy.com/embed/2DRSlLXPBiKvC","username":"","source":"https://www.reddit.com/r/gifs/comments/4bhisp/who_loves_to_dance/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4bhisp/who_loves_to_dance/","is_sticker":0,"import_datetime":"2016-03-22
+          14:10:46","trending_datetime":"2016-03-23 09:00:01","images":{"original":{"url":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"426","height":"240","size":"1127393","mp4":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"596933","webp":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"525020","frames":"33","hash":"4110afc58a8bf443b07d11d4294a4306"}},"title":"ballet
+          dancing GIF","user":null}}]'
+        giphy:images: ['https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif',
+          'https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif',
+          'https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif']
+    /another-sample-document[3]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6a95ffdc-d066-42bc-97f5-6ae61929402f
+      hippo:availability: []
+      hippostd:holder: admin
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-08-30T14:32:40.542+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
+      hippotranslation:locale: en
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Another Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+      /myproject:giphyimagepicker:
+        jcr:primaryType: giphy:giphyimagepicker
+        giphy:gifs: '[{"id":"devyAHhaiQlfa","title":"hungry hippo GIF","image":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"","data":{"type":"gif","id":"devyAHhaiQlfa","slug":"hungry-hippo-devyAHhaiQlfa","url":"https://giphy.com/gifs/hungry-hippo-devyAHhaiQlfa","bitly_gif_url":"https://gph.is/29kLKj7","bitly_url":"https://gph.is/29kLKj7","embed_url":"https://giphy.com/embed/devyAHhaiQlfa","username":"","source":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4rjbfc/hungry_hungry_hippo/","is_sticker":0,"import_datetime":"2016-07-07
+          19:08:46","trending_datetime":"2016-07-07 22:45:02","images":{"original":{"url":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"717","height":"404","size":"29872104","mp4":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"848084","webp":"https://media2.giphy.com/media/devyAHhaiQlfa/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"10394962","frames":"125","hash":null}},"title":"hungry
+          hippo GIF","user":null}},{"id":"26BGxEdqrtNVRNoC4","title":"leaving national
+          geographic GIF by Nat Geo Wild","image":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"natgeowild","data":{"type":"gif","id":"26BGxEdqrtNVRNoC4","slug":"natgeowild-nat-geo-wild-big-cat-week-26BGxEdqrtNVRNoC4","url":"https://giphy.com/gifs/natgeowild-nat-geo-wild-big-cat-week-26BGxEdqrtNVRNoC4","bitly_gif_url":"https://gph.is/2lEwhgD","bitly_url":"https://gph.is/2lEwhgD","embed_url":"https://giphy.com/embed/26BGxEdqrtNVRNoC4","username":"natgeowild","source":"https://channel.nationalgeographic.com/wild/big-cat-week/","content_url":"","source_tld":"channel.nationalgeographic.com","source_post_url":"https://channel.nationalgeographic.com/wild/big-cat-week/","is_sticker":0,"import_datetime":"2017-02-24
+          22:44:42","trending_datetime":"2017-03-09 09:45:01","images":{"original":{"url":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"480","height":"268","size":"3400515","mp4":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"1060413","webp":"https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"1529110","frames":"51","hash":"3d9f810c6ae39d3c80db870e8fb603a3"}},"title":"leaving
+          national geographic GIF by Nat Geo Wild","user":{"avatar_url":"https://media4.giphy.com/avatars/natgeowild/zBojD0lYteHi.jpg","banner_url":"https://media4.giphy.com/headers/natgeowild/UplNMTnbMAkp.jpg","banner_image":"https://media4.giphy.com/headers/natgeowild/UplNMTnbMAkp.jpg","profile_url":"https://giphy.com/natgeowild/","username":"natgeowild","display_name":"Nat
+          Geo Wild","is_verified":true}}},{"id":"2DRSlLXPBiKvC","title":"ballet dancing
+          GIF","image":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","description":"","data":{"type":"gif","id":"2DRSlLXPBiKvC","slug":"2DRSlLXPBiKvC","url":"https://giphy.com/gifs/2DRSlLXPBiKvC","bitly_gif_url":"https://gph.is/25iHHaU","bitly_url":"https://gph.is/25iHHaU","embed_url":"https://giphy.com/embed/2DRSlLXPBiKvC","username":"","source":"https://www.reddit.com/r/gifs/comments/4bhisp/who_loves_to_dance/","content_url":"","source_tld":"www.reddit.com","source_post_url":"https://www.reddit.com/r/gifs/comments/4bhisp/who_loves_to_dance/","is_sticker":0,"import_datetime":"2016-03-22
+          14:10:46","trending_datetime":"2016-03-23 09:00:01","images":{"original":{"url":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif","width":"426","height":"240","size":"1127393","mp4":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.mp4?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.mp4","mp4_size":"596933","webp":"https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.webp?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.webp","webp_size":"525020","frames":"33","hash":"4110afc58a8bf443b07d11d4294a4306"}},"title":"ballet
+          dancing GIF","user":null}}]'
+        giphy:images: ['https://media2.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif',
+          'https://media3.giphy.com/media/26BGxEdqrtNVRNoC4/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif',
+          'https://media0.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc15678677ef51d7c0cddad539c4781fa9a7d6ef9adf6&rid=giphy.gif']
