@@ -1,4 +1,4 @@
 definitions:
   config:
     /hst:platform/hst:hosts/dev-localhost/localhost/hst:root/edp:
-      hst:responseheaders: ['Access-Control-Allow-Origin: *']
+      hst:responseheaders: ['Access-Control-Allow-Origin: http://localhost:3002']

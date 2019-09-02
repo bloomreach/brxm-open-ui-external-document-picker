@@ -148,10 +148,11 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 378fa84b-3abc-47e9-b779-37655d0e3b7d
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-08-08T18:53:01.343+02:00
+      hippostdpubwf:lastModificationDate: 2019-09-02T12:28:50.643+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
@@ -212,14 +213,15 @@
           'https://media2.giphy.com/media/JnCZxjhrb6D6g/giphy.gif?cid=042fc15671c36f710eab7a098035d2171dc16a53e1ddcda9&rid=giphy.gif']
   /another-sample-document:
     jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9caea793-42b1-4f3e-a8e5-d58f810ce2ef
     hippo:name: Another sample document
-    /another-sample-document:
+    hippo:versionHistory: 0e838baf-ccee-4a2b-9727-489720c39012
+    /another-sample-document[1]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 2ea8c13b-9e73-4462-a7f2-984b38a4a2f8
-      hippo:availability: [live, preview]
+      hippo:availability: [live]
       hippostd:holder: admin
       hippostd:state: published
       hippostdpubwf:createdBy: admin
@@ -252,3 +254,78 @@
 
                       </body>
                       </html>
+    /another-sample-document[2]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 74690cf0-c7b5-4d6a-bd03-055016c40447
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2014-03-25T16:57:00+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
+      hippotranslation:locale: en
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Another Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+    /another-sample-document[3]:
+      jcr:primaryType: myproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 4ca06aaa-e36c-450a-9262-bafab3cf76d1
+      hippo:availability: []
+      hippostd:holder: admin
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
+      hippostdpubwf:lastModificationDate: 2019-09-02T12:49:02.070+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
+      hippotranslation:locale: en
+      myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
+      myproject:publicationdate: 2014-03-25T16:52:00+01:00
+      myproject:title: Another Lorem
+      /myproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <html>
+                      <body>
+
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                      roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                      years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                      Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                      Lorem Ipsum passage, and going through the cites of the word in classical
+                      literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                      1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                      Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                      ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                      "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                      </body>
+                      </html>
+      /myproject:giphyimagepicker:
+        jcr:primaryType: giphy:giphyimagepicker
+        giphy:gifs: ''
+        giphy:images: []
