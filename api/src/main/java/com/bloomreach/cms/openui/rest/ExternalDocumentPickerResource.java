@@ -14,7 +14,8 @@ public interface ExternalDocumentPickerResource<T extends PickerItem> {
     @GET
     @Path("/search")
     @Produces({MediaType.APPLICATION_JSON})
-    public List<T> search(@QueryParam("query") String query,
-                                   @QueryParam("page") @DefaultValue("1") int page,
-                                   @QueryParam("pageSize") @DefaultValue("16") int pageSize);
+    List<T> search(@QueryParam("query") String query,
+                   @QueryParam("page") @DefaultValue("1") int page,
+                   @QueryParam("pageSize") @DefaultValue("16") int pageSize,
+                   @QueryParam("documentId") String documentId);
 }
