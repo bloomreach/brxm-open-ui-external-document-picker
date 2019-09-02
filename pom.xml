@@ -55,7 +55,6 @@
     <connection>scm:git:git@github.com:ksalic/brxm-open-ui-external-document-picker.git</connection>
     <developerConnection>scm:git:git@github.com:ksalic/brxm-open-ui-external-document-picker.git</developerConnection>
     <url>https://github.com/ksalic/brxm-open-ui-external-document-picker.git</url>
-    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
