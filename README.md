@@ -1,3 +1,4 @@
+`Note: please check if the UI extension is using the supported frontend url ` https://github.com/ksalic/brxm-open-ui-external-document-picker#release-notes
 
 # Documentation BrXM External Document Picker (Open UI)  
   
@@ -50,9 +51,9 @@ In the root pom.xml
   <!-- SNIP -->
  
   <repository>
-    <id>hippo-maven2</id>
+    <id>hippo-maven2-forge</id>
     <name>Hippo Maven 2 Repository</name>
-    <url>https://maven.onehippo.com/maven2-forge//</url>
+    <url>https://maven.onehippo.com/maven2-forge/</url>
   </repository>
  
   <!-- SNIP -->
