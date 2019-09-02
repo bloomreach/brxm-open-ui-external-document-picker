@@ -27,7 +27,7 @@
   <artifactId>external-document-picker-parent</artifactId>
   <name>OpenUI External Document Picker Parent</name>
   <description>OpenUI External Document Picker Parent</description>
-  <version>0.3.1-SNAPSHOT</version>
+  <version>0.3.1</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -55,7 +55,7 @@
     <connection>scm:git:git@github.com:ksalic/brxm-open-ui-external-document-picker.git</connection>
     <developerConnection>scm:git:git@github.com:ksalic/brxm-open-ui-external-document-picker.git</developerConnection>
     <url>https://github.com/ksalic/brxm-open-ui-external-document-picker.git</url>
-    <tag>HEAD</tag>
+    <tag>external-document-picker-parent-0.3.1</tag>
   </scm>
 
   <distributionManagement>
