@@ -9,4 +9,4 @@ definitions:
       frontend:displayName: External Document Picker
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
-      frontend:url: http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com
+      frontend:url: http://brxm-extdoc-pickerv0.3.s3-website-eu-west-1.amazonaws.com
