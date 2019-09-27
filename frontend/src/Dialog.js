@@ -1,23 +1,24 @@
 import React from 'react';
 import './App.css';
 import TextField from "@material-ui/core/TextField/TextField";
-import Fab from "@material-ui/core/Fab/Fab";
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
-import GridListTile from "@material-ui/core/GridListTile/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
-import GridList from "@material-ui/core/GridList/GridList";
-import Fade from "@material-ui/core/Fade/Fade";
-import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";
 import DialogContent from "@material-ui/core/DialogContent/DialogContent";
 import Dialog from "@material-ui/core/Dialog/Dialog";
 import {makeStyles} from "@material-ui/core";
-import Button from "@material-ui/core/Button/Button";
-import Typography from "@material-ui/core/Typography/Typography";
 import Chip from "@material-ui/core/Chip/Chip";
 import Avatar from "@material-ui/core/Avatar/Avatar";
+import Gallery from "react-photo-gallery";
+import Fade from "@material-ui/core/Fade/Fade";
+import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
+import Typography from "@material-ui/core/Typography/Typography";
+import Button from "@material-ui/core/Button/Button";
+import Fab from "@material-ui/core/Fab/Fab";
+import GridList from "@material-ui/core/GridList/GridList";
+import GridListTile from "@material-ui/core/GridListTile/GridListTile";
+import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
 
 const dataMode = {
   SINGLE: 'single',
@@ -126,8 +127,6 @@ class ExtPickerDialog extends React.Component {
   }
 
   async fetchItems (query, page, pageSize) {
-    console.log('2');
-    console.log(this.state.context);
     this.setState({isLoading: true});
     const fetched =
       await fetch(this.urlEndpoint +
@@ -138,7 +137,9 @@ class ExtPickerDialog extends React.Component {
         + pageSize
         + "&clientId="
         + this.clientId
-        + '&documentId=' + this.state.context.documentId
+        // + '&documentId=' + (typeof(this.state.context.documentId) != 'undefined' && this.state.context.documentId !=
+        // null)?'': this.state.context.documentId
+
       ).then(response => response.json());
     this.setState({isLoading: false});
     return fetched;
@@ -152,6 +153,7 @@ class ExtPickerDialog extends React.Component {
   onOk () {
     this.ui.dialog.close(this.state.selectedItems);
   }
+
 
   render () {
     const {isLoading} = this.state || false;
@@ -176,9 +178,9 @@ class ExtPickerDialog extends React.Component {
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>
-        <GridList>
+        <GridList cols={4}>
           {items.map((p, id) =>
-            <GridListTile key={id}>
+            <GridListTile key={id} cols={1}>
               <img src={p.image} alt={p.title}/>
               <GridListTileBar
                 title={p.title}
@@ -213,7 +215,8 @@ class ExtPickerDialog extends React.Component {
             <Chip key={id}
                   size={'small'}
                   avatar={<Avatar src={p.image ? p.image : 'default'}></Avatar>}
-                  label={p.title}
+                  label={(p.title != null && p.title !== undefined) ? p.title.replace(/^(.{6}[^\s]*).*/, "$1") : ''}
+                  onDelete={event => this.deleteItem(p)}
             />
           )}
         </div>
