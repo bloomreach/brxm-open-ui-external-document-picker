@@ -1,8 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.css';
 import TextField from "@material-ui/core/TextField/TextField";
-import AddIcon from '@material-ui/icons/Add';
-import DeleteIcon from '@material-ui/icons/Delete';
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";
 import DialogContent from "@material-ui/core/DialogContent/DialogContent";
@@ -19,6 +17,7 @@ import Fab from "@material-ui/core/Fab/Fab";
 import GridList from "@material-ui/core/GridList/GridList";
 import GridListTile from "@material-ui/core/GridListTile/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
+import {Check} from "@material-ui/icons";
 
 const dataMode = {
   SINGLE: 'single',
@@ -121,6 +120,14 @@ class ExtPickerDialog extends React.Component {
     }
   }
 
+  addOrDeleteItem (item) {
+    if (this.state.selectedItems.some(e => e.id === item.id)) {
+      this.deleteItem(item);
+    } else {
+      this.addItem(item);
+    }
+  }
+
   deleteItem (item) {
     const items = this.state.selectedItems.filter(value => value.id !== item.id);
     this.setState({selectedItems: items});
@@ -138,7 +145,6 @@ class ExtPickerDialog extends React.Component {
         + "&clientId="
         + this.clientId
         + '&documentId=' + this.state.context.documentId
-
       ).then(response => response.json());
     this.setState({isLoading: false});
     return fetched;
@@ -152,7 +158,6 @@ class ExtPickerDialog extends React.Component {
   onOk () {
     this.ui.dialog.close(this.state.selectedItems);
   }
-
 
   render () {
     const {isLoading} = this.state || false;
@@ -177,20 +182,18 @@ class ExtPickerDialog extends React.Component {
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>
-        <GridList cols={4}>
-          {items.map((p, id) =>
-            <GridListTile key={id} cols={1}>
-              <img src={p.image} alt={p.title}/>
+        <GridList spacing={10} cols={4}>
+          {items.map((item, id) =>
+            <GridListTile key={id} cols={1} onClick={event => this.addOrDeleteItem(item)} style={{cursor: 'pointer'}} >
+              <img src={item.image} alt={item.title} />
               <GridListTileBar
-                title={p.title}
-                subtitle={<span>{p.description}</span>}
-                actionIcon={(selectedItems.some(e => e.id === p.id)) ?
-                  <Fab color="secondary" aria-label="Delete">
-                    <DeleteIcon onClick={event => this.deleteItem(p)}/>
-                  </Fab> :
-                  <Fab color="primary" aria-label="Add">
-                    <AddIcon onClick={event => this.addItem(p)}/>
-                  </Fab>}
+                title={item.title}
+                subtitle={<span>{item.description}</span>}
+                actionIcon={(selectedItems.some(e => e.id === item.id)) ?
+                  <Fab size={'small'} color="primary" aria-label="Add">
+                    <Check/>
+                  </Fab> : <Fragment/>
+                }
               />
             </GridListTile>
           )}
