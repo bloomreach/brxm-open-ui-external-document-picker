@@ -137,8 +137,7 @@ class ExtPickerDialog extends React.Component {
         + pageSize
         + "&clientId="
         + this.clientId
-        // + '&documentId=' + (typeof(this.state.context.documentId) != 'undefined' && this.state.context.documentId !=
-        // null)?'': this.state.context.documentId
+        + '&documentId=' + this.state.context.documentId
 
       ).then(response => response.json());
     this.setState({isLoading: false});
