@@ -8,7 +8,6 @@ import Dialog from "@material-ui/core/Dialog/Dialog";
 import {makeStyles} from "@material-ui/core";
 import Chip from "@material-ui/core/Chip/Chip";
 import Avatar from "@material-ui/core/Avatar/Avatar";
-import Gallery from "react-photo-gallery";
 import Fade from "@material-ui/core/Fade/Fade";
 import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
 import Typography from "@material-ui/core/Typography/Typography";
