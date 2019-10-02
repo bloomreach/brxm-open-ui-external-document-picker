@@ -255,10 +255,11 @@ Note right of Frontend: transformed results
 |--|--|--|--|
 | 13.3.x | 0.1.0 | [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | Initial Version: Included Unsplash.com + Giphy |
 | 13.3.x | 0.3.1 | [http://brxm-extdoc-pickerv0.3.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | documentId support |
+| 13.4.x | 0.4.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | re-orderable items, selected items in dialog, dialog view improved |
 
 ## Feature Requests:
 
-1. Re-ordering the selected items in the edit mode
+1. Re-ordering the selected items in the edit mode (done 0.4)
 2. List and Data view in Dialog
 3. Improved ui in document field (now using chips)
 4. CKeditor Support
