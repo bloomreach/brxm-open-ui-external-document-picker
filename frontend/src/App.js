@@ -29,7 +29,6 @@ class App extends React.Component {
 
     this.ui = props.ui;
 
-    console.log(this.ui);
     this.state = {items: []};
 
     this.extensionConfig = JSON.parse(this.ui.extension.config);
@@ -87,7 +86,6 @@ class App extends React.Component {
   }
 
   handleDelete = itemToDelete => () => {
-    console.log('delete this!!!');
     const items = this.state.items.filter(value => value.id !== itemToDelete.id);
     this.setState({items: items});
     this.ui.document.field.setValue(JSON.stringify(items));
@@ -97,7 +95,6 @@ class App extends React.Component {
     try {
       const brDocument = await this.ui.document.get();
       const context = {documentId: brDocument.id, documentLocale: brDocument.locale, userId: this.ui.user.id};
-      console.log(context);
       const value = {items: this.state.items, context: context}
       const extensionConfig = JSON.parse(this.ui.extension.config);
       this.dialogOptions = {
