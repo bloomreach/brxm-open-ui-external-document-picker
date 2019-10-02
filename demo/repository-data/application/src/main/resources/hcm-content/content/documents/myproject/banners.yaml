@@ -69,13 +69,14 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-20T17:00:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-07-25T11:08:42.776+02:00
+      hippostdpubwf:lastModificationDate: 2019-09-30T13:57:22.364+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 918edc40-ba1d-4a51-89da-dad6ff088283
       hippotranslation:locale: en
       myproject:extdocpicker: adem, hannah
-      myproject:md: "***\r\n\r\n## Hello markdown editor\r\n\r\n***"
-      myproject:title: Sample banner
+      myproject:md: "***\r\n\r\n## Hello markdown editor\r\n\r\n**Hello**\r\n\r\n\
+        **BloomREach CMS**\r\n\r\n***"
+      myproject:title: test@test.com
       /myproject:content:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -96,7 +97,6 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 42ffdd71-36f6-4e5a-b083-dc1207e9090a
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-20T17:00:00+01:00
@@ -107,7 +107,7 @@
       myproject:extdocpicker: adem, hannah
       myproject:md: "***\r\n\r\n## Hello markdown editor\r\n\r\n**Hello**\r\n\r\n\
         **BloomREach CMS**\r\n\r\n***"
-      myproject:title: Sample banner
+      myproject:title: test@test.com
       /myproject:content:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
