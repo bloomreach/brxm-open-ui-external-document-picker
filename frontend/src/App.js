@@ -65,12 +65,16 @@ class App extends React.Component {
 
   async openDialog () {
     try {
+      const brDocument = await this.ui.document.get();
+      const context = {documentId : brDocument.id, documentLocale: brDocument.locale, userId: this.ui.user.id};
+      console.log(context);
+      const value = {items: this.state.items, context: context}
       const extensionConfig = JSON.parse(this.ui.extension.config);
       this.dialogOptions = {
         title: extensionConfig.title,
         url: './dialog',
         size: extensionConfig.size,
-        value: JSON.stringify(this.state.items)
+        value: JSON.stringify(value)
       };
 
       const response = await this.ui.dialog.open(this.dialogOptions);

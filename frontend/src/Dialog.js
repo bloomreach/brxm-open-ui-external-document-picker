@@ -74,9 +74,7 @@ class ExtPickerDialog extends React.Component {
   }
 
   componentDidMount () {
-    this.setInitialSelected(this.ui)
-      .then(this.fetchItems(this.state.query, this.state.page, this.state.pageSize)
-        .then(items => this.setState({items: items})));
+    this.setInitialSelected(this.ui);
   }
 
   onScroll () {
@@ -95,8 +93,14 @@ class ExtPickerDialog extends React.Component {
   async setInitialSelected (ui) {
     try {
       const options = await ui.dialog.options();
-      const items = JSON.parse(options.value);
+      const value = JSON.parse(options.value)
+      const items = value.items;
+      const context = value.context;
+      this.setState({context: context});
       this.setState({selectedItems: items});
+      this.fetchItems(this.state.query, this.state.page, this.state.pageSize)
+        .then(items => this.setState({items: items}));
+
     } catch (error) {
       console.error('Failed to register extension:', error.message);
       console.error('- error code:', error.code);
@@ -122,9 +126,20 @@ class ExtPickerDialog extends React.Component {
   }
 
   async fetchItems (query, page, pageSize) {
+    console.log('2');
+    console.log(this.state.context);
     this.setState({isLoading: true});
-    const fetched = await fetch(this.urlEndpoint + '/search?query=' + query + '&page=' + page + '&pageSize=' + pageSize + "&clientId=" + this.clientId)
-      .then(response => response.json());
+    const fetched =
+      await fetch(this.urlEndpoint +
+        '/search?query=' + query
+        + '&page='
+        + page
+        + '&pageSize='
+        + pageSize
+        + "&clientId="
+        + this.clientId
+        + '&documentId=' + this.state.context.documentId
+      ).then(response => response.json());
     this.setState({isLoading: false});
     return fetched;
   }

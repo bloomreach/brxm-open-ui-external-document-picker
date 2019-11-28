@@ -1,3 +1,4 @@
+`Note: please check if the UI extension is using the supported frontend url ` https://github.com/ksalic/brxm-open-ui-external-document-picker#release-notes
 
 # Documentation BrXM External Document Picker (Open UI)  
   
@@ -253,6 +254,7 @@ Note right of Frontend: transformed results
 | CMS Version| External Document Picker Version| Frontend URL | Release Notes
 |--|--|--|--|
 | 13.3.x | 0.1.0 | [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | Initial Version: Included Unsplash.com + Giphy |
+| 13.3.x | 0.3.1 | [http://brxm-extdoc-pickerv0.3.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | documentId support |
 
 ## Feature Requests:
 

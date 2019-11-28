@@ -1,7 +1,6 @@
 package com.bloomreach.cms.openui.rest.unsplashed;
 
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +34,8 @@ public class UnsplashedExternalDocumentPickerResource extends BaseRestResource i
     @Produces({MediaType.APPLICATION_JSON})
     public List<PickerItem> search(@QueryParam("query") String query,
                                    @QueryParam("page") @DefaultValue("1") int page,
-                                   @QueryParam("pageSize") @DefaultValue("20") int pageSize) {
+                                   @QueryParam("pageSize") @DefaultValue("20") int pageSize,
+                                   @QueryParam("documentId") String documentId) {
         final Map<String, Object> pathVars = new HashMap<>();
         pathVars.put("query", query);
         pathVars.put("per_page", pageSize);
@@ -46,9 +46,9 @@ public class UnsplashedExternalDocumentPickerResource extends BaseRestResource i
         Resource results = (Resource)content.getValue("results");
 
         ResourceCollection children = results.getChildren();
-        ResourceBeanMapper unsplashed = broker.getResourceBeanMapper("unsplashed");
+        ResourceBeanMapper unsplash = broker.getResourceBeanMapper("unsplashed");
 
-        return unsplashed.mapCollection(children, UnsplashedItem.class)
+        return unsplash.mapCollection(children, UnsplashedItem.class)
                 .stream().map(unsplashedItem -> new UnsplashedPickerItemAdapter(unsplashedItem))
                 .collect(Collectors.toList());
 
