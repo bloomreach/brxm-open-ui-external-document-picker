@@ -1,0 +1,37 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/productPicker:
+      jcr:primaryType: crisp:resourceresolver
+      crisp:beandefinition: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans\
+        \ xmlns=\"http://www.springframework.org/schema/beans\"\r\n       xmlns:xsi=\"\
+        http://www.w3.org/2001/XMLSchema-instance\"\r\n       xsi:schemaLocation=\"\
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd\"\
+        >\r\n \r\n  <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
+        \r\n        class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
+        >\r\n    <property name=\"cacheEnabled\" value=\"${cache.enabled}\" />\r\n\
+        \    <property name=\"baseUri\" value=\"${commerce.api.base.uri}&amp;account_id=${account_id}&amp;auth_key=${auth_key}&amp;request_type=search&amp;search_type=keyword&amp;domain_key=${domain_key}&amp;request_id=${request_id}&amp;url=${url}&amp;ref_url=${ref_url}&amp;facet.range=${facet.range}&amp;fl=${fl}\"\
+        \ />\r\n    <property name=\"restTemplate\">\r\n      <bean class=\"org.springframework.web.client.RestTemplate\"\
+        >\r\n        <property name=\"requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
+        \ />\r\n      </bean>\r\n    </property>\r\n    <property name=\"resourceLinkResolver\"\
+        >\r\n      <bean class=\"org.onehippo.cms7.crisp.core.resource.FreemarkerTemplateResourceLinkResolver\"\
+        >\r\n        <property name=\"templateSource\">\r\n          <value>https://core.dxpapi.com/api/v1/core/products/${(preview\
+        \ == \"true\")?then(\"staging\", \"current\")}/sku/${resource.valueMap['SKU']!\"\
+        unknown\"}/overview.html</value>\r\n        </property>\r\n      </bean>\r\
+        \n    </property>\r\n    <property name=\"resourceDataCache\">\r\n      <bean\
+        \ class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
+        >\r\n        <constructor-arg>\r\n          <bean class=\"org.springframework.cache.ehcache.EhCacheCache\"\
+        >\r\n            <constructor-arg>\r\n              <bean parent=\"abstractCrispResourceEhCache\"\
+        >\r\n                <property name=\"cacheName\" value=\"demoProductCatalogsCache\"\
+        \ />\r\n                <property name=\"maxEntriesLocalHeap\" value=\"1000\"\
+        \ />\r\n                <property name=\"maxEntriesLocalDisk\" value=\"0\"\
+        \ />\r\n                <property name=\"timeToLiveSeconds\" value=\"60\"\
+        \ />\r\n                <property name=\"timeToIdleSeconds\" value=\"60\"\
+        \ />\r\n              </bean>\r\n            </constructor-arg>\r\n      \
+        \    </bean>\r\n        </constructor-arg>\r\n      </bean>\r\n    </property>\r\
+        \n  </bean>\r\n \r\n</beans>"
+      crisp:propnames: [cache.enabled, commerce.api.base.uri, domain_key, request_id,
+        url, ref_url, facet.range, fl, account_id, auth_key]
+      crisp:propvalues: ['true', 'https://core.dxpapi.com/api/v1/core/?', 'yourdomain',
+        'request_id', 'url', 'ref_url',
+        price, 'pid,title,price,sale_price,brand,description,url,thumb_image,InvQty,BazaarvoiceStarRating,NoBazaarvoiceReviews,New,PromoLabel,ItemNo,VATRate,ExcludeInternational,ExcludedCountries,IncludedCountries,UseBulkShippingAgent,PictureURL2,PatternType',
+        'account_id', 'auth_key']
