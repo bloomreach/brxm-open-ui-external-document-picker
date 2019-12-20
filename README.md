@@ -110,6 +110,25 @@ API dependency (required):
      <artifactId>openui-external-document-picker-giphy-site</artifactId>  
      <version>${edp.version}</version>  
     </dependency>
+    
+    
+ ## Important for _v14+_ users!
+ For brX version **14.0.0** and newer, a domain rule needs to be added to allow the API access to the openUI nodes. This can be done with the following steps: 
+ 
+ 1. In the console, go to **hippo:configuration > hippo:domains > live-documents**
+ 2. Import the following YAML snippet:
+ 
+ ~~~
+    /hippo:configuration/hippo:domains/hst-live-documents/openui:
+      jcr:primaryType: hipposys:domainrule
+      /openui-read:
+        jcr:primaryType: hipposys:facetrule
+        hipposys:equals: true
+        hipposys:facet: jcr:path
+        hipposys:type: Reference
+        hipposys:value: /hippo:configuration/hippo:frontend/cms/ui-extensions
+ ~~~
+3. Done! Now you should be able to use the Open UI plugins in v14!
 
  ## Configure
 
