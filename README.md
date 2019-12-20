@@ -86,6 +86,15 @@ API dependency (required):
          <artifactId>openui-external-document-picker-giphy-cms</artifactId>  
          <version>${edp.version}</version>  
        </dependency>
+       
+ brSM Product Picker dependency (optional):
+ 
+ 	   <dependency>  
+          <groupId>com.bloomreach.openui</groupId>  
+          <artifactId>openui-external-document-picker-brsm-cms</artifactId>  
+          <version>${edp.version}</version>  
+        </dependency>
+ 
 
  In the site/components pom.xml add the following (optional) dependencies:
  
@@ -114,7 +123,7 @@ Example: add Unsplash Picker to a News item:
 
 */hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/unsplashed*
 
- 2. Edit the client.id (abc123) to match the **Acces Key** supplied by your unsplash [developer account](https://unsplash.com/developers)
+ 2. Edit the client.id (abc123) to match the **Access Key** supplied by your unsplash [developer account](https://unsplash.com/developers)
  3. Login to the CMS, navigate to the document type section and find a document which you want to add the picker to and go into edit mode.
  4. Select **unsplashed** from the right sidebar in the compound section
 
@@ -122,7 +131,9 @@ Example: add Unsplash Picker to a News item:
 
 5. Done and Commit. The picker should now be available to each News item in the BrXM instance.
 
-For Gipy uses the same approach.
+For Giphy use the same approach.
+
+For _brSM_, make sure to fill the parameters of the productPicker CRISP module with your API instance's details.
 
 ## Create Your Own 3rd Party Integration
 
@@ -256,6 +267,7 @@ Note right of Frontend: transformed results
 | 13.3.x | 0.1.0 | [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | Initial Version: Included Unsplash.com + Giphy |
 | 13.3.x | 0.3.1 | [http://brxm-extdoc-pickerv0.3.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/) | documentId support |
 | 13.4.x | 0.4.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | re-orderable items, selected items in dialog, dialog view improved |
+| 14.0.x | 0.5.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | Included brSM product picker (no beans) |
 
 ## Feature Requests:
 
