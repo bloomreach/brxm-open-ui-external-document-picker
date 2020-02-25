@@ -111,7 +111,7 @@
     <module>giphy-site</module>
     <module>brsm-site</module>
     <module>brsm-cms</module>
-    <!--<module>demo</module>-->
+    <module>demo</module>
   </modules>
 
 </project>

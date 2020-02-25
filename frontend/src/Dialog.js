@@ -17,6 +17,10 @@ import GridList from "@material-ui/core/GridList/GridList";
 import GridListTile from "@material-ui/core/GridListTile/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
 import {Check} from "@material-ui/icons";
+import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import MuiAlert from '@material-ui/lab/Alert';
 
 const dataMode = {
   SINGLE: 'single',
@@ -37,6 +41,7 @@ class ExtPickerDialog extends React.Component {
 
     this.onScroll = this.onScroll.bind(this);
     this.onOk = this.onOk.bind(this);
+    this.logError = this.logError.bind(this);
 
     this.extensionConfig = JSON.parse(this.ui.extension.config);
     this.application = this.extensionConfig.application;
@@ -132,6 +137,10 @@ class ExtPickerDialog extends React.Component {
     this.setState({selectedItems: items});
   }
 
+  alertClose () {
+    this.setState({alertOpen: false});
+  }
+
   async fetchItems (query, page, pageSize) {
     this.setState({isLoading: true});
     const fetched =
@@ -144,7 +153,16 @@ class ExtPickerDialog extends React.Component {
         + "&clientId="
         + this.clientId
         + '&documentId=' + this.state.context.documentId
-      ).then(response => response.json());
+      ).then(response => {
+        if (!response.ok) {
+          response.text().then(value => this.logError(value))
+          return [];
+        }
+        return response.json();
+      }).catch(reason => {
+        this.logError('Error: ' + reason.toString());
+        return [];
+      });
     this.setState({isLoading: false});
     return fetched;
   }
@@ -160,12 +178,29 @@ class ExtPickerDialog extends React.Component {
 
   render () {
     const {isLoading} = this.state || false;
+    const {alertOpen} = this.state || false;
+    const {alertMessage} = this.state || '';
     const {items} = this.state || [];
     const {selectedItems} = this.state || [];
     const classes = this.useStyles;
     const isMultiMode = this.dataMode === dataMode.MULTIPLE;
 
     return <Dialog fullScreen open={true}>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
+        open={alertOpen}
+        message={alertMessage}
+        action={
+          <React.Fragment>
+            <IconButton size="small" aria-label="close" color="inherit" onClick={event => this.alertClose()}>
+              <CloseIcon fontSize="small"/>
+            </IconButton>
+          </React.Fragment>
+        }
+      />
       <AppBar position="static" color="default">
         <Toolbar>
           <TextField
@@ -183,8 +218,8 @@ class ExtPickerDialog extends React.Component {
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>
         <GridList spacing={10} cols={4}>
           {items.map((item, id) =>
-            <GridListTile key={id} cols={1} onClick={event => this.addOrDeleteItem(item)} style={{cursor: 'pointer'}} >
-              <img src={item.image} alt={item.title} />
+            <GridListTile key={id} cols={1} onClick={event => this.addOrDeleteItem(item)} style={{cursor: 'pointer'}}>
+              <img src={item.image} alt={item.title}/>
               <GridListTileBar
                 title={item.title}
                 subtitle={<span>{item.description}</span>}
@@ -225,6 +260,10 @@ class ExtPickerDialog extends React.Component {
       </Toolbar>
       }
     </Dialog>
+  }
+
+  async logError (message) {
+    this.setState({alertOpen: true, alertMessage: message});
   }
 }
 
