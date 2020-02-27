@@ -6,6 +6,8 @@ import java.util.Calendar;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
 
+import com.bloomreach.site.openui.rest.unsplashed.beans.Unsplashed;
+
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: unsplashedpicker:unsplashed
  */
@@ -50,5 +52,9 @@ public class Newsdocument extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "myproject:image")
     public HippoGalleryImageSet getImage() {
         return getLinkedBean("myproject:image", HippoGalleryImageSet.class);
+    }
+
+    public String[] getImages() {
+        return getBean("myproject:unsplashed", Unsplashed.class).getImages();
     }
 }
