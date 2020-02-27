@@ -20,7 +20,6 @@ import {Check} from "@material-ui/icons";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import MuiAlert from '@material-ui/lab/Alert';
 
 const dataMode = {
   SINGLE: 'single',
@@ -146,25 +145,27 @@ class ExtPickerDialog extends React.Component {
   async fetchItems (query, page, pageSize) {
     this.setState({isLoading: true});
     const url = new URL(this.urlEndpoint + '/search'),
-      params = {query:query,
-        page:page,
-        pageSize:pageSize,
-        clientId:this.clientId,
-        documentId:this.state.context.documentId,
-        documentLocale:this.state.context.documentLocale}
+      params = {
+        query: query,
+        page: page,
+        pageSize: pageSize,
+        clientId: this.clientId,
+        documentId: this.state.context.documentId,
+        documentLocale: this.state.context.documentLocale
+      }
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
     const fetched =
       await fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          response.text().then(value => this.logError(value))
+        .then(response => {
+          if (!response.ok) {
+            response.text().then(value => this.logError(value))
+            return [];
+          }
+          return response.json();
+        }).catch(reason => {
+          this.logError('Error: ' + reason.toString());
           return [];
-        }
-        return response.json();
-      }).catch(reason => {
-        this.logError('Error: ' + reason.toString());
-        return [];
-      });
+        });
     this.setState({isLoading: false});
     return fetched;
   }
