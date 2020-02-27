@@ -31,7 +31,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <hippo.version>13.3.0</hippo.version>
+    <hippo.version>14.1.0</hippo.version>
   </properties>
 
   <developers>
