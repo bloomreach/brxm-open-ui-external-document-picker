@@ -1,70 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.example</groupId>
     <artifactId>myproject</artifactId>
-    <version>0.5.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
   </parent>
   <artifactId>myproject-cms</artifactId>
   <packaging>war</packaging>
   <name>My Project CMS</name>
   <description>My Project CMS</description>
   <dependencies>
-    <!--<dependency>-->
-      <!--<groupId>org.example</groupId>-->
-      <!--<artifactId>openui-external-document-picker-api</artifactId>-->
-      <!--<version>${project.version}</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.example</groupId>-->
-      <!--<artifactId>openui-external-document-picker-unsplashed</artifactId>-->
-      <!--<version>0.1.0-SNAPSHOT</version>-->
-    <!--</dependency>-->
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-api</artifactId>
-      <version>0.6.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-unsplashed-cms</artifactId>
-      <version>0.6.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-giphy-cms</artifactId>
-      <version>0.6.0-SNAPSHOT</version>
-    </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>myproject-cms-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
     </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-essentials-components-hst</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.8.2</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.scribejava</groupId>
-      <artifactId>scribejava-core</artifactId>
-      <version>2.7.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.7</version>
-    </dependency>
-
-
   </dependencies>
   <build>
     <finalName>cms</finalName>

@@ -1,0 +1,10 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/live-documents/openui-read:
+      jcr:primaryType: hipposys:domainrule
+      /openui-extension-access:
+        jcr:primaryType: hipposys:facetrule
+        hipposys:equals: true
+        hipposys:facet: jcr:path
+        hipposys:type: Reference
+        hipposys:value: /hippo:configuration/hippo:frontend/cms/ui-extensions

@@ -3,16 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.onehippo.cms7</groupId>
-    <artifactId>hippo-cms7-enterprise-release</artifactId>
-    <version>13.3.0</version>
+    <groupId>org.onehippo.cms7</groupId>
+    <artifactId>hippo-cms7-release</artifactId>
+    <version>14.1.0</version>
   </parent>
 
   <name>My Project</name>
   <description>My Project</description>
   <groupId>org.example</groupId>
   <artifactId>myproject</artifactId>
-  <version>0.5.0-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -22,28 +22,30 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <organization />
+  <url/>
+  <inceptionYear/>
+  <organization/>
   <licenses>
-    <license />
+    <license/>
   </licenses>
   <mailingLists>
-    <mailingList />
+    <mailingList/>
   </mailingLists>
   <developers>
-    <developer />
+    <developer/>
   </developers>
   <contributors>
-    <contributor />
+    <contributor/>
   </contributors>
-  <issueManagement />
+  <issueManagement/>
   <!--
   <scm>
-    <connection />
-    <developerConnection />
-    <url />
+    <connection/>
+    <developerConnection/>
+    <url/>
   </scm>
   -->
-  <ciManagement />
+  <ciManagement/>
   <distributionManagement>
     <repository>
       <id>-</id>
@@ -61,7 +63,7 @@
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
 
-    <essentials.version>13.3.0</essentials.version>
+    <essentials.version>14.1.0</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
     <taglibs.version>1.2.5</taglibs.version>
 
@@ -76,15 +78,6 @@
       <id>hippo</id>
       <name>Hippo maven 2 repository.</name>
       <url>https://maven.onehippo.com/maven2/</url>
-    </repository>
-    <repository>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </releases>
-      <id>hippo-maven2-enterprise</id>
-      <name>Hippo Enterprise Maven 2</name>
-      <url>https://maven.onehippo.com/maven2-enterprise</url>
     </repository>
   </repositories>
 
@@ -146,7 +139,7 @@
                     <versionRange>[0.0,)</versionRange>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -184,9 +177,6 @@
         </property>
       </activation>
       <modules>
-        <!--<module>openui-external-document-picker</module>-->
-        <!--<module>openui-external-document-picker-api</module>-->
-        <!--<module>openui-external-document-picker-unsplashed</module>-->
         <module>cms-dependencies</module>
         <module>repository-data</module>
         <module>cms</module>
@@ -270,6 +260,10 @@
 
     <profile>
       <id>cargo.run</id>
+      <properties>
+        <!-- Already defined in the cms project POM. Override here for your project, if necessary -->
+        <!-- <repo.bootstrap>true</repo.bootstrap> -->
+      </properties>
       <build>
         <plugins>
           <plugin>
@@ -287,6 +281,16 @@
                     <file>${project.basedir}/conf/catalina-logging.properties</file>
                     <todir>conf/</todir>
                     <tofile>logging.properties</tofile>
+                  </configfile>
+                  <configfile>
+                    <file>${project.basedir}/conf/hst-dev.properties</file>
+                    <todir>conf/</todir>
+                    <tofile>hst.properties</tofile>
+                  </configfile>
+                  <configfile>
+                    <file>${project.basedir}/conf/platform-dev.properties</file>
+                    <todir>conf/</todir>
+                    <tofile>platform.properties</tofile>
                   </configfile>
                 </configfiles>
                 <files>
