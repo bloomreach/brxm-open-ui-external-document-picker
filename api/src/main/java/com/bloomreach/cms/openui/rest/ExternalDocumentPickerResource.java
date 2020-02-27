@@ -17,5 +17,6 @@ public interface ExternalDocumentPickerResource<T extends PickerItem> {
     List<T> search(@QueryParam("query") String query,
                    @QueryParam("page") @DefaultValue("1") int page,
                    @QueryParam("pageSize") @DefaultValue("16") int pageSize,
+                   @QueryParam("documentLocale") String locale,
                    @QueryParam("documentId") String documentId);
 }

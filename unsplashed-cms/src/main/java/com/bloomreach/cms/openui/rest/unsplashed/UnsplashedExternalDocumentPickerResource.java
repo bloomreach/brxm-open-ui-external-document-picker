@@ -11,7 +11,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource;
 import com.bloomreach.cms.openui.rest.PickerItem;
@@ -35,7 +37,11 @@ public class UnsplashedExternalDocumentPickerResource extends BaseRestResource i
     public List<PickerItem> search(@QueryParam("query") String query,
                                    @QueryParam("page") @DefaultValue("1") int page,
                                    @QueryParam("pageSize") @DefaultValue("20") int pageSize,
+                                   @QueryParam("documentLocale") String locale,
                                    @QueryParam("documentId") String documentId) {
+
+
+//        throw new WebApplicationException(Response.status(501).entity("DANGER WILL ROBINSON").build());
         final Map<String, Object> pathVars = new HashMap<>();
         pathVars.put("query", query);
         pathVars.put("per_page", pageSize);

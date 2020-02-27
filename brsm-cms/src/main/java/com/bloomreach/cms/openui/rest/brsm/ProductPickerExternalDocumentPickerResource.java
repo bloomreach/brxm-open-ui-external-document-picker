@@ -34,7 +34,8 @@ public class ProductPickerExternalDocumentPickerResource extends BaseRestResourc
     public List<PickerItem> search(@QueryParam("query") String query,
                                    @QueryParam("page") @DefaultValue("1") int page,
                                    @QueryParam("pageSize") @DefaultValue("20") int pageSize,
-                                    @QueryParam("documentId") String documentId){
+                                   @QueryParam("documentLocale") String locale,
+                                   @QueryParam("documentId") String documentId){
         final Map<String, Object> pathVars = new HashMap<>();
 
         int limit = pageSize;

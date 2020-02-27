@@ -100,6 +100,8 @@ class ExtPickerDialog extends React.Component {
       const value = JSON.parse(options.value)
       const items = value.items;
       const context = value.context;
+      console.log('init');
+      console.log(value);
       this.setState({context: context});
       this.setState({selectedItems: items});
       this.fetchItems(this.state.query, this.state.page, this.state.pageSize)
@@ -143,17 +145,17 @@ class ExtPickerDialog extends React.Component {
 
   async fetchItems (query, page, pageSize) {
     this.setState({isLoading: true});
+    const url = new URL(this.urlEndpoint + '/search'),
+      params = {query:query,
+        page:page,
+        pageSize:pageSize,
+        clientId:this.clientId,
+        documentId:this.state.context.documentId,
+        documentLocale:this.state.context.documentLocale}
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
     const fetched =
-      await fetch(this.urlEndpoint +
-        '/search?query=' + query
-        + '&page='
-        + page
-        + '&pageSize='
-        + pageSize
-        + "&clientId="
-        + this.clientId
-        + '&documentId=' + this.state.context.documentId
-      ).then(response => {
+      await fetch(url)
+      .then(response => {
         if (!response.ok) {
           response.text().then(value => this.logError(value))
           return [];
