@@ -45,17 +45,17 @@
     <dependency>
       <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-api</artifactId>
-      <version>0.6.0</version>
+      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
     <dependency>
       <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-unsplashed-cms</artifactId>
-      <version>0.6.0</version>
+      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
     <dependency>
       <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-giphy-cms</artifactId>
-      <version>0.6.0</version>
+      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
 
     <dependency>

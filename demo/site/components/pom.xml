@@ -47,12 +47,12 @@
     <dependency>
       <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-unsplashed-site</artifactId>
-      <version>0.6.0</version>
+      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
     <dependency>
       <groupId>com.bloomreach.openui</groupId>
       <artifactId>openui-external-document-picker-giphy-site</artifactId>
-      <version>0.6.0</version>
+      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
 
   </dependencies>
