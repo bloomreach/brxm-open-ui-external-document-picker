@@ -20,6 +20,10 @@ import {Check} from "@material-ui/icons";
 import Snackbar from "@material-ui/core/Snackbar/Snackbar";
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import FormControl from "@material-ui/core/FormControl/FormControl";
+import InputLabel from "@material-ui/core/InputLabel/InputLabel";
+import Select from "@material-ui/core/Select/Select";
+import MenuItem from "@material-ui/core/MenuItem/MenuItem";
 
 const dataMode = {
   SINGLE: 'single',
@@ -41,6 +45,7 @@ class ExtPickerDialog extends React.Component {
     this.onScroll = this.onScroll.bind(this);
     this.onOk = this.onOk.bind(this);
     this.logError = this.logError.bind(this);
+    this.onAggChange = this.onAggChange.bind(this);
 
     this.extensionConfig = JSON.parse(this.ui.extension.config);
     this.application = this.extensionConfig.application;
@@ -52,6 +57,8 @@ class ExtPickerDialog extends React.Component {
     this.urlEndpoint = this.ui.baseUrl + 'edp/' + this.application;
     this.state = {
       items: [],
+      aggs: [],
+      aggValues: {},
       query: this.extensionConfig.query,
       page: 1,
       pageSize: this.extensionConfig.pageSize,
@@ -151,7 +158,8 @@ class ExtPickerDialog extends React.Component {
         pageSize: pageSize,
         clientId: this.clientId,
         documentId: this.state.context.documentId,
-        documentLocale: this.state.context.documentLocale
+        documentLocale: this.state.context.documentLocale,
+        aggs: JSON.stringify(this.state.aggValues)
       }
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
     const fetched =
@@ -162,7 +170,12 @@ class ExtPickerDialog extends React.Component {
             return [];
           }
           return response.json();
-        }).catch(reason => {
+        })
+        .then(result => {
+          this.setState({aggs: result.aggs});
+          return result.data;
+        })
+        .catch(reason => {
           this.logError('Error: ' + reason.toString());
           return [];
         });
@@ -175,12 +188,26 @@ class ExtPickerDialog extends React.Component {
     this.fetchItems(value, this.state.page, this.state.pageSize).then(items => this.setState({items: items}))
   }
 
+  onAggChange (name, values) {
+    // console.log('name: ' + name);
+    // console.log(values)
+    const aggVal = this.state.aggValues;
+    aggVal[name] = values;
+    this.setState({aggValues: aggVal});
+    this.changeQuery(this.state.query);
+  }
+
   onOk () {
     this.ui.dialog.close(this.state.selectedItems);
   }
 
+  isEmpty (val) {
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+  }
+
   render () {
     const {isLoading} = this.state || false;
+    const {aggs} = this.state || [];
     const {alertOpen} = this.state || false;
     const {alertMessage} = this.state || '';
     const {items} = this.state || [];
@@ -211,11 +238,40 @@ class ExtPickerDialog extends React.Component {
             autoFocus
             margin="dense"
             id="search"
+            style={{
+              minWidth: 200
+            }}
             label="Search"
             type="text"
-            fullWidth
+            fullWidth={true}
             onChange={event => this.changeQuery(event.target.value)}
           />
+          {aggs.map((aggregation, id) =>
+            <FormControl key={id} style={{
+              minWidth: 120,
+            }}>
+              {this.isEmpty(this.state.aggValues[aggregation.name]) ?
+                <InputLabel>
+                  {aggregation.label}
+                </InputLabel> : ''
+              }
+              {(() => {
+                switch (aggregation.type) {
+                  case "SingleSelect":
+                    return <Select value={this.state.aggValues[aggregation.name] !== undefined ? this.state.aggValues[aggregation.name] : this.state.aggValues[aggregation.name] = ''} onChange={event => this.onAggChange(aggregation.name, event.target.value)} style={{height: '50px'}}>
+                      <MenuItem value={''}></MenuItem>
+                      {aggregation.values.map((value, id) =>
+                        <MenuItem key={id} value={value}>{value}</MenuItem>
+                      )}
+                    </Select>;
+                  case "MultiSelect":
+                    return "";
+                  default:
+                    return "";
+                }
+              })()}
+            </FormControl>
+          )}
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>

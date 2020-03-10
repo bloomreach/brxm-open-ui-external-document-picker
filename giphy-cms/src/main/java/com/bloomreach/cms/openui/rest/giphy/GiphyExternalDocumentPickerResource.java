@@ -11,8 +11,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.UriInfo;
 
+import com.bloomreach.cms.openui.model.Result;
 import com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource;
 import com.bloomreach.cms.openui.rest.PickerItem;
 import com.bloomreach.cms.openui.rest.giphy.model.GiphyItem;
@@ -32,7 +35,8 @@ public class GiphyExternalDocumentPickerResource extends BaseRestResource implem
     @GET
     @Path("/search")
     @Produces({MediaType.APPLICATION_JSON})
-    public List<PickerItem> search(@QueryParam("query") String query,
+    public Result<PickerItem> search(@Context UriInfo uriInfo,
+                                   @QueryParam("query") String query,
                                    @QueryParam("page") @DefaultValue("1") int page,
                                    @QueryParam("pageSize") @DefaultValue("20") int pageSize,
                                    @QueryParam("documentLocale") String locale,
@@ -53,9 +57,13 @@ public class GiphyExternalDocumentPickerResource extends BaseRestResource implem
         ResourceCollection children = results.getChildren();
         ResourceBeanMapper unsplashed = broker.getResourceBeanMapper("giphy");
 
-        return unsplashed.mapCollection(children, GiphyItem.class)
+        List<PickerItem> items = unsplashed.mapCollection(children, GiphyItem.class)
                 .stream().map(giphyItem -> new GiphyPickerItemAdapter(giphyItem))
                 .collect(Collectors.toList());
+
+        Result<PickerItem> result = new Result<>(items);
+
+        return result;
 
     }
 
