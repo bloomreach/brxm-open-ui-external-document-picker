@@ -96,7 +96,7 @@ public class UnsplashedExternalDocumentPickerResource extends BaseExternalDocume
         try {
             content = broker.resolve("unsplashed", "&query={query}&per_page={per_page}&page={page}" + requestQuery.toString(), pathVars);
         } catch (ResourceException e) {
-            throw new WebApplicationException(Response.status(501).entity(e.getCause().getMessage() + " limit reached!").build());
+            throw new WebApplicationException(Response.status(501).entity(e.getCause().getMessage() + ", most probably the limit is reached!").build());
         }
 
         Resource results = (Resource)content.getValue("results");
