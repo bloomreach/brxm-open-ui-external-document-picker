@@ -12,6 +12,7 @@ public class JsonConversionUtil {
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
+    //todo move to query param using com.bloomreach.cms.openui.rest.JacksonJsonParamConverterProvider
     public static final Map<String, String> extractAggregationMapFromUriInfo(final UriInfo info) {
         MultivaluedMap<String, String> queryParameters = info.getQueryParameters();
         return queryParameters.containsKey("aggs") ? convertJsonStringToMap(queryParameters.get("aggs").get(0)) : null;

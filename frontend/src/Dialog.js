@@ -44,6 +44,7 @@ class ExtPickerDialog extends React.Component {
 
     this.onScroll = this.onScroll.bind(this);
     this.onOk = this.onOk.bind(this);
+    this.changeQuery = this.changeQuery.bind(this);
     this.logError = this.logError.bind(this);
     this.onAggChange = this.onAggChange.bind(this);
 
@@ -107,7 +108,6 @@ class ExtPickerDialog extends React.Component {
       const items = value.items;
       const context = value.context;
       console.log('init');
-      console.log(value);
       this.setState({context: context});
       this.setState({selectedItems: items});
       this.fetchItems(this.state.query, this.state.page, this.state.pageSize)
@@ -167,7 +167,7 @@ class ExtPickerDialog extends React.Component {
         .then(response => {
           if (!response.ok) {
             response.text().then(value => this.logError(value))
-            return [];
+            return {data:[], aggs:[]};
           }
           return response.json();
         })
@@ -184,16 +184,16 @@ class ExtPickerDialog extends React.Component {
   }
 
   changeQuery (value) {
-    this.setState({query: value, page: 1})
-    this.fetchItems(value, this.state.page, this.state.pageSize).then(items => this.setState({items: items}))
+    this.extDialog.current.scrollTo(0, 0);
+    this.setState({query: value, items: [], page: 1});
+    this.fetchItems(value, 1, this.state.pageSize)
+      .then(items => this.setState({items: items}))
   }
 
   onAggChange (name, values) {
-    // console.log('name: ' + name);
-    // console.log(values)
     const aggVal = this.state.aggValues;
     aggVal[name] = values;
-    this.setState({aggValues: aggVal});
+    this.setState({aggValues: aggVal, page: 1});
     this.changeQuery(this.state.query);
   }
 
@@ -261,7 +261,7 @@ class ExtPickerDialog extends React.Component {
                     return <Select value={this.state.aggValues[aggregation.name] !== undefined ? this.state.aggValues[aggregation.name] : this.state.aggValues[aggregation.name] = ''} onChange={event => this.onAggChange(aggregation.name, event.target.value)} style={{height: '50px'}}>
                       <MenuItem value={''}></MenuItem>
                       {aggregation.values.map((value, id) =>
-                        <MenuItem key={id} value={value}>{value}</MenuItem>
+                        <MenuItem key={id} value={value.value}>{value.label}</MenuItem>
                       )}
                     </Select>;
                   case "MultiSelect":

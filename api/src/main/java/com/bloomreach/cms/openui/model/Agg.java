@@ -7,7 +7,7 @@ public class Agg {
     private String name;
     private String label;
     private String type;
-    private List<String> values;
+    private List<Option> values;
 
     @JsonProperty("name")
     public String getName() { return name; }
@@ -25,7 +25,7 @@ public class Agg {
     public void setType(String value) { this.type = value; }
 
     @JsonProperty("values")
-    public List<String> getValues() { return values; }
+    public List<Option> getValues() { return values; }
     @JsonProperty("values")
-    public void setValues(List<String> value) { this.values = value; }
+    public void setValues(List<Option> value) { this.values = value; }
 }
