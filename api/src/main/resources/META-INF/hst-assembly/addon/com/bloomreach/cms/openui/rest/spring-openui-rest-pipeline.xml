@@ -18,6 +18,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
+  <import resource="classpath:/org/hippoecm/hst/site/optional/jaxrs/SpringComponentManager-rest-jackson.xml"/>
+
   <bean id="jaxrsRestOpenUiServiceQueryStringReplacingInterceptor" class="org.hippoecm.hst.jaxrs.cxf.QueryStringReplacingInterceptor">
     <property name="paramNameReplaces">
       <map>
@@ -73,6 +75,31 @@
       </bean>
     </constructor-arg>
     <property name="valveName" value="jaxrsRestOpenUiServiceValve"/>
+  </bean>
+
+  <bean id="jaxrsRestOpenUiExceptionMapper" class="org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper">
+    <property name="printStackTrace" value="false"/>
+  </bean>
+
+  <bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+        <!--<ref bean="jaxrsOpenUiCustomContextProvider"/>-->
+        <ref bean="jaxrsRestOpenUiExceptionMapper"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="openUiRestAllEntityProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">
+    <constructor-arg value="java.util.List"/>
+    <property name="targetClass" value="org.apache.commons.collections.ListUtils"/>
+    <property name="targetMethod" value="union"/>
+    <property name="arguments">
+      <list>
+        <ref bean="jaxrsRestDefaultEntityProviders"/>
+        <ref bean="openUiRestEntityProviders"/>
+      </list>
+    </property>
   </bean>
 
   <bean id="jaxrsRestOpenUiResourceProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">

@@ -18,52 +18,52 @@
     </property>
   </bean>
 
-  <bean id="jaxrsRestOpenUiExceptionMapper" class="org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper">
-    <property name="printStackTrace" value="false"/>
-  </bean>
+  <!--<bean id="jaxrsRestOpenUiExceptionMapper" class="org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper">-->
+    <!--<property name="printStackTrace" value="false"/>-->
+  <!--</bean>-->
 
-  <bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
-    <property name="sourceList">
-      <list>
-        <ref bean="jaxrsRestOpenUiExceptionMapper"/>
-      </list>
-    </property>
-  </bean>
+  <!--<bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">-->
+    <!--<property name="sourceList">-->
+      <!--<list>-->
+        <!--<ref bean="jaxrsRestOpenUiExceptionMapper"/>-->
+      <!--</list>-->
+    <!--</property>-->
+  <!--</bean>-->
 
-  <bean id="openUiRestAllEntityProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">
-    <constructor-arg value="java.util.List"/>
-    <property name="targetClass" value="org.apache.commons.collections.ListUtils"/>
-    <property name="targetMethod" value="union"/>
-    <property name="arguments">
-      <list>
-        <ref bean="jaxrsRestDefaultEntityProviders"/>
-        <ref bean="openUiRestEntityProviders"/>
-      </list>
-    </property>
-  </bean>
+  <!--<bean id="openUiRestAllEntityProviders" class="org.hippoecm.hst.site.container.TypeDeterminedMethodInvokingFactoryBean">-->
+    <!--<constructor-arg value="java.util.List"/>-->
+    <!--<property name="targetClass" value="org.apache.commons.collections.ListUtils"/>-->
+    <!--<property name="targetMethod" value="union"/>-->
+    <!--<property name="arguments">-->
+      <!--<list>-->
+        <!--<ref bean="jaxrsRestDefaultEntityProviders"/>-->
+        <!--<ref bean="openUiRestEntityProviders"/>-->
+      <!--</list>-->
+    <!--</property>-->
+  <!--</bean>-->
 
-  <bean id="jaxrsRestOpenUiServiceValve" class="org.hippoecm.hst.core.container.JaxrsRestServiceValve"
-        init-method="initialize" destroy-method="destroy">
-    <constructor-arg>
-      <bean class="org.hippoecm.hst.jaxrs.cxf.CXFJaxrsService">
-        <constructor-arg value="jaxrsOpenUiService"/>
-        <property name="servletPath" value=""/>
-        <property name="jaxrsServerFactoryBean">
-          <bean class="org.apache.cxf.jaxrs.JAXRSServerFactoryBean">
-            <property name="address" value="/"/>
-            <property name="providers" ref="openUiRestAllEntityProviders"/>
-            <property name="resourceProviders" ref="brSMRestOpenUiResourceProviders"/>
-            <property name="invoker" ref="jaxrsRestOpenUiServiceInvoker"/>
-          </bean>
-        </property>
-        <property name="inInterceptors">
-          <list>
-            <ref bean="jaxrsRestOpenUiServiceQueryStringReplacingInterceptor"/>
-          </list>
-        </property>
-      </bean>
-    </constructor-arg>
-    <property name="valveName" value="jaxrsRestOpenUiServiceValve"/>
-  </bean>
+  <!--<bean id="jaxrsRestOpenUiServiceValve" class="org.hippoecm.hst.core.container.JaxrsRestServiceValve"-->
+        <!--init-method="initialize" destroy-method="destroy">-->
+    <!--<constructor-arg>-->
+      <!--<bean class="org.hippoecm.hst.jaxrs.cxf.CXFJaxrsService">-->
+        <!--<constructor-arg value="jaxrsOpenUiService"/>-->
+        <!--<property name="servletPath" value=""/>-->
+        <!--<property name="jaxrsServerFactoryBean">-->
+          <!--<bean class="org.apache.cxf.jaxrs.JAXRSServerFactoryBean">-->
+            <!--<property name="address" value="/"/>-->
+            <!--<property name="providers" ref="openUiRestAllEntityProviders"/>-->
+            <!--<property name="resourceProviders" ref="brSMRestOpenUiResourceProviders"/>-->
+            <!--<property name="invoker" ref="jaxrsRestOpenUiServiceInvoker"/>-->
+          <!--</bean>-->
+        <!--</property>-->
+        <!--<property name="inInterceptors">-->
+          <!--<list>-->
+            <!--<ref bean="jaxrsRestOpenUiServiceQueryStringReplacingInterceptor"/>-->
+          <!--</list>-->
+        <!--</property>-->
+      <!--</bean>-->
+    <!--</constructor-arg>-->
+    <!--<property name="valveName" value="jaxrsRestOpenUiServiceValve"/>-->
+  <!--</bean>-->
 
 </beans>
