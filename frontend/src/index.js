@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import * as UiExtension from "@bloomreach/ui-extension";
 import ExtPickerDialog from "./Dialog";
+import Fallback from "./Fallback";
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(error);
     console.error('Failed to register extension:', error.message);
     console.error('- error code:', error.code);
+    ReactDOM.render(<Fallback/>, document.getElementById('root'));
   }
 });
 // If you want your app to work offline and load faster, you can change

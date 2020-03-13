@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react';
-import './App.css';
 import TextField from "@material-ui/core/TextField/TextField";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";

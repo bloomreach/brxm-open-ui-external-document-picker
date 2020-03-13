@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Button from "@material-ui/core/Button/Button";
 import Chip from "@material-ui/core/Chip/Chip";
 import Avatar from "@material-ui/core/Avatar/Avatar";
