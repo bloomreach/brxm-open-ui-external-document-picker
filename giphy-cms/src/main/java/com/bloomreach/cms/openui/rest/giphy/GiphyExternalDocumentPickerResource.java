@@ -30,17 +30,19 @@ import org.onehippo.cms7.essentials.components.rest.BaseRestResource;
 
 
 @Path("/giphy")
-public class GiphyExternalDocumentPickerResource extends BaseRestResource implements ExternalDocumentPickerResource {
+public class GiphyExternalDocumentPickerResource implements ExternalDocumentPickerResource<PickerItem> {
 
+    @SuppressWarnings("RestParamTypeInspection")
     @GET
     @Path("/search")
     @Produces({MediaType.APPLICATION_JSON})
     public Result<PickerItem> search(@Context UriInfo uriInfo,
-                                   @QueryParam("query") String query,
-                                   @QueryParam("page") @DefaultValue("1") int page,
-                                   @QueryParam("pageSize") @DefaultValue("20") int pageSize,
-                                   @QueryParam("documentLocale") String locale,
-                                   @QueryParam("documentId") String documentId) {
+                                     @QueryParam("query") String query,
+                                     @QueryParam("page") @DefaultValue("1") int page,
+                                     @QueryParam("pageSize") @DefaultValue("20") int pageSize,
+                                     @QueryParam("documentLocale") String locale,
+                                     @QueryParam("documentId") String documentId,
+                                     @QueryParam("aggs") Map<String, String> aggregations) {
         final Map<String, Object> pathVars = new HashMap<>();
 
         int limit = pageSize;

@@ -29,7 +29,7 @@ import com.bloomreach.cms.openui.rest.brsm.model.PickerProductItem;
 
 
 @Path("/productPicker")
-public class ProductPickerExternalDocumentPickerResource extends BaseRestResource implements ExternalDocumentPickerResource {
+public class ProductPickerExternalDocumentPickerResource implements ExternalDocumentPickerResource<PickerItem> {
 
     @GET
     @Path("/search")
@@ -39,7 +39,8 @@ public class ProductPickerExternalDocumentPickerResource extends BaseRestResourc
                                      @QueryParam("page") @DefaultValue("1") int page,
                                      @QueryParam("pageSize") @DefaultValue("20") int pageSize,
                                      @QueryParam("documentLocale") String locale,
-                                     @QueryParam("documentId") String documentId){
+                                     @QueryParam("documentId") String documentId,
+                                     @QueryParam("aggs") Map<String, String> aggregations){
         final Map<String, Object> pathVars = new HashMap<>();
 
         int limit = pageSize;

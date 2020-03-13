@@ -29,7 +29,7 @@ import org.onehippo.cms7.crisp.hst.module.CrispHstServices;
 
 
 @Path("/unsplashed")
-public class UnsplashedExternalDocumentPickerResource extends BaseExternalDocumentPickerResource {
+public class UnsplashedExternalDocumentPickerResource extends BaseExternalDocumentPickerResource<PickerItem> {
 
     private static final List<Agg> UNSPLASHED_AGGS = new ArrayList<>();
 

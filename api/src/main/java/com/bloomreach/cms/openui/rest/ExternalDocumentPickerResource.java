@@ -1,5 +1,7 @@
 package com.bloomreach.cms.openui.rest;
 
+import java.util.Map;
+
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,6 +15,7 @@ import com.bloomreach.cms.openui.model.Result;
 
 public interface ExternalDocumentPickerResource<T extends PickerItem> {
 
+    @SuppressWarnings("RestParamTypeInspection")
     @GET
     @Path("/search")
     @Produces({MediaType.APPLICATION_JSON})
@@ -21,5 +24,6 @@ public interface ExternalDocumentPickerResource<T extends PickerItem> {
                      @QueryParam("page") @DefaultValue("1") int page,
                      @QueryParam("pageSize") @DefaultValue("16") int pageSize,
                      @QueryParam("documentLocale") String locale,
-                     @QueryParam("documentId") String documentId);
+                     @QueryParam("documentId") String documentId,
+                     @QueryParam("aggs") Map<String, String> aggregations);
 }

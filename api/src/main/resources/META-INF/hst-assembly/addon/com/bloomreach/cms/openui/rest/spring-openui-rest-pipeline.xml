@@ -81,10 +81,13 @@
     <property name="printStackTrace" value="false"/>
   </bean>
 
+  <bean id="jacksonJsonParamConverterProvider" class="com.bloomreach.cms.openui.rest.JacksonJsonParamConverterProvider">
+  </bean>
+
   <bean id="openUiRestEntityProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
-        <!--<ref bean="jaxrsOpenUiCustomContextProvider"/>-->
+        <ref bean="jacksonJsonParamConverterProvider"/>
         <ref bean="jaxrsRestOpenUiExceptionMapper"/>
       </list>
     </property>
