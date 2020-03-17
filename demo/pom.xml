@@ -12,7 +12,7 @@
   <description>My Project</description>
   <groupId>org.example</groupId>
   <artifactId>myproject</artifactId>
-  <version>0.7.0-SNAPSHOT</version>
+  <version>0.7.0</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -22,30 +22,30 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <url/>
-  <inceptionYear/>
-  <organization/>
+  <url />
+  <inceptionYear />
+  <organization />
   <licenses>
-    <license/>
+    <license />
   </licenses>
   <mailingLists>
-    <mailingList/>
+    <mailingList />
   </mailingLists>
   <developers>
-    <developer/>
+    <developer />
   </developers>
   <contributors>
-    <contributor/>
+    <contributor />
   </contributors>
-  <issueManagement/>
+  <issueManagement />
   <!--
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <connection />
+    <developerConnection />
+    <url />
   </scm>
   -->
-  <ciManagement/>
+  <ciManagement />
   <distributionManagement>
     <repository>
       <id>-</id>
@@ -150,7 +150,7 @@
                     <versionRange>[0.0,)</versionRange>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore/>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -462,4 +462,8 @@
 
   </profiles>
 
+
+  <scm>
+    <tag>myproject-0.7.0</tag>
+  </scm>
 </project>

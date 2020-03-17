@@ -10,9 +10,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.onehippo.cms7.hst:hst-api:13.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.onehippo.cms7.hst:hst-content-beans:13.3.0" level="project" />
-    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.9.10" level="project" />
+    <orderEntry type="library" name="Maven: org.onehippo.cms7.hst:hst-api:14.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.onehippo.cms7.hst:hst-content-beans:14.1.0" level="project" />
+    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.10.2" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-proxy:1.0" level="project" />
