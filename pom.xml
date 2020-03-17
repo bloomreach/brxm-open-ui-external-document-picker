@@ -27,7 +27,7 @@
   <artifactId>external-document-picker-parent</artifactId>
   <name>OpenUI External Document Picker Parent</name>
   <description>OpenUI External Document Picker Parent</description>
-  <version>0.7.0</version>
+  <version>0.8.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
