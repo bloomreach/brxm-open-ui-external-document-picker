@@ -6,6 +6,6 @@ definitions:
       hst:ismapped: false
       hst:namedpipeline: JaxrsRestOpenUiPipeline
       hst:types: [rest]
-      hst:responseheaders: ['Access-Control-Allow-Origin: https://dv2becjeusob0.cloudfront.net']
+      hst:responseheaders: ['Access-Control-Allow-Origin: https://d381zp6o8iqqvl.cloudfront.net']
       hst:subjectbasedsession: false
       hst:authenticated: false

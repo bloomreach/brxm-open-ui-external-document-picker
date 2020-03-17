@@ -288,13 +288,13 @@ Note right of Frontend: transformed results
 | 13.4.x | 0.4.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | re-orderable items, selected items in dialog, dialog view improved |
 | 14.0.x | 0.5.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | Included brSM product picker (no beans) |
 | 14.1.x | 0.6.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | added extra option in the api such as: documentLocale  |
+| 14.1.x | 0.7.0 | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Facets and Filters supported, please not that this requires an update on existing backend code |
 
 ## Feature Requests:
 
-1. Re-ordering the selected items in the edit mode (done 0.4)
-2. List and Data view in Dialog
-3. Improved ui in document field (now using chips)
-4. CKeditor Support
-5. Custom Dialog result view (i.e. video support)
+1. List and Data view in Dialog
+2. Improved ui in document field (now using chips)
+3. CKeditor Support
+4. Custom Dialog result view (i.e. video support)
 
 Let me know if you have more?

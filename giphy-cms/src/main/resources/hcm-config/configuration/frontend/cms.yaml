@@ -9,4 +9,4 @@ definitions:
       frontend:displayName: External Document Picker
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
-      frontend:url: https://dv2becjeusob0.cloudfront.net
+      frontend:url: https://d381zp6o8iqqvl.cloudfront.net
