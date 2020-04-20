@@ -54,6 +54,13 @@ class ExtPickerDialog extends React.Component {
     } else {
       this.dataMode = dataMode.MULTIPLE;
     }
+
+    if(typeof this.extensionConfig.autoSearch !== 'undefined') {
+      this.autoSearch = this.extensionConfig.autoSearch;
+    } else {
+      this.autoSearch = true;
+    }
+
     this.urlEndpoint = this.ui.baseUrl + 'edp/' + this.application;
     this.state = {
       items: [],
@@ -189,6 +196,12 @@ class ExtPickerDialog extends React.Component {
       .then(items => this.setState({items: items}))
   }
 
+  handleKeyDown (e) {
+    if (e.key === 'Enter') {
+      this.changeQuery(e.target.value);
+    }
+  }
+
   onAggChange (name, values) {
     const aggVal = this.state.aggValues;
     aggVal[name] = values;
@@ -240,10 +253,11 @@ class ExtPickerDialog extends React.Component {
             style={{
               minWidth: 200
             }}
-            label="Search"
+            label={this.autoSearch ? "Search" : "Search on enter"}
             type="text"
             fullWidth={true}
-            onChange={event => this.changeQuery(event.target.value)}
+            onChange={event => this.autoSearch && this.changeQuery(event.target.value)}
+            onKeyDown={event => !this.autoSearch && this.handleKeyDown(event)}
           />
           {aggs.map((aggregation, id) =>
             <FormControl key={id} style={{
