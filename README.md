@@ -181,7 +181,7 @@ The first thing that is required is to register the Open UI extension point in t
   jcr:primaryType: frontend:uiExtension  
   jcr:mixinTypes: ['hippostd:relaxed']  
   frontend:clientid: abc123  
-  frontend:config: '{"dataMode":"multiple", "title":"<application> Image Picker","size":"large",
+  frontend:config: '{"dataMode":"multiple", "autoSearch":false, "title":"<application> Image Picker","size":"large",
                       "application": "<application>", "query": "hippo", "pageSize" :"16", "clientId": "abc123"}'`  
   frontend:displayName: External Document Picker  
   frontend:extensionPoint: document.field  
@@ -197,12 +197,13 @@ in the **frontend:config** we are specifying the JSON string which the frontend 
 | property | value | comment |
 |--|--|--|
 |dataMode  | single or multiple | Depending if you would like to select a single or multiple items in the external document picker. |
-|title | X Picker | The title of the dialog
-|size | small, medium or large| Size of the Dialog
-|application | foo | Name of the 3rd party connector developed. E.g. unsplash: {... ,application: unsplash}. This corresponds with the value of @Path annotation in the Rest Resource (see below)
-| query | hippo | Default query executed when dialog instantiated 
-| pageSize | 16 | Default limit  used for pagination in the infinite scroll feature
-|cliendId | foobar123 | the same value as the  `frontend:clientid: abc123` property. Used for (simple authentication purposes)
+|autoSearch  | true or false (default true) | If unset or set to true new requests fire while the user types in the search bar. If false the search fires only on Enter key press.|
+|title | X Picker | The title of the dialog |
+|size | small, medium or large| Size of the Dialog |
+|application | foo | Name of the 3rd party connector developed. E.g. unsplash: {... ,application: unsplash}. This corresponds with the value of @Path annotation in the Rest Resource (see below) |
+| query | hippo | Default query executed when dialog instantiated |
+| pageSize | 16 | Default limit  used for pagination in the infinite scroll feature |
+|cliendId | foobar123 | the same value as the  `frontend:clientid: abc123` property. Used for (simple authentication purposes) |
 
 The **frontend:url** is the property which is pointing towards the frontend application. If you are running the frontend application locally on http://localhost:3002 then the value should be `frontend:url: http://localhost:3002`. Check the release notes (below) which frontend application is already deployed and you can use the link directly e.g.: [http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com](http://brxm-extdoc-pickerv0.2.s3-website-eu-west-1.amazonaws.com/)
 
@@ -287,6 +288,7 @@ Note right of Frontend: transformed results
 | 14.0.x | 0.5.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | Included brSM product picker (no beans) |
 | 14.1.x | 0.6.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | added extra option in the api such as: documentLocale  |
 | 14.1.x | 0.7.0 | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Facets and Filters supported, please not that this requires an update on existing backend code |
+| 14.1.x | 0.7.0 | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Control when search requests fire with autoSearch property |
 
 ## Feature Requests:
 
