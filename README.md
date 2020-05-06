@@ -198,6 +198,7 @@ in the **frontend:config** we are specifying the JSON string which the frontend 
 |--|--|--|
 |dataMode  | single or multiple | Depending if you would like to select a single or multiple items in the external document picker. |
 |autoSearch  | true or false (default true) | If unset or set to true new requests fire while the user types in the search bar. If false the search fires only on Enter key press.|
+|imgCover | true or false (default true) | With value true the associated image will cover the tile while with false it will be contained retaining original dimensions |
 |title | X Picker | The title of the dialog |
 |size | small, medium or large| Size of the Dialog |
 |application | foo | Name of the 3rd party connector developed. E.g. unsplash: {... ,application: unsplash}. This corresponds with the value of @Path annotation in the Rest Resource (see below) |

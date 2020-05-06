@@ -61,6 +61,12 @@ class ExtPickerDialog extends React.Component {
       this.autoSearch = true;
     }
 
+    if(typeof this.extensionConfig.imgCover !== 'undefined') {
+      this.imgCover = this.extensionConfig.imgCover;
+    } else {
+      this.imgCover = true;
+    }
+
     this.urlEndpoint = this.ui.baseUrl + 'edp/' + this.application;
     this.state = {
       items: [],
@@ -291,7 +297,7 @@ class ExtPickerDialog extends React.Component {
         <GridList spacing={10} cols={4}>
           {items.map((item, id) =>
             <GridListTile key={id} cols={1} onClick={event => this.addOrDeleteItem(item)} style={{cursor: 'pointer'}}>
-              <img src={item.image} alt={item.title}/>
+              <img src={item.image} alt={item.title} className={`${this.imgCover ? "" : "img-contain"}`}/>
               <GridListTileBar
                 title={item.title}
                 subtitle={<span>{item.description}</span>}
