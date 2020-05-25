@@ -225,14 +225,17 @@ To use the Java API you will need to implement the 2 interfaces from the API dep
 
 **[com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/ExternalDocumentPickerResource.java)**
 
-    public interface ExternalDocumentPickerResource<T extends PickerItem> {  
-      
-        @GET  
-        @Path("/search")  
-        @Produces({MediaType.APPLICATION_JSON})  
-        public List<T> search(@QueryParam("query") String query,  
-                @QueryParam("page") @DefaultValue("1") int page,  
-                @QueryParam("pageSize") @DefaultValue("16") int pageSize);  
+    public interface ExternalDocumentPickerResource<T extends PickerItem> {
+    
+        @GET
+        @Path("/search")
+        @Produces({MediaType.APPLICATION_JSON})
+        Result<T> search(@Context UriInfo uriInfo,
+                         @QueryParam("query") String query,
+                         @QueryParam("page") @DefaultValue("1") int page,
+                         @QueryParam("pageSize") @DefaultValue("16") int pageSize,
+                         @QueryParam("documentLocale") String locale,
+                         @QueryParam("documentId") String documentId);
     }
 
 Example:

@@ -1,6 +1,6 @@
 definitions:
   config:
     /hippo:configuration/hippo:frontend/cms/ui-extensions/giphy:
-      frontend:url: http://brxm-extdoc-pickerv0.7.s3-website-eu-west-1.amazonaws.com
+      frontend:url: http://localhost:3002
     /hippo:configuration/hippo:frontend/cms/ui-extensions/unsplashed:
-      frontend:url: http://brxm-extdoc-pickerv0.7.s3-website-eu-west-1.amazonaws.com
+      frontend:url: http://localhost:3002

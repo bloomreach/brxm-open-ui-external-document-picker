@@ -18,7 +18,6 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
-
 class App extends React.Component {
 
   constructor (props) {
@@ -60,10 +59,10 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.setInitialState(this.ui);
+    this.getInitialItems(this.ui).then(items => this.setState({items: items}));
   }
 
-  async setInitialState (ui) {
+  async getInitialItems (ui) {
     try {
       const brDocument = await ui.document.get();
       this.mode = brDocument.mode;
@@ -77,11 +76,13 @@ class App extends React.Component {
         items.push(items)
       }
 
-      this.setState({items: items});
+      return items;
+
     } catch (error) {
       console.error('Failed to register extension:', error.message);
       console.error('- error code:', error.code);
     }
+    return [];
   }
 
   handleDelete = itemToDelete => () => {

@@ -1,0 +1,7 @@
+/.idea/
+target
+*.versionsBackup
+*.releaseBackup
+/demo/essentials/overlays/
+*.iml
+release.properties
