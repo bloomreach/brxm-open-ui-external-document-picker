@@ -238,6 +238,10 @@ To use the Java API you will need to implement the 2 interfaces from the API dep
                          @QueryParam("documentId") String documentId);
     }
 
+#### NEW!! Facet Support
+
+Now facets are supported by using the com.bloomreach.cms.openui.util.JsonConversionUtil.extractAggregationMapFromUriInfo method and returning back an aggregation in the Result object
+
 Example:
 
  - Unsplash
