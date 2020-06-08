@@ -14,7 +14,7 @@ function Fallback () {
           <li>
             <a
               className="App-link"
-              href="https://github.com/ksalic/brxm-open-ui-external-document-picker"
+              href="https://github.com/bloomreach/brxm-open-ui-external-document-picker"
               target="_blank"
               rel="noopener noreferrer"
             >
