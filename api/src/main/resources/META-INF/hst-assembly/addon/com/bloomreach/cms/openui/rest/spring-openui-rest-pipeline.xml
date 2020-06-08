@@ -111,6 +111,7 @@
         <ref bean="unsplashedRestOpenUiResourceProviders"/>
         <ref bean="giphyRestOpenUiResourceProviders"/>
         <ref bean="brSMRestOpenUiResourceProviders"/>
+        <ref bean="formIOOpenUiResourceProviders"/>
         <ref bean="customRestOpenUiResourceProviders1"/>
         <ref bean="customRestOpenUiResourceProviders2"/>
         <ref bean="customRestOpenUiResourceProviders3"/>
@@ -142,6 +143,13 @@
   </bean>
 
   <bean id="brSMRestOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="formIOOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
     <property name="sourceList">
       <list>
       </list>

@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    formiopicker:
+      uri: http://extdockpicker.bloomreach.com/formiopicker/1.0
+      cnd: formiopicker.cnd

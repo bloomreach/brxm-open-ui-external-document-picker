@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-project</artifactId>
-    <version>31.1.0</version>
+    <version>31.2.1</version>
   </parent>
 
   <groupId>com.bloomreach.openui</groupId>
@@ -111,6 +111,8 @@
     <module>giphy-site</module>
     <module>brsm-site</module>
     <module>brsm-cms</module>
+    <module>formio-site</module>
+    <module>formio-cms</module>
     <!--<module>demo</module>-->
   </modules>
 

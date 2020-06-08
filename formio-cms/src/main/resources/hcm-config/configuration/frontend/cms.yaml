@@ -1,0 +1,13 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/ui-extensions/formio:
+      jcr:primaryType: frontend:uiExtension
+      jcr:mixinTypes: ['hippostd:relaxed']
+      frontend:clientid: qwerty123
+      frontend:config: '{"dataMode":"multiple","title":"FormIO Picker","size":"large",
+        "application": "formio", "query": "hippo", "pageSize" :"16", "clientId":
+        "qwerty123"}'
+      frontend:displayName: FormIO Form Picker
+      frontend:extensionPoint: document.field
+      frontend:initialHeightInPixels: 200
+      frontend:url: https://d381zp6o8iqqvl.cloudfront.net

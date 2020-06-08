@@ -1,0 +1,5 @@
+group: hippo-cms
+project:
+  name: hippo-plugin-external-document-picker-formio
+  after: hippo-cms
+module: hippo-plugin-external-document-picker

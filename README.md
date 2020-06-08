@@ -1,4 +1,4 @@
-`Note: please check if the UI extension is using the supported frontend url ` https://github.com/ksalic/brxm-open-ui-external-document-picker#release-notes
+`Note: please check if the UI extension is using the supported frontend url ` https://github.com/bloomreach/brxm-open-ui-external-document-picker#release-notes
 
 # Documentation BrXM External Document Picker (Open UI)  
   
@@ -17,7 +17,7 @@ Of course as a frontend developer you can take the source code of the picker, wr
   
 **Short Demo:**  
   
-![Open UI DEMO](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/resources/open-ui-demo.gif?raw=true)  
+![Open UI DEMO](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/open-ui-demo.gif?raw=true)  
   
  ## OOTB Integrations
 
@@ -138,7 +138,7 @@ Example: add Unsplash Picker to a News item:
 
  1. Log in to the console and find the unsplash CRISP configuration
 
-![enter image description here](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/resources/configure-console.png?raw=true)
+![enter image description here](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/configure-console.png?raw=true)
 
 */hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/unsplashed*
 
@@ -146,7 +146,7 @@ Example: add Unsplash Picker to a News item:
  3. Login to the CMS, navigate to the document type section and find a document which you want to add the picker to and go into edit mode.
  4. Select **unsplashed** from the right sidebar in the compound section
 
-![enter image description here](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/resources/configure.png?raw=true)
+![enter image description here](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/configure.png?raw=true)
 
 5. Done and Commit. The picker should now be available to each News item in the BrXM instance.
 
@@ -212,7 +212,7 @@ The **frontend:url** is the property which is pointing towards the frontend appl
 
 To use the Java API you will need to implement the 2 interfaces from the API dependency. The implementation will serve as a **connector**
 
-**[com.bloomreach.cms.openui.rest.PickerItem](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/PickerItem.java)**
+**[com.bloomreach.cms.openui.rest.PickerItem](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/PickerItem.java)**
 
     public interface PickerItem<T> {  
    
@@ -223,7 +223,7 @@ To use the Java API you will need to implement the 2 interfaces from the API dep
         public T getData();  
     }
 
-**[com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/ExternalDocumentPickerResource.java)**
+**[com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/api/src/main/java/com/bloomreach/cms/openui/rest/ExternalDocumentPickerResource.java)**
 
     public interface ExternalDocumentPickerResource<T extends PickerItem> {
     
@@ -245,11 +245,11 @@ Now facets are supported by using the com.bloomreach.cms.openui.util.JsonConvers
 Example:
 
  - Unsplash
-	 - [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java)
-	 - [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java)
+	 - [https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedExternalDocumentPickerResource.java)
+	 - [https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/java/com/bloomreach/cms/openui/rest/unsplashed/UnsplashedPickerItemAdapter.java)
 - Giphy
-	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java)
-	- [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java)
+	- [https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyExternalDocumentPickerResource.java)
+	- [https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/giphy-cms/src/main/java/com/bloomreach/cms/openui/rest/giphy/GiphyPickerItemAdapter.java)
 
 ####  Client Connector
 
@@ -259,7 +259,7 @@ To create the client connectors we recommend you use CRISP as in above examples 
 
 To register your custom connector you will need to register the implementation of ExternalDocumentPickerResource to the `JaxrsRestOpenUiPipeline`. You can do this by adding a XML snippet in your code
 
-Example of unsplash: [https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml)
+Example of unsplash: [https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/unsplashed-cms/src/main/resources/META-INF/hst-assembly/overrides/addon/com/bloomreach/cms/openui/rest/spring-openui-rest-pipeline-unsplashed.xml)
 
 When completed, rebuild and run. The endpoint should be available and retrieving results from the 3rd party service: 
 
@@ -271,7 +271,7 @@ This REST resource will return results in a structured way for the (picker) fron
 
 ### How it works (Sequence):
 
-![Sequence Diagram](https://github.com/ksalic/brxm-open-ui-external-document-picker/blob/master/resources/sequence.png?raw=true)  
+![Sequence Diagram](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/sequence.png?raw=true)  
  
 
 ```mermaid

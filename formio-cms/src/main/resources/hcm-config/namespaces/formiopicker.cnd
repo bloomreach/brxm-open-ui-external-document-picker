@@ -1,0 +1,8 @@
+<'formiopicker'='http://extdockpicker.bloomreach.com/formiopicker/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+
+[formiopicker:formio] > hippo:compound, hippostd:relaxed, hippo:derived
+  orderable
+

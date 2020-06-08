@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:derivatives/formio:
+      jcr:primaryType: hipposys:deriveddefinition
+      hipposys:classname: com.bloomreach.cms.openui.derived.FormIODerivedFunction
+      hipposys:nodetype: formiopicker:formio
+      hipposys:serialver: 1
+      /hipposys:accessed:
+        jcr:primaryType: hipposys:propertyreferences
+        /openuid:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: formiopicker:formiopaths
+      /hipposys:derived:
+        jcr:primaryType: hipposys:propertyreferences
+        /path:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: formiopicker:path
