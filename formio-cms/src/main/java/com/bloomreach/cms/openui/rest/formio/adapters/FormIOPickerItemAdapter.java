@@ -19,7 +19,7 @@ public class FormIOPickerItemAdapter implements PickerItem<FormIOItem> {
         this.title = item.getTitle();
         this.description = item.getTitle();
         this.data = item;
-        this.image = "https://www.pngitem.com/pimgs/m/529-5292982_fiche-d-inscription-application-form-form-icon-hd.png";
+        this.image = "https://raw.githubusercontent.com/bloomreach/brxm-open-ui-external-document-picker/master/formio-cms/src/main/resources/form.png";
     }
 
     @Override
