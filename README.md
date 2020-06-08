@@ -17,7 +17,7 @@ Of course as a frontend developer you can take the source code of the picker, wr
   
 **Short Demo:**  
   
-![Open UI DEMO](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/open-ui-demo.gif?raw=true)  
+![Open UI DEMO](https://github.com/bloomreach/brxm-open-ui-external-document-picker/blob/master/resources/open-ui-demo2.gif?raw=true)  
   
  ## OOTB Integrations
 
