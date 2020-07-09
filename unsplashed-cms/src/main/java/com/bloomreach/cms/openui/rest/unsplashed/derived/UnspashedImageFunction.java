@@ -10,7 +10,7 @@ import javax.jcr.Value;
 import com.bloomreach.cms.openui.rest.unsplashed.UnsplashedPickerItemAdapter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.ext.DerivedDataFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

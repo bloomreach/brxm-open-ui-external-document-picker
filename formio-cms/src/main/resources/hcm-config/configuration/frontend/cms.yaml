@@ -4,10 +4,10 @@ definitions:
       jcr:primaryType: frontend:uiExtension
       jcr:mixinTypes: ['hippostd:relaxed']
       frontend:clientid: qwerty123
-      frontend:config: '{"dataMode":"multiple","title":"FormIO Picker","size":"large",
-        "application": "formio", "query": "hippo", "pageSize" :"16", "clientId":
+      frontend:config: '{"dataMode":"single","title":"FormIO Picker","size":"small",
+        "application": "formio", "query": "", "pageSize" :"8", "clientId":
         "qwerty123"}'
       frontend:displayName: FormIO Form Picker
       frontend:extensionPoint: document.field
       frontend:initialHeightInPixels: 200
-      frontend:url: https://d381zp6o8iqqvl.cloudfront.net
+      frontend:url: http://brxm-extdoc-pickerv0.8.s3-website-eu-west-1.amazonaws.com

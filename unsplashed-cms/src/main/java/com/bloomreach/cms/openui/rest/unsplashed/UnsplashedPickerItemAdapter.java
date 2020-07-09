@@ -3,8 +3,6 @@ package com.bloomreach.cms.openui.rest.unsplashed;
 import com.bloomreach.cms.openui.rest.PickerItem;
 import com.bloomreach.cms.openui.rest.unsplashed.model.UnsplashedItem;
 
-import org.apache.commons.lang.StringUtils;
-
 public class UnsplashedPickerItemAdapter implements PickerItem<UnsplashedItem> {
 
     private String id;

@@ -12,13 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
-import com.bloomreach.cms.openui.model.Agg;
-import com.bloomreach.cms.openui.model.Option;
-import com.bloomreach.cms.openui.rest.BaseExternalDocumentPickerResource;
-import com.bloomreach.cms.openui.rest.PickerItem;
-import com.bloomreach.cms.openui.rest.unsplashed.model.UnsplashedItem;
-
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.site.HstServices;
 import org.onehippo.cms7.crisp.api.broker.ResourceServiceBroker;
 import org.onehippo.cms7.crisp.api.resource.Resource;
@@ -26,6 +20,12 @@ import org.onehippo.cms7.crisp.api.resource.ResourceBeanMapper;
 import org.onehippo.cms7.crisp.api.resource.ResourceCollection;
 import org.onehippo.cms7.crisp.api.resource.ResourceException;
 import org.onehippo.cms7.crisp.hst.module.CrispHstServices;
+
+import com.bloomreach.cms.openui.model.Agg;
+import com.bloomreach.cms.openui.model.Option;
+import com.bloomreach.cms.openui.rest.BaseExternalDocumentPickerResource;
+import com.bloomreach.cms.openui.rest.PickerItem;
+import com.bloomreach.cms.openui.rest.unsplashed.model.UnsplashedItem;
 
 
 @Path("/unsplashed")

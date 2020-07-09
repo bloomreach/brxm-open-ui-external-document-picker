@@ -56,6 +56,11 @@
       <artifactId>openui-external-document-picker-giphy-cms</artifactId>
       <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-formio-cms</artifactId>
+      <version>${openui.exernaldoc.picker.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>

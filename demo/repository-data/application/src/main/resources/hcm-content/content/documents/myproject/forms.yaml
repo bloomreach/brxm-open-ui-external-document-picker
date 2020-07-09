@@ -1,0 +1,72 @@
+/content/documents/myproject/forms:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 6822403b-ca8d-47a6-afcd-bbcb323fb756
+  hippo:name: Forms
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 5f3fe45e-9466-4cdf-af66-ad0b4472cd8d
+  hippotranslation:locale: en
+  /contact-us:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: cc66bb81-34b6-40d7-8f3c-e24fda969cdf
+    hippo:name: Contact us
+    hippo:versionHistory: 2f08c96e-ff5b-4e5e-a52f-5186201c6056
+    /contact-us[1]:
+      jcr:primaryType: myproject:formdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: b24aa716-153f-4375-989f-c9d4f3be0e56
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-09T14:15:52.630+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-09T14:15:52.630+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: cbd304b9-137f-4d65-9949-0d8e15e560d6
+      hippotranslation:locale: en
+      myproject:title: Contact Us
+      /myproject:formio:
+        jcr:primaryType: formiopicker:formio
+        formiopicker:formiopaths: '[{"id":"contactus","title":"Contact Us","data":{"type":null,"title":"Contact
+          Us","name":"contactUs","path":"contactus","_id":"5ece3e13e70f440f96eb0552"},"description":"Contact
+          Us","image":"https://raw.githubusercontent.com/bloomreach/brxm-open-ui-external-document-picker/master/formio-cms/src/main/resources/form.png"}]'
+        formiopicker:path: contactus
+    /contact-us[2]:
+      jcr:primaryType: myproject:formdocument
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 34752a80-63b2-4003-af0e-225819dcbdf2
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-09T14:15:52.630+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-09T16:22:09.774+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: cbd304b9-137f-4d65-9949-0d8e15e560d6
+      hippotranslation:locale: en
+      myproject:title: Contact Us
+      /myproject:formio:
+        jcr:primaryType: formiopicker:formio
+        formiopicker:formiopaths: '[{"id":"contactus","title":"Contact Us","data":{"type":null,"title":"Contact
+          Us","name":"contactUs","path":"contactus","_id":"5ece3e13e70f440f96eb0552"},"description":"Contact
+          Us","image":"https://raw.githubusercontent.com/bloomreach/brxm-open-ui-external-document-picker/master/formio-cms/src/main/resources/form.png"}]'
+        formiopicker:path: contactus
+    /contact-us[3]:
+      jcr:primaryType: myproject:formdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6becf376-a0a3-4f98-8e96-2e7c127d7572
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-09T14:15:52.630+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-09T16:22:09.774+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-09T16:22:27.070+02:00
+      hippotranslation:id: cbd304b9-137f-4d65-9949-0d8e15e560d6
+      hippotranslation:locale: en
+      myproject:title: Contact Us
+      /myproject:formio:
+        jcr:primaryType: formiopicker:formio
+        formiopicker:formiopaths: '[{"id":"contactus","title":"Contact Us","data":{"type":null,"title":"Contact
+          Us","name":"contactUs","path":"contactus","_id":"5ece3e13e70f440f96eb0552"},"description":"Contact
+          Us","image":"https://raw.githubusercontent.com/bloomreach/brxm-open-ui-external-document-picker/master/formio-cms/src/main/resources/form.png"}]'
+        formiopicker:path: contactus
