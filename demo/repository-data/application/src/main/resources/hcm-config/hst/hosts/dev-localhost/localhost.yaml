@@ -1,6 +1,4 @@
 definitions:
   config:
     /hst:platform/hst:hosts/dev-localhost/localhost/hst:root/edp:
-      hst:responseheaders: ['Access-Control-Allow-Origin: http://localhost:3002',
-        'Access-Control-Allow-Origin: https://d381zp6o8iqqvl.cloudfront.net', 'Access-Control-Allow-Origin:
-          http://brxm-extdoc-pickerv0.8.s3-website-eu-west-1.amazonaws.com']
+      hst:responseheaders: ['Access-Control-Allow-Origin: http://brxm-extdoc-pickerv0.8.s3-website-eu-west-1.amazonaws.com']
