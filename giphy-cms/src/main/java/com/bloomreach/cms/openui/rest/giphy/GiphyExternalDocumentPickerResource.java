@@ -15,11 +15,6 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 
-import com.bloomreach.cms.openui.model.Result;
-import com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource;
-import com.bloomreach.cms.openui.rest.PickerItem;
-import com.bloomreach.cms.openui.rest.giphy.model.GiphyItem;
-
 import org.hippoecm.hst.site.HstServices;
 import org.onehippo.cms7.crisp.api.broker.ResourceServiceBroker;
 import org.onehippo.cms7.crisp.api.resource.Resource;
@@ -27,6 +22,11 @@ import org.onehippo.cms7.crisp.api.resource.ResourceBeanMapper;
 import org.onehippo.cms7.crisp.api.resource.ResourceCollection;
 import org.onehippo.cms7.crisp.hst.module.CrispHstServices;
 import org.onehippo.cms7.essentials.components.rest.BaseRestResource;
+
+import com.bloomreach.cms.openui.model.Result;
+import com.bloomreach.cms.openui.rest.ExternalDocumentPickerResource;
+import com.bloomreach.cms.openui.rest.PickerItem;
+import com.bloomreach.cms.openui.rest.giphy.model.GiphyItem;
 
 
 @Path("/giphy")

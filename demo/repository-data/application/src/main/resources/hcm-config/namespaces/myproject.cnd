@@ -13,6 +13,9 @@
 [myproject:contentdocument] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
   orderable
 
+[myproject:formdocument] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
+  orderable
+
 [myproject:newsdocument] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
   orderable
 

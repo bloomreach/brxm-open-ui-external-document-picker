@@ -53,6 +53,11 @@
       <artifactId>openui-external-document-picker-giphy-site</artifactId>
       <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-formio-site</artifactId>
+      <version>${openui.exernaldoc.picker.version}</version>
+    </dependency>
 
   </dependencies>
   <build>
