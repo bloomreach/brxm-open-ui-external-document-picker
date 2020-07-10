@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: b5645341-bb51-499a-b25d-b8cb57c40618
+          jcr:uuid: 61bc90bd-383d-44ec-911d-bdef14a46a11
           hipposysedit:node: true
           hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
@@ -55,12 +55,20 @@ definitions:
             hipposysedit:path: myproject:giphyimagepicker
             hipposysedit:primary: false
             hipposysedit:type: giphy:giphyimagepicker
+          /infographics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: myproject:infographics
+            hipposysedit:primary: false
+            hipposysedit:type: infographicspicker:infographics
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: myproject:contentdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 28193a25-62c2-4cab-b9e6-5766044ece9b
+          jcr:uuid: 8d934756-4548-46f2-8b53-eb5c22ca59a6
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft
@@ -80,6 +88,9 @@ definitions:
             jcr:primaryType: giphy:giphyimagepicker
             giphy:gifs: ''
             giphy:images: []
+          /myproject:infographics:
+            jcr:primaryType: infographicspicker:infographics
+            infographicspicker:infographicspaths: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -139,5 +150,13 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /infographics:
+            jcr:primaryType: frontend:plugin
+            caption: Infographics
+            field: infographics
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

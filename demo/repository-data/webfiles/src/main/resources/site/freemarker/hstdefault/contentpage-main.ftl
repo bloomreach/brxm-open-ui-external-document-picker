@@ -23,6 +23,9 @@
     </#list>
     </ul>
     </div>
+    <#if document.infographics??>
+        <script id="infogram_0_${document.infographics.path}" title="Ocean Sand" src="https://e.infogram.com/js/dist/embed.js?YSX" type="text/javascript"></script>
+    </#if>
     </article>
 <#-- @ftlvariable name="editMode" type="java.lang.Boolean"-->
 <#elseif editMode>

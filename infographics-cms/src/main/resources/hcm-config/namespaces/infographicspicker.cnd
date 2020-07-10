@@ -1,0 +1,8 @@
+<'infographicspicker'='http://extdockpicker.bloomreach.com/infographicspicker/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+
+[infographicspicker:infographics] > hippo:compound, hippostd:relaxed, hippo:derived
+  orderable
+

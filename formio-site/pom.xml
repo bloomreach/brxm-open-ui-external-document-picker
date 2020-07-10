@@ -19,27 +19,5 @@
       <version>${hippo.version}</version>
       <type>pom</type>
     </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7.hst</groupId>
-      <artifactId>hst-api</artifactId>
-      <version>${hippo.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7.hst</groupId>
-      <artifactId>hst-content-beans</artifactId>
-      <version>${hippo.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-hst</artifactId>
-      <version>${hippo.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-api</artifactId>
-      <version>${hippo.version}</version>
-    </dependency>
-
   </dependencies>
 </project>

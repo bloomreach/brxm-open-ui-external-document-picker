@@ -1,0 +1,13 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/ui-extensions/infographics:
+      jcr:primaryType: frontend:uiExtension
+      jcr:mixinTypes: ['hippostd:relaxed']
+      frontend:clientid: qwerty123
+      frontend:config: '{"dataMode":"single","title":"Infographics Picker","size":"large",
+        "application": "infographics", "query": "", "pageSize" :"10", "clientId":
+        "qwerty123"}'
+      frontend:displayName: Infographics Picker
+      frontend:extensionPoint: document.field
+      frontend:initialHeightInPixels: 300
+      frontend:url: http://brxm-extdoc-pickerv0.8.s3-website-eu-west-1.amazonaws.com

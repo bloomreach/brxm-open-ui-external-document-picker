@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:derivatives/infographics:
+      jcr:primaryType: hipposys:deriveddefinition
+      hipposys:classname: com.bloomreach.cms.openui.derived.InfographicsDerivedFunction
+      hipposys:nodetype: infographicspicker:infographics
+      hipposys:serialver: 1
+      /hipposys:accessed:
+        jcr:primaryType: hipposys:propertyreferences
+        /openuid:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: infographicspicker:infographicspaths
+      /hipposys:derived:
+        jcr:primaryType: hipposys:propertyreferences
+        /publicId:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: infographicspicker:publicId

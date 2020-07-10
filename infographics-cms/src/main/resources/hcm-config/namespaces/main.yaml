@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    infographicspicker:
+      uri: http://extdockpicker.bloomreach.com/infographicspicker/1.0
+      cnd: infographicspicker.cnd

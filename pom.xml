@@ -113,6 +113,8 @@
     <module>brsm-cms</module>
     <module>formio-site</module>
     <module>formio-cms</module>
+    <module>infographics-cms</module>
+    <module>infographics-site</module>
     <!--<module>demo</module>-->
   </modules>
 

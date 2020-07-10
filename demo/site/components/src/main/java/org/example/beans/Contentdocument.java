@@ -5,8 +5,9 @@ import org.hippoecm.hst.content.beans.Node;
 import java.util.Calendar;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import com.bloomreach.site.openui.rest.giphy.beans.Giphy;
+import com.bloomreach.site.openui.rest.infographics.beans.InfographicsCompound;
 
-/** 
+/**
  * TODO: Beanwriter: Failed to create getter for node type: giphy:giphyimagepicker
  */
 @HippoEssentialsGenerated(internalName = "myproject:contentdocument")
@@ -34,5 +35,9 @@ public class Contentdocument extends BaseDocument {
 
     public String[] getImages() {
         return getBean("myproject:giphyimagepicker", Giphy.class).getImages();
+    }
+
+    public InfographicsCompound getInfographics() {
+        return getBean("myproject:infographics", InfographicsCompound.class);
     }
 }

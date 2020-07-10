@@ -1,0 +1,7 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/cms-folder-views/hipposysedit:namespacefolder/root/filters:
+      /hideinfographicspicker:
+        jcr:primaryType: frontend:pluginconfig
+        display: false
+        path: /hippo:namespaces/infographicspicker

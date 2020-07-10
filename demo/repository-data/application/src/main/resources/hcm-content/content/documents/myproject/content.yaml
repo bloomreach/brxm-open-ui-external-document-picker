@@ -10,7 +10,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 64ab4648-0c20-40d2-9f18-d7a394f0334b
     hippo:name: Sample document
-    hippo:versionHistory: 5ca70c82-5ca5-4aab-a3cb-c4bf168ec45b
+    hippo:versionHistory: 6adc4211-437c-47d0-b01c-8b0613c5bcfe
     /sample-document[1]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -20,9 +20,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-10-02T10:19:44.275+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:04:13.086+02:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2019-10-02T10:19:45.831+02:00
+      hippostdpubwf:publicationDate: 2020-07-10T16:04:14.720+02:00
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
       myproject:externaldockerpicker: '[{"id":"1O1hLL-v7Hc","title":"gray hipopotamos","image":"https://images.unsplash.com/photo-1499842340257-55ccb7a02645?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgwNjg5fQ","description":null,"data":{"id":"1O1hLL-v7Hc","created_at":"2017-07-12T02:53:16-04:00","updated_at":"2019-07-28T01:25:53-04:00","width":7952,"height":5304,"color":"#34261A","description":"Yawning
@@ -78,6 +78,11 @@
           'https://media1.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif',
           'https://media1.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc15672f6676eac18f8d1e9d394e432f8ba75ae4ee699&rid=giphy.gif',
           'https://media0.giphy.com/media/l3mZcNSkdbE9cXylq/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","data":{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg","date_modified":1594288139000},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg"}]'
     /sample-document[2]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -86,7 +91,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-10-02T10:19:44.275+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:04:13.086+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
@@ -143,6 +148,11 @@
           'https://media1.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif',
           'https://media1.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc15672f6676eac18f8d1e9d394e432f8ba75ae4ee699&rid=giphy.gif',
           'https://media0.giphy.com/media/l3mZcNSkdbE9cXylq/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","data":{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg","date_modified":1594288139000},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg"}]'
     /sample-document[3]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -151,7 +161,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-09-27T15:58:04.263+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:04:07.631+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d6073768-17b0-47a3-8f41-9338d445a685
       hippotranslation:locale: en
@@ -208,12 +218,17 @@
           'https://media1.giphy.com/media/devyAHhaiQlfa/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif',
           'https://media1.giphy.com/media/fWCRNZUrkxcD6/giphy.gif?cid=042fc15672f6676eac18f8d1e9d394e432f8ba75ae4ee699&rid=giphy.gif',
           'https://media0.giphy.com/media/l3mZcNSkdbE9cXylq/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","data":{"id":"9d6703c5-1d14-4e77-b206-b10f836701fa","title":"Ocean
+          Sand","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg","date_modified":1594288139000},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/9d6703c5-1d14-4e77-b206-b10f836701fa.jpg"}]'
   /another-sample-document:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9caea793-42b1-4f3e-a8e5-d58f810ce2ef
     hippo:name: Another sample document
-    hippo:versionHistory: d44c7b4c-9792-43c1-b493-3a91385678d1
+    hippo:versionHistory: da4ca2fe-885a-41c4-afcc-bcce4dac24cf
     /another-sample-document[1]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -223,9 +238,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-10-02T10:19:32.566+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:53:31.628+02:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2019-10-02T10:19:37.332+02:00
+      hippostdpubwf:publicationDate: 2020-07-10T16:53:33.201+02:00
       hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
       hippotranslation:locale: en
       myproject:introduction: Lorem Ipsum is simply dummy text of the printing and
@@ -296,6 +311,16 @@
           'https://media2.giphy.com/media/8GWsFYsl1dfjy/giphy.gif?cid=042fc156c9fba0f1c7662b514934d8b9292a598ba707832c&rid=giphy.gif',
           'https://media0.giphy.com/media/xUPGcyMM1DhdFRmvdu/giphy.gif?cid=042fc156f5621194474662f6fd5ccc9867fa2f8d5b9b58fe&rid=giphy.gif',
           'https://media3.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","data":{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg","date_modified":1594392794000,"url":"https://infogram.com/test-1ho16v9g59nx4nq","embed_responsive":"<script
+          id=\"infogram_0_7f1c2e58-c705-4426-bf19-289fe909acd4\" title=\"Test\" src=\"https://e.infogram.com/js/dist/embed.js?Joy\"
+          type=\"text/javascript\"></script><div style=\"padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px
+          solid #dadada;margin:0 30px\"><a href=\"https://infogram.com/7f1c2e58-c705-4426-bf19-289fe909acd4\"
+          style=\"color:#989898!important;text-decoration:none!important;\" target=\"_blank\">Test</a><br><a
+          href=\"https://infogram.com\" style=\"color:#989898!important;text-decoration:none!important;\"
+          target=\"_blank\" rel=\"nofollow\">Infogram</a></div>"},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg"}]'
+        infographicspicker:publicId: test-1ho16v9g59nx4nq
     /another-sample-document[2]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -304,7 +329,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-10-02T10:19:32.566+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:53:31.628+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
       hippotranslation:locale: en
@@ -376,6 +401,16 @@
           'https://media2.giphy.com/media/8GWsFYsl1dfjy/giphy.gif?cid=042fc156c9fba0f1c7662b514934d8b9292a598ba707832c&rid=giphy.gif',
           'https://media0.giphy.com/media/xUPGcyMM1DhdFRmvdu/giphy.gif?cid=042fc156f5621194474662f6fd5ccc9867fa2f8d5b9b58fe&rid=giphy.gif',
           'https://media3.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","data":{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg","date_modified":1594392794000,"url":"https://infogram.com/test-1ho16v9g59nx4nq","embed_responsive":"<script
+          id=\"infogram_0_7f1c2e58-c705-4426-bf19-289fe909acd4\" title=\"Test\" src=\"https://e.infogram.com/js/dist/embed.js?Joy\"
+          type=\"text/javascript\"></script><div style=\"padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px
+          solid #dadada;margin:0 30px\"><a href=\"https://infogram.com/7f1c2e58-c705-4426-bf19-289fe909acd4\"
+          style=\"color:#989898!important;text-decoration:none!important;\" target=\"_blank\">Test</a><br><a
+          href=\"https://infogram.com\" style=\"color:#989898!important;text-decoration:none!important;\"
+          target=\"_blank\" rel=\"nofollow\">Infogram</a></div>"},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg"}]'
+        infographicspicker:publicId: test-1ho16v9g59nx4nq
     /another-sample-document[3]:
       jcr:primaryType: myproject:contentdocument
       jcr:mixinTypes: ['mix:referenceable']
@@ -384,7 +419,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2014-03-25T16:52:00+01:00
-      hippostdpubwf:lastModificationDate: 2019-09-27T16:20:10.830+02:00
+      hippostdpubwf:lastModificationDate: 2020-07-10T16:53:24.454+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: ac9ed281-60de-4422-83ff-c8fd28beb040
       hippotranslation:locale: en
@@ -456,3 +491,13 @@
           'https://media2.giphy.com/media/8GWsFYsl1dfjy/giphy.gif?cid=042fc156c9fba0f1c7662b514934d8b9292a598ba707832c&rid=giphy.gif',
           'https://media0.giphy.com/media/xUPGcyMM1DhdFRmvdu/giphy.gif?cid=042fc156f5621194474662f6fd5ccc9867fa2f8d5b9b58fe&rid=giphy.gif',
           'https://media3.giphy.com/media/2DRSlLXPBiKvC/giphy.gif?cid=042fc156672ba48c04a48a8c9e15179d1ecb9ff1bb95a293&rid=giphy.gif']
+      /myproject:infographics:
+        jcr:primaryType: infographicspicker:infographics
+        infographicspicker:infographicspaths: '[{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","data":{"id":"ba812ce5-6c00-4226-a089-3cfdd1a7fbad","title":"Test","themeId":0,"published":true,"thumbnail_url":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg","date_modified":1594392794000,"url":"https://infogram.com/test-1ho16v9g59nx4nq","embed_responsive":"<script
+          id=\"infogram_0_7f1c2e58-c705-4426-bf19-289fe909acd4\" title=\"Test\" src=\"https://e.infogram.com/js/dist/embed.js?Joy\"
+          type=\"text/javascript\"></script><div style=\"padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px
+          solid #dadada;margin:0 30px\"><a href=\"https://infogram.com/7f1c2e58-c705-4426-bf19-289fe909acd4\"
+          style=\"color:#989898!important;text-decoration:none!important;\" target=\"_blank\">Test</a><br><a
+          href=\"https://infogram.com\" style=\"color:#989898!important;text-decoration:none!important;\"
+          target=\"_blank\" rel=\"nofollow\">Infogram</a></div>"},"description":"Published","image":"https://infogram-thumbs-200.s3-eu-west-1.amazonaws.com/ba812ce5-6c00-4226-a089-3cfdd1a7fbad.jpg"}]'
+        infographicspicker:publicId: test-1ho16v9g59nx4nq

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <import resource="classpath:/org/hippoecm/hst/site/optional/jaxrs/SpringComponentManager-rest-jackson.xml"/>
+
+  <bean id="infographicsOpenUiResourceProviders" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+        <bean class="org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider">
+          <constructor-arg>
+            <bean class="com.bloomreach.cms.openui.rest.infographics.resources.InfographicsExternalDocumentPickerResource">
+              <constructor-arg name="urlBase" value="https://infogr.am/service/v1/infographics"/>
+              <constructor-arg name="apiKey" value="os8PdrZcE5s4B0uZIRjvL2Z4Z1szTsar"/>
+              <constructor-arg name="apiSecret" value="w1gSHw28NnvqqPBmDnJityjPDubN4Kfv"/>
+            </bean>
+          </constructor-arg>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+
+</beans>
