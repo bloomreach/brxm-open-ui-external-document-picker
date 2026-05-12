@@ -19,15 +19,7 @@ definitions:
         unknown\"}/overview.html</value>\r\n        </property>\r\n      </bean>\r\
         \n    </property>\r\n    <property name=\"resourceDataCache\">\r\n      <bean\
         \ class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
-        >\r\n        <constructor-arg>\r\n          <bean class=\"org.springframework.cache.ehcache.EhCacheCache\"\
-        >\r\n            <constructor-arg>\r\n              <bean parent=\"abstractCrispResourceEhCache\"\
-        >\r\n                <property name=\"cacheName\" value=\"demoProductCatalogsCache\"\
-        \ />\r\n                <property name=\"maxEntriesLocalHeap\" value=\"1000\"\
-        \ />\r\n                <property name=\"maxEntriesLocalDisk\" value=\"0\"\
-        \ />\r\n                <property name=\"timeToLiveSeconds\" value=\"60\"\
-        \ />\r\n                <property name=\"timeToIdleSeconds\" value=\"60\"\
-        \ />\r\n              </bean>\r\n            </constructor-arg>\r\n      \
-        \    </bean>\r\n        </constructor-arg>\r\n      </bean>\r\n    </property>\r\
+        >\r\n        <constructor-arg>\r\n          <bean class=\"org.springframework.cache.caffeine.CaffeineCache\" factory-bean=\"caffeineCacheInstanceFactory\" factory-method=\"createSpringCacheInstance\">\r\n            <constructor-arg value=\"demomarketoCache\" />\r\n            <constructor-arg value=\"initialCapacity=10,maximumSize=1000,expireAfterWrite=100s,expireAfterAccess=100s\" />\r\n          </bean>\r\n        </constructor-arg>\r\n        </bean>\r\n    </property>\r\
         \n  </bean>\r\n \r\n</beans>"
       crisp:propnames: [cache.enabled, commerce.api.base.uri, domain_key, request_id,
         url, ref_url, facet.range, fl, account_id, auth_key]
