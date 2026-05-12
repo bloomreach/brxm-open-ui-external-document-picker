@@ -98,6 +98,5 @@
     <module>formio-site</module>
     <module>formio-cms</module>
     <!--<module>demo</module>-->
-    <module>myproject</module>
   </modules>
 </project>
