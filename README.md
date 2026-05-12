@@ -290,13 +290,14 @@ Note right of Frontend: transformed results
  
 ## Release Notes
 
-| CMS Version| External Document Picker Version| Frontend URL | Release Notes
-|--|--|--|--|
-| 13.4.x | 0.4.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | re-orderable items, selected items in dialog, dialog view improved |
-| 14.0.x | 0.5.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | Included brSM product picker (no beans) |
-| 14.1.x | 0.6.0 | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | added extra option in the api such as: documentLocale  |
-| 14.1.x | 0.7.0 | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Facets and Filters supported, please not that this requires an update on existing backend code |
-| 14.1.x | 0.7.0 | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Control when search requests fire with autoSearch property |
+| CMS Version | External Document Picker Version | Frontend URL | Release Notes                                                                                  
+|-------------|----------------------------------|--|------------------------------------------------------------------------------------------------|
+| 16.9.x      | 0.8.0                            | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Upgrade for 16.9 support. NOTE: New frontend is not re-deployed                                |
+| 14.1.x      | 0.7.0                            | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Control when search requests fire with autoSearch property                                     |
+| 14.1.x      | 0.7.0                            | [https://d381zp6o8iqqvl.cloudfront.net/](https://d381zp6o8iqqvl.cloudfront.net) | Facets and Filters supported, please not that this requires an update on existing backend code |
+| 14.1.x      | 0.6.0                            | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | added extra option in the api such as: documentLocale                                          |
+| 14.0.x      | 0.5.0                            | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | Included brSM product picker (no beans)                                                        |
+| 13.4.x      | 0.4.0                            | [https://dv2becjeusob0.cloudfront.net](https://dv2becjeusob0.cloudfront.net) | re-orderable items, selected items in dialog, dialog view improved                             |
 
 ## Feature Requests:
 
