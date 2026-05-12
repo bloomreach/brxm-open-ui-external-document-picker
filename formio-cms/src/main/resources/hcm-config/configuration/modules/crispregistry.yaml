@@ -4,22 +4,20 @@ definitions:
       jcr:primaryType: crisp:resourceresolver
       crisp:beandefinition: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans xmlns=\"\
           http://www.springframework.org/schema/beans\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
-          \ xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd\"\
-          >\r\n   <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
-          \ class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
-          >\r\n      <property name=\"cacheEnabled\" value=\"${cache.enabled}\" />\r\n \
-          \     <property name=\"baseUri\" value=\"${baseUri}\" />\r\n      <property name=\"\
-          restTemplate\">\r\n         <bean class=\"org.springframework.web.client.RestTemplate\"\
-          >\r\n            <property name=\"requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
-          \ />\r\n         </bean>\r\n      </property>\r\n\r\n      <property name=\"resourceDataCache\"\
-          >\r\n         <bean class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
-          >\r\n            <constructor-arg>\r\n               <bean class=\"org.springframework.cache.ehcache.EhCacheCache\"\
-          >\r\n<constructor-arg>\r\n    <bean class=\"org.springframework.cache.caffeine.CaffeineCache\"\
+          \r\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd\"\
+          >\r\n    <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
+          \r\n          class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
+          >\r\n        <property name=\"cacheEnabled\" value=\"${cache.enabled}\"/>\r\n\
+          \        <property name=\"baseUri\" value=\"${baseUri}\"/>\r\n        <property\
+          \ name=\"restTemplate\">\r\n            <bean class=\"org.springframework.web.client.RestTemplate\"\
+          >\r\n                <property name=\"requestFactory\" ref=\"org.springframework.http.client.ClientHttpRequestFactory\"\
+          />\r\n            </bean>\r\n        </property>\r\n        <property name=\"\
+          resourceDataCache\">\r\n            <bean class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
+          >\r\n                <constructor-arg>\r\n                    <bean class=\"org.springframework.cache.caffeine.CaffeineCache\"\
           \ factory-bean=\"caffeineCacheInstanceFactory\" factory-method=\"createSpringCacheInstance\"\
-          >\r\n      <constructor-arg value=\"demomarketoCache\" />\r\n      <constructor-arg\
-          \ value=\"initialCapacity=10,maximumSize=1000,expireAfterWrite=100s,expireAfterAccess=100s\"\
-          \ />\r\n     </bean>\r\n   </constructor-arg>\r\n               </bean>\r\n  \
-          \          </constructor-arg>\r\n         </bean>\r\n      </property>\r\n   </bean>\r\
-          \n</beans>"
+          >\r\n                        <constructor-arg value=\"formioCache\" />\r\n   \
+          \                     <constructor-arg value=\"initialCapacity=10,maximumSize=1000,expireAfterWrite=100s,expireAfterAccess=100s\"\
+          \ />\r\n                    </bean>\r\n                </constructor-arg>\r\n\
+          \            </bean>\r\n        </property>\r\n    </bean>\r\n</beans>"
       crisp:propnames: [ cache.enabled, baseUri ]
       crisp:propvalues: [ 'true', 'https://wjdkhpmngdzgwzj.form.io/' ]

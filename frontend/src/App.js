@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from "@material-ui/core/Button/Button";
-import Chip from "@material-ui/core/Chip/Chip";
-import Avatar from "@material-ui/core/Avatar/Avatar";
-import List from "@material-ui/core/List/List";
-import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Avatar from '@mui/material/Avatar';
+import List from '@mui/material/List';
+import {DragDropContext, Draggable, Droppable} from '@hello-pangea/dnd';
 
 const dataMode = {
   SINGLE: 'single',
@@ -41,7 +41,6 @@ class App extends React.Component {
   }
 
   onDragEnd (result) {
-    // dropped outside the list
     if (!result.destination) {
       return;
     }
@@ -128,18 +127,18 @@ class App extends React.Component {
       {this.state.mode === 'edit' ?
         <DragDropContext onDragEnd={this.onDragEnd}>
           <Droppable droppableId="droppable">
-            {(provided, snapshot) => (
+            {(provided) => (
               <List
                 {...provided.droppableProps}
                 ref={provided.innerRef}>
                 {this.state.items.map((item, index) => (
                   <Draggable key={item.id} draggableId={item.id} index={index}>
-                    {(provided, snapshot) => (
+                    {(provided) => (
                       <Chip ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps} key={index}
                             size={'medium'}
-                            avatar={<Avatar src={item.image ? item.image : 'default'}></Avatar>}
+                            avatar={<Avatar src={item.image ? item.image : 'default'}/>}
                             label={item.title}
                             onDelete={this.handleDelete(item)}/>
                     )}
@@ -155,7 +154,7 @@ class App extends React.Component {
           {this.state.items.map((p, id) =>
             <Chip key={id}
                   size={'medium'}
-                  avatar={<Avatar src={p.image ? p.image : 'default'}></Avatar>}
+                  avatar={<Avatar src={p.image ? p.image : 'default'}/>}
                   label={p.title}/>
           )}
         </List>

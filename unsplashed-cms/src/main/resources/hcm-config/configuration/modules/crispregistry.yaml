@@ -15,7 +15,7 @@ definitions:
         >\r\n         <bean class=\"org.onehippo.cms7.crisp.core.resource.SpringResourceDataCache\"\
         >\r\n<constructor-arg>\r\n    <bean class=\"org.springframework.cache.caffeine.CaffeineCache\"\
         \ factory-bean=\"caffeineCacheInstanceFactory\" factory-method=\"createSpringCacheInstance\"\
-        >\r\n      <constructor-arg value=\"demomarketoCache\" />\r\n      <constructor-arg\
+        >\r\n      <constructor-arg value=\"unsplashCache\" />\r\n      <constructor-arg\
         \ value=\"initialCapacity=10,maximumSize=1000,expireAfterWrite=100s,expireAfterAccess=100s\"\
         \ />\r\n     </bean>\r\n   </constructor-arg>\r\n         </bean>\r\n      </property>\r\
         \n   </bean>\r\n</beans>"

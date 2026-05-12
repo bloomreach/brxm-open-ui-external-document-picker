@@ -1,28 +1,27 @@
 import React, {Fragment} from 'react';
-import TextField from "@material-ui/core/TextField/TextField";
-import AppBar from "@material-ui/core/AppBar/AppBar";
-import Toolbar from "@material-ui/core/Toolbar/Toolbar";
-import DialogContent from "@material-ui/core/DialogContent/DialogContent";
-import Dialog from "@material-ui/core/Dialog/Dialog";
-import {makeStyles} from "@material-ui/core";
-import Chip from "@material-ui/core/Chip/Chip";
-import Avatar from "@material-ui/core/Avatar/Avatar";
-import Fade from "@material-ui/core/Fade/Fade";
-import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
-import Typography from "@material-ui/core/Typography/Typography";
-import Button from "@material-ui/core/Button/Button";
-import Fab from "@material-ui/core/Fab/Fab";
-import GridList from "@material-ui/core/GridList/GridList";
-import GridListTile from "@material-ui/core/GridListTile/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar/GridListTileBar";
-import {Check} from "@material-ui/icons";
-import Snackbar from "@material-ui/core/Snackbar/Snackbar";
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import FormControl from "@material-ui/core/FormControl/FormControl";
-import InputLabel from "@material-ui/core/InputLabel/InputLabel";
-import Select from "@material-ui/core/Select/Select";
-import MenuItem from "@material-ui/core/MenuItem/MenuItem";
+import TextField from '@mui/material/TextField';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import DialogContent from '@mui/material/DialogContent';
+import Dialog from '@mui/material/Dialog';
+import Chip from '@mui/material/Chip';
+import Avatar from '@mui/material/Avatar';
+import Fade from '@mui/material/Fade';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Fab from '@mui/material/Fab';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Check from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
 
 const dataMode = {
   SINGLE: 'single',
@@ -84,15 +83,6 @@ class ExtPickerDialog extends React.Component {
 
     this.clientId = this.extensionConfig.clientId;
 
-    this.useStyles = makeStyles(theme => ({
-      grow: {
-        flexGrow: 1
-      },
-      search: {
-        flexGrow: 1,
-      }
-    }));
-
     this.extDialog = React.createRef();
   }
 
@@ -119,7 +109,6 @@ class ExtPickerDialog extends React.Component {
       const value = JSON.parse(options.value)
       const items = value.items;
       const context = value.context;
-      console.log('init');
       this.setState({context: context});
       this.setState({selectedItems: items});
       this.fetchItems(this.state.query, this.state.page, this.state.pageSize)
@@ -220,7 +209,7 @@ class ExtPickerDialog extends React.Component {
   }
 
   isEmpty (val) {
-    return (val === undefined || val == null || val.length <= 0) ? true : false;
+    return (val === undefined || val == null || val.length <= 0);
   }
 
   render () {
@@ -230,7 +219,6 @@ class ExtPickerDialog extends React.Component {
     const {alertMessage} = this.state || '';
     const {items} = this.state || [];
     const {selectedItems} = this.state || [];
-    const classes = this.useStyles;
     const isMultiMode = this.dataMode === dataMode.MULTIPLE;
 
     return <Dialog fullScreen open={true}>
@@ -243,7 +231,7 @@ class ExtPickerDialog extends React.Component {
         message={alertMessage}
         action={
           <React.Fragment>
-            <IconButton size="small" aria-label="close" color="inherit" onClick={event => this.alertClose()}>
+            <IconButton size="small" aria-label="close" color="inherit" onClick={() => this.alertClose()}>
               <CloseIcon fontSize="small"/>
             </IconButton>
           </React.Fragment>
@@ -252,13 +240,10 @@ class ExtPickerDialog extends React.Component {
       <AppBar position="static" color="default">
         <Toolbar>
           <TextField
-            className={classes.search}
+            sx={{flexGrow: 1, minWidth: 200}}
             autoFocus
             margin="dense"
             id="search"
-            style={{
-              minWidth: 200
-            }}
             label={this.autoSearch ? "Search" : "Search on enter"}
             type="text"
             fullWidth={true}
@@ -266,9 +251,7 @@ class ExtPickerDialog extends React.Component {
             onKeyDown={event => !this.autoSearch && this.handleKeyDown(event)}
           />
           {aggs.map((aggregation, id) =>
-            <FormControl key={id} style={{
-              minWidth: 120,
-            }}>
+            <FormControl key={id} sx={{minWidth: 120}}>
               {this.isEmpty(this.state.aggValues[aggregation.name]) ?
                 <InputLabel>
                   {aggregation.label}
@@ -277,7 +260,7 @@ class ExtPickerDialog extends React.Component {
               {(() => {
                 switch (aggregation.type) {
                   case "SingleSelect":
-                    return <Select value={this.state.aggValues[aggregation.name] !== undefined ? this.state.aggValues[aggregation.name] : this.state.aggValues[aggregation.name] = ''} onChange={event => this.onAggChange(aggregation.name, event.target.value)} style={{height: '50px'}}>
+                    return <Select value={this.state.aggValues[aggregation.name] !== undefined ? this.state.aggValues[aggregation.name] : ''} onChange={event => this.onAggChange(aggregation.name, event.target.value)} sx={{height: '50px'}}>
                       <MenuItem value={''}></MenuItem>
                       {aggregation.values.map((value, id) =>
                         <MenuItem key={id} value={value.value}>{value.label}</MenuItem>
@@ -294,11 +277,11 @@ class ExtPickerDialog extends React.Component {
         </Toolbar>
       </AppBar>
       <DialogContent ref={this.extDialog} onScroll={this.onScroll}>
-        <GridList spacing={10} cols={4}>
+        <ImageList gap={10} cols={4}>
           {items.map((item, id) =>
-            <GridListTile key={id} cols={1} onClick={event => this.addOrDeleteItem(item)} style={{cursor: 'pointer'}}>
+            <ImageListItem key={id} cols={1} onClick={() => this.addOrDeleteItem(item)} sx={{cursor: 'pointer'}}>
               <img src={item.image} alt={item.title} className={`${this.imgCover ? "" : "img-contain"}`}/>
-              <GridListTileBar
+              <ImageListItemBar
                 title={item.title}
                 subtitle={<span>{item.description}</span>}
                 actionIcon={(selectedItems.some(e => e.id === item.id)) ?
@@ -307,9 +290,9 @@ class ExtPickerDialog extends React.Component {
                   </Fab> : <Fragment/>
                 }
               />
-            </GridListTile>
+            </ImageListItem>
           )}
-        </GridList>
+        </ImageList>
       </DialogContent>
       <Fade
         in={isLoading}
@@ -328,9 +311,9 @@ class ExtPickerDialog extends React.Component {
           {selectedItems.map((p, id) =>
             <Chip key={id}
                   size={'small'}
-                  avatar={<Avatar src={p.image ? p.image : 'default'}></Avatar>}
+                  avatar={<Avatar src={p.image ? p.image : 'default'}/>}
                   label={(p.title != null && p.title !== undefined) ? p.title.replace(/^(.{6}[^\s]*).*/, "$1") : ''}
-                  onDelete={event => this.deleteItem(p)}
+                  onDelete={() => this.deleteItem(p)}
             />
           )}
         </div>
@@ -346,5 +329,3 @@ class ExtPickerDialog extends React.Component {
 }
 
 export default ExtPickerDialog;
-
-

@@ -1,36 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import * as UiExtension from "@bloomreach/ui-extension";
-import ExtPickerDialog from "./Dialog";
-import Fallback from "./Fallback";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import * as UiExtension from '@bloomreach/ui-extension';
+import ExtPickerDialog from './Dialog';
+import Fallback from './Fallback';
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const root = createRoot(document.getElementById('root'));
   try {
     const ui = await UiExtension.register();
 
-    const routing = (
-      <Router>
-        <Switch>
-          <Route path="/dialog" render={props => <ExtPickerDialog ui={ui}/>}/>
-          <Route exact path="/" render={props => <App ui={ui}/>}/>
-        </Switch>
-      </Router>
+    root.render(
+      <BrowserRouter>
+        <Routes>
+          <Route path="/dialog" element={<ExtPickerDialog ui={ui}/>}/>
+          <Route path="/" element={<App ui={ui}/>}/>
+        </Routes>
+      </BrowserRouter>
     );
-
-    ReactDOM.render(routing, document.getElementById("root"));
-
   } catch (error) {
     console.log(error);
     console.error('Failed to register extension:', error.message);
     console.error('- error code:', error.code);
-    ReactDOM.render(<Fallback/>, document.getElementById('root'));
+    root.render(<Fallback/>);
   }
 });
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
