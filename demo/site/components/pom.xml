@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.example</groupId>
@@ -12,19 +13,36 @@
   <description>My Project Site Components</description>
 
   <dependencies>
+
     <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>jsp-api</artifactId>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-unsplashed-site</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-giphy-site</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-formio-site</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>jakarta.servlet.jsp</groupId>
+      <artifactId>jakarta.servlet.jsp-api</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.taglibs</groupId>
-      <artifactId>taglibs-standard-spec</artifactId>
+      <groupId>com.bloomreach.xm</groupId>
+      <artifactId>taglibs-standard-spec-jakarta</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.taglibs</groupId>
-      <artifactId>taglibs-standard-impl</artifactId>
+      <groupId>com.bloomreach.xm</groupId>
+      <artifactId>taglibs-standard-impl-jakarta</artifactId>
     </dependency>
 
     <dependency>
@@ -41,22 +59,6 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-plugin-selections-hst-client</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-unsplashed-site</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-giphy-site</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-formio-site</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
     </dependency>
 
   </dependencies>

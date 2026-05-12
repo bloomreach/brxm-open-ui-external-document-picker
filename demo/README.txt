@@ -19,7 +19,7 @@ it won't be seen and picked up during the repository bootstrap process.
 
 Access the Bloomreach setup application at <http://localhost:8080/essentials>.
 After your project is set up, access the CMS at <http://localhost:8080/cms> and the site at <http://localhost:8080/myproject>.
-Logs are located in target/tomcat9x/logs
+Logs are located in target/tomcat10x/logs
 
 
 Best Practice for Development
@@ -87,7 +87,7 @@ Then build the brXM docker image:
     mvn -Pdocker.build
 
 This maven profile will create a docker image and add it to the local docker registry. The new image will be tagged
-as org.example/myproject:0.1.0-SNAPSHOT
+as org.example/myproject:0.8.0-SNAPSHOT
 
 To run the image with in-memory h2 database:
 

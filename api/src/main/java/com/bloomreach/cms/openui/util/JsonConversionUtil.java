@@ -2,27 +2,31 @@ package com.bloomreach.cms.openui.util;
 
 import java.util.Map;
 
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.UriInfo;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class JsonConversionUtil {
+public final class JsonConversionUtil {
+    private static final Logger log = LoggerFactory.getLogger(JsonConversionUtil.class);
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     //todo move to query param using com.bloomreach.cms.openui.rest.JacksonJsonParamConverterProvider
-    public static final Map<String, String> extractAggregationMapFromUriInfo(final UriInfo info) {
+    public static  Map<String, String> extractAggregationMapFromUriInfo(final UriInfo info) {
         MultivaluedMap<String, String> queryParameters = info.getQueryParameters();
         return queryParameters.containsKey("aggs") ? convertJsonStringToMap(queryParameters.get("aggs").get(0)) : null;
     }
 
-    public static final Map<String, String> convertJsonStringToMap(final String json) {
+    @SuppressWarnings("unchecked")
+    public static  Map<String, String> convertJsonStringToMap(final String json) {
         try {
             return MAPPER.readValue(json, Map.class);
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            log.error("Error converting to map", e);
         }
         return null;
     }

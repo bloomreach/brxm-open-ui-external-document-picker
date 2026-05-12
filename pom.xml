@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright 2009-2019 Hippo B.V. (http://www.onehippo.com)
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Copyright 2009-2026 Hippo B.V. (http://www.onehippo.com)
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -13,27 +12,19 @@
   BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
-    <groupId>org.onehippo.cms7</groupId>
-    <artifactId>hippo-cms7-project</artifactId>
-    <version>31.2.1</version>
+    <groupId>com.onehippo.cms7</groupId>
+    <artifactId>hippo-cms7-enterprise-release</artifactId>
+    <version>16.9.1</version>
   </parent>
-
   <groupId>com.bloomreach.openui</groupId>
   <artifactId>external-document-picker-parent</artifactId>
   <name>OpenUI External Document Picker Parent</name>
   <description>OpenUI External Document Picker Parent</description>
   <version>0.8.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-
-  <properties>
-    <hippo.version>14.2.0</hippo.version>
-  </properties>
-
   <developers>
     <developer>
       <id>ksalic</id>
@@ -42,7 +33,6 @@
       <email>kenan.salic@bloomreach.com</email>
     </developer>
   </developers>
-
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -50,32 +40,27 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <scm>
     <connection>scm:git:git@github.com:bloomreach/brxm-open-ui-external-document-picker.git</connection>
     <developerConnection>scm:git:git@github.com:bloomreach/brxm-open-ui-external-document-picker.git</developerConnection>
     <url>https://github.com/bloomreach/brxm-open-ui-external-document-picker.git</url>
     <tag>external-document-picker-parent-0.7.0</tag>
   </scm>
-
   <distributionManagement>
     <repository>
       <name>Hippo Maven 2 Forge Repository</name>
       <id>hippo-maven2-forge</id>
-      <url>https://maven.onehippo.com/content/repositories/forge-releases/</url>
+      <url>https://maven.bloomreach.com/content/repositories/forge-releases/</url>
       <uniqueVersion>false</uniqueVersion>
     </repository>
   </distributionManagement>
-
   <issueManagement>
-    <url>https://issues.onehippo.com/browse/HIPFORGE</url>
+    <url>https://issues.bloomreach.com/browse/HIPFORGE</url>
   </issueManagement>
-
   <organization>
     <name>Bloomreach</name>
     <url>https://www.bloomreach.com</url>
   </organization>
-
   <repositories>
     <repository>
       <id>hippo</id>
@@ -102,7 +87,6 @@
       <layout>default</layout>
     </repository>
   </repositories>
-
   <modules>
     <module>api</module>
     <module>unsplashed-cms</module>
@@ -114,6 +98,6 @@
     <module>formio-site</module>
     <module>formio-cms</module>
     <!--<module>demo</module>-->
+    <module>myproject</module>
   </modules>
-
 </project>

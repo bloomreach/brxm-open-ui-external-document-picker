@@ -4,18 +4,14 @@ import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
-import javax.ws.rs.ProcessingException;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.ext.ContextResolver;
-import javax.ws.rs.ext.MessageBodyReader;
-import javax.ws.rs.ext.ParamConverter;
-import javax.ws.rs.ext.ParamConverterProvider;
-import javax.ws.rs.ext.Provider;
-import javax.ws.rs.ext.Providers;
+
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.ws.rs.ProcessingException;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.ext.*;
 
 //todo to convert query parameter to object
 @Provider

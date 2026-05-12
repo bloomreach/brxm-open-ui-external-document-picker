@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.example</groupId>
@@ -17,6 +18,47 @@
       <artifactId>myproject-repository-data-application</artifactId>
       <version>${project.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-unsplashed-cms</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-giphy-cms</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.bloomreach.openui</groupId>
+      <artifactId>openui-external-document-picker-formio-cms</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-crisp-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-crisp-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-crisp-hst</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-crisp-repository</artifactId>
+    </dependency>
+    
+
+
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
@@ -39,44 +81,6 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-plugin-selections-addon-repository</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-api</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-unsplashed-cms</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-giphy-cms</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.bloomreach.openui</groupId>
-      <artifactId>openui-external-document-picker-formio-cms</artifactId>
-      <version>${openui.exernaldoc.picker.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-hst</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-addon-crisp-repository</artifactId>
     </dependency>
   </dependencies>
 </project>

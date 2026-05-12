@@ -15,12 +15,10 @@
     <dependency>
       <groupId>org.onehippo.cms7.hst</groupId>
       <artifactId>hst-api</artifactId>
-      <version>${hippo.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7.hst</groupId>
       <artifactId>hst-content-beans</artifactId>
-      <version>${hippo.version}</version>
     </dependency>
   </dependencies>
 
